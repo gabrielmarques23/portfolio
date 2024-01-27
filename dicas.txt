@@ -1,3 +1,15 @@
+Possível paleta de cores principais{
+#2D283E Tom de roxo
+
+#282A3D Tom de azul 1
+#282A3D Tom de azul 2
+
+#999999 Tom de cinza 
+
+}
+
+
+
 Para criar um portfólio eficaz na área de programação, considere as seguintes dicas:
 
 Página Inicial Impactante:
