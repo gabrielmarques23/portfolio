@@ -9,6 +9,8 @@
 
     --bg01: #191919;
     --bg02: #3f3f3f;
+    --bg03: #424242;
+    --bg04: #6200EE;
 
     --tt01: #F5F5F5;
     --tt02: #9E9E9E;
@@ -43,32 +45,37 @@ header>h1.about {
     padding: 0rem 2rem;
 }
 
-header>h2.about {
-    padding: 0rem 2rem;
-}
-
 nav {
     text-align: end;
     font-size: 2.5rem;
     padding: .5rem .5rem 2rem .5rem;
 
     position: relative;
-    top: 0;
+    top: 1rem;
     left: 0;
     right: 0;
 }
 
 nav>a {
-    color: white;
-
-    font-weight: bold;
-
     background-color: var(--bg02);
+    color: var(--tt01);
 
-    margin-left: .5rem;
-    padding: .5rem;
-    border-radius: 1.5rem;
+    font-weight: 600;
+    width: 1rem;
 
+    padding: .9rem 2rem;
+    margin-right: 1rem;
+    border-radius: 2rem;
+}
+
+nav a#contact{
+    background-color: var(--bg04);
+}
+nav a#about{
+    background-color: var(--bg03);
+}
+nav a#projetcs{
+    background-color: var(--bg03);
 }
 
 main#groupBox {
@@ -129,6 +136,4 @@ footer {
     padding: .6rem;
 
     font-size: 1.5rem;
-
-
 }
