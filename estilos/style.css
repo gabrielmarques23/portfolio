@@ -71,8 +71,8 @@ nav>a {
 
 }
 
-main {
-
+main#groupBox {
+    
     position: relative;
 
     left: 3rem;
@@ -84,18 +84,16 @@ main {
     padding: 1.5rem;
 
     font-size: 4rem;
-
 }
 
-main>fieldset {
 
+main>fieldset {
     border-radius: 1.5rem;
     border: 2px solid #757575;
 
-    padding: 1rem;
+    padding: 1rem 1.9rem 1rem .7rem;
 
     text-align: left;
-
 }
 
 main>fieldset>legend {
