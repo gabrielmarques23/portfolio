@@ -8,6 +8,7 @@ Possível paleta de cores principais{
 
 }
 
+link de portfolio de referencia: https://dribbble.com/shots/15563392-Portfolio-Landing-Page
 
 
 Para criar um portfólio eficaz na área de programação, considere as seguintes dicas:
