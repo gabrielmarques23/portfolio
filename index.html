@@ -8,7 +8,7 @@
 
     <!--Media Querries-->
     <link rel="stylesheet" href="estilos/style.css" media="all">
-    <link rel="stylesheet" href="estilos/tablet.css" media="screen and (min-width: 667px) and (max-width: 992px)">
+    <link rel="stylesheet" href="estilos/tablet.css" media="screen and (min-width: 555px) and (max-width: 992px)">
     <link rel="stylesheet" href="estilos/desktop.css" media=" screen and (min-width: 992px) and (max-width: 1200px)">
     <link rel="stylesheet" href="estilos/tv.css" media="screen and (min-width = 1200px)">
 
@@ -17,51 +17,41 @@
 </head>
 
 <body>
+    <div id="headerDiv">
+        <header>
+            <nav id="nav-h">
+                <a href="#" id="about">Sobre mim</a>
+                <a href="#" id="projects">Projetos</a>
+                <a href="#" id="contact">Contato</a>
+            </nav>
+        </header>
+    </div>
+    
+    <div id="principalContainer">
+    <div id="photo">
+        <img src="imagens/profile-cinza-preto200px.png" alt="Imagem pessoal">
+    </div>
 
-    <header id="principal-header">
+        <main id="groupBox">
+            <fieldset>
+                <legend>
+                    <h1>Gabriel Marques ></h1>
+                </legend>
 
-        <nav id="nav-h">
-            <a href="#" id="about">Sobre mim</a>
-            <a href="#" id="projects">Projetos</a>
-            <a href="#" id="contact">Contato</a>
-        </nav>
+                <h2>Desenveolvedor Front-end</h2>
 
+                <section>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis et cumque laudantium vel
+                        consectetur? Vitae, voluptate eum adipisci sapiente facilis possimus quia mollitia non expedita.
+                    </p>
+                </section>
+            </fieldset>
+        </main>
+    </div>
+    <div id="social">
 
-    </header>
-
-    <div id="photo"> <img src="imagens/profile-cinza-preto200px.png" alt=""></div>
-
-    <main id="groupBox">
-        <fieldset>
-            <legend>
-                <h1>Gabriel Marques ></h1>
-            </legend>
-
-            <h2>Desenveolvedor Front-end</h2>
-
-            <section>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis et cumque laudantium vel consectetur? Vitae, voluptate eum adipisci sapiente facilis possimus quia mollitia non expedita.
-                </p>
-            </section>
-
-        </fieldset>
-
-    </main>
-
-    <main>
-        <section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum pariatur laboriosam tempore laudantium
-                aliquam reiciendis repellendus aut facilis, illo dicta facere. Quisquam officia laudantium excepturi
-                vitae cum perferendis expedita quasi?</p>
-        </section>
-    </main>
-
-    <footer>
-        Entre em contato comigo!!
-        <a href="#">Meu contato</a>
-    </footer>
-
+    </div>
 
     <script src="script.js"></script>
 </body>
