@@ -62,30 +62,17 @@ nav>a {
 
 div#principalContainer{
     position: relative;
-    top: 2rem;
-}
-
-div#bgPhoto01{
-    background: url(../imagens/profile-preto-branco300px.png)center no-repeat;
-    background-attachment: local;
-    background-position: top right;
-    
-    height: 100vh;
-    width: 100%;
-
-    transition: width .8s,height .8s;
-    transition-timing-function: ease-in;
 }
 
 main#groupBox {
     position: absolute;
     top: 5.5rem;
-
+    
     max-width: 30rem;
     max-height: 30rem;
-
+    
     font-size: 4rem;
-
+    
     transition: width .4s,height .4s;
     transition-timing-function: ease;
 }
@@ -93,9 +80,9 @@ main#groupBox {
 main>fieldset {
     border-radius: 1.5rem;
     border: 2px solid #757575;
-
+    
     padding: 1rem 1.9rem 1rem .7rem;
-
+    
     text-align: left;
 }
 
@@ -110,16 +97,27 @@ main>fieldset>h2 {
     font-family: var(--font01);
     text-decoration: underline;
     text-align: left;
-
+    
     color: var(--tt03);
 }
 
 main>fieldset>section>p {
     font-size: 1.8rem;
     font-weight: 600;
-
+    
 }
 
 section p {
     text-align: justify;
+}
+
+div#bgPhoto02{
+    background: url(../imagens/profile-preto-branco300px.png) no-repeat;
+    background-attachment: local;
+    background-position: center right 15%;
+    
+    height: 80vh;
+    width: 100%;
+
+    transition: background-image 0.3s ease;
 }

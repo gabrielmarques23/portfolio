@@ -93,29 +93,15 @@ div#principalContainer{
     top: 10rem;
 }
 
-div#bgPhoto01 {
-    display: flex;
-    margin: auto;
-
-    background: url(../imagens/profile-cinza-preto200px.png) no-repeat center;
-
-    height: 20rem;
-}
-
 main#groupBox {
-    
-    position: relative;
-
-    left: 1.5rem;
-    top: 1rem;
+    display: flex;
+    align-content: center;
 
     max-width: 30rem;
     max-height: 30rem;
 
-    padding: 1.5rem;
-
     font-size: 4rem;
-
+    
     box-sizing: content-box;
 }
 
@@ -123,9 +109,9 @@ main#groupBox {
 main>fieldset {
     border-radius: 1.5rem;
     border: 2px solid #757575;
-
-    padding: 1rem 1.9rem 1rem .5rem;
-
+    
+    padding: 0rem 2rem 2rem 1rem;
+    
     text-align: left;
 }
 
@@ -140,7 +126,7 @@ main>fieldset>h2 {
     font-family: var(--font01);
     text-decoration: underline;
     text-align: left;
-
+    
     color: var(--tt03);
 }
 
@@ -152,5 +138,15 @@ main>fieldset>section>p {
 
 section p {
     text-align: justify;
+}
+
+div#bgPhoto02 {
+    display: flex;
+    margin: auto;
+
+    background: url(../imagens/profile-cinza-preto200px.png) no-repeat center center;
+
+    height: 20rem;
+    transition: background-image 0.3s ease;
 }
 
