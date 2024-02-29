@@ -88,6 +88,20 @@ nav a#projects:hover{
     background-color: #3f3f3fd5;
 }
 
+div#principalContainer{
+    position: absolute;
+    top: 10rem;
+}
+
+div#bgPhoto01 {
+    display: flex;
+    margin: auto;
+
+    background: url(../imagens/profile-cinza-preto200px.png) no-repeat center;
+
+    height: 20rem;
+}
+
 main#groupBox {
     
     position: relative;

@@ -60,13 +60,21 @@ nav>a {
     border-radius: 2rem;
 }
 
-div#photo {
-    display: flex;
+div#principalContainer{
+    position: relative;
+    top: 2rem;
+}
 
-    padding: 2rem;
+div#bgPhoto01{
+    background: url(../imagens/profile-preto-branco300px.png)center no-repeat;
+    background-attachment: local;
+    background-position: top right;
+    
+    height: 100vh;
+    width: 100%;
 
-    justify-content: flex-end;
-
+    transition: width .8s,height .8s;
+    transition-timing-function: ease-in;
 }
 
 main#groupBox {
