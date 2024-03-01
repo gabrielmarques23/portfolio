@@ -34,29 +34,20 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
-header {
-    font-size: 3rem;
-}
-
-div#photo{
+header#header {
     display: flex;
+    padding: 1rem;
     justify-content: center;
-    align-items: center;
-    
-    margin: 1rem;
+
+    font-size: 3rem;
 }
 
 nav {
     text-align: center;
     font-size: 2.5rem;
-    padding: .5rem .5rem 2.5rem .5rem;
+    padding: .5rem;
 
-    position: relative;
-    top: 1rem;
-    left: 0;
-    right: 0;
 }
-
 nav>a {
     background-color: var(--bg02);
     color: var(--tt01);
@@ -64,11 +55,10 @@ nav>a {
     font-weight: 600;
     width: 1rem;
 
-    padding: .9rem 1.7rem;
+    padding: .9rem 1.5rem;
     margin-right: 1rem;
     border-radius: 2rem;
 }
-
 nav a#contact{
     background-color: var(--bg04);
 }
@@ -100,19 +90,18 @@ div#bgPhoto01{
     transition-timing-function: ease;
 }
 
-div#principalContainer{
-    position: relative;
-
-    display: flex;
-    justify-content: center;
+main#principalContainer{
+    width: 100vw;
 }
 
-main#groupBox {
-    
+main>section#groupBox {
     display: flex;
-    position: relative;
-    top: 5.5rem;
-    
+    justify-content: center;
+    place-items: center;
+
+    margin: auto;
+    height: 35vh;
+
     max-width: 30rem;
     max-height: 30rem;
     
@@ -122,8 +111,7 @@ main#groupBox {
     transition-timing-function: ease;
 }
 
-
-main>fieldset {
+section>fieldset {
     border-radius: 1.5rem;
     border: 2px solid #757575;
     
@@ -132,13 +120,13 @@ main>fieldset {
     text-align: left;
 }
 
-main>fieldset>legend {
+fieldset>legend {
     font-size: 4rem;
     font-family: var(--font02);
     color: var(--tt01);
 }
 
-main>fieldset>h2 {
+fieldset>h2 {
     font-size: 2rem;
     font-family: var(--font01);
     text-decoration: underline;
@@ -147,13 +135,12 @@ main>fieldset>h2 {
     color: var(--tt03);
 }
 
-main>fieldset>section>p {
+fieldset>div>p {
     font-size: 1.8rem;
     font-weight: 600;
 
 }
-
-section p {
-    text-align: justify;
+div#bgPhoto02{
+    display: none;
 }
 
