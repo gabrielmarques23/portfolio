@@ -88,21 +88,35 @@ nav a#projects:hover{
     background-color: #3f3f3fd5;
 }
 
+div#bgPhoto01{
+
+    background: url(../imagens/profile-cinza-preto200px.png) no-repeat center center;
+
+    height: 20rem;
+    position: relative;
+    top: 2.5rem;
+    
+    transition: background-image 0.3s ease-in-out;
+}
+
 div#principalContainer{
-    position: absolute;
-    top: 10rem;
+    display: flex;
+    justify-content: center;
 }
 
 main#groupBox {
+    
     display: flex;
-    align-content: center;
-
+    position: relative;
+    top: 5.5rem;
+    
     max-width: 30rem;
     max-height: 30rem;
-
+    
     font-size: 4rem;
     
-    box-sizing: content-box;
+    transition: width .4s,height .4s;
+    transition-timing-function: ease;
 }
 
 
@@ -138,15 +152,5 @@ main>fieldset>section>p {
 
 section p {
     text-align: justify;
-}
-
-div#bgPhoto02 {
-    display: flex;
-    margin: auto;
-
-    background: url(../imagens/profile-cinza-preto200px.png) no-repeat center center;
-
-    height: 20rem;
-    transition: background-image 0.3s ease;
 }
 

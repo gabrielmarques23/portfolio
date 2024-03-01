@@ -64,25 +64,29 @@ div#principalContainer{
     top: 10rem;
 }
 
-div#bgPhoto01 {
+div#bgPhoto01{
     display: none;
 }
 
 main#groupBox {
     position: relative;
-
-    max-width: 30rem;
+    top: 5.5rem;
+    left: 3rem;
+    
+    max-width: 35rem;
     max-height: 30rem;
-
+    
     font-size: 4rem;
+    
+    transition: width .4s,height .4s;
+    transition-timing-function: ease;
 }
 
 main>fieldset {
     border-radius: 1.5rem;
     border: 2px solid #757575;
 
-    padding: 1rem 1.9rem 1rem .7rem;
-
+    padding: 1rem 1.9rem 2rem 1rem;
     text-align: left;
 }
 

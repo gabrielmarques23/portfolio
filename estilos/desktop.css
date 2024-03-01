@@ -70,11 +70,17 @@ div#bgPhoto01 {
 
 main#groupBox {
     position: relative;
-
-    max-width: 30rem;
+    top: 5.5rem;
+    left: 3rem;
+    
+    max-width: 32rem;
     max-height: 30rem;
-
+    
     font-size: 4rem;
+    
+    transition: width .4s,height .4s;
+    transition-timing-function: ease;
+    
 }
 
 main>fieldset {
@@ -112,6 +118,7 @@ div#bgPhoto02{
     background: var(--bg01) url(../imagens/profile-cinza-branco-fundo.png) no-repeat;
     background-attachment: fixed;
     background-position: top right 15%;
+    
     
     height: 100vh;
     width: 100%;
