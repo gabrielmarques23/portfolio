@@ -89,17 +89,20 @@ nav a#projects:hover{
 }
 
 div#bgPhoto01{
+    position: relative;
 
-    background: url(../imagens/profile-cinza-preto200px.png) no-repeat center center;
+    background: url(../imagens/profile-cinza-preto200px.png) no-repeat;
+    background-position: center;
 
     height: 20rem;
-    position: relative;
     top: 2.5rem;
     
-    transition: background-image 0.3s ease-in-out;
+    transition-timing-function: ease;
 }
 
 div#principalContainer{
+    position: relative;
+
     display: flex;
     justify-content: center;
 }

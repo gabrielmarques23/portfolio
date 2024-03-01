@@ -35,6 +35,7 @@ body {
 
 header {
     font-size: 4rem;
+    padding-bottom: 5rem;
 }
 
 header#headerDiv {
@@ -58,6 +59,25 @@ nav>a {
     padding: .9rem 2rem;
     margin-right: 5rem;
     border-radius: 2rem;
+}
+
+nav a#contact{
+    background-color: var(--bg04);
+}
+nav a#contact:hover{
+    background-color: #5900d5;
+}
+nav a#about{
+    background-color: var(--bg03);
+}
+nav a#about:hover{
+    background-color: #3f3f3fd5;
+}
+nav a#projetcs{
+    background-color: var(--bg03);
+}
+nav a#projects:hover{
+    background-color: #3f3f3fd5;
 }
 
 div#principalContainer{
@@ -118,7 +138,7 @@ section p {
 
 div#bgPhoto02{
     position: relative;
-    
+
     background: url(../imagens/profile-preto-branco300px.png) no-repeat;
     background-position: top right;
     
