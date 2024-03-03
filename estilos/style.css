@@ -79,14 +79,13 @@ nav a#projects:hover{
 
 div#bgPhoto01{
     position: relative;
-
-    background: url(../imagens/profile-cinza-preto200px.png) no-repeat;
-    background-position: center;
-
-    height: 20rem;
-    top: 2.5rem;
     
-    transition: background-image 0.3s ease;
+    background: url(../imagens/profile-cinza-preto200px.png) center center no-repeat;
+    
+    padding-bottom: 24rem;
+    height: 20rem;
+
+    transition: background-image 0.3s ease 0s;
 }
 
 main#principalContainer{
@@ -99,7 +98,6 @@ main>section#groupBox {
     place-items: center;
 
     margin: auto;
-    height: 35vh;
 
     max-width: 30rem;
     max-height: 30rem;
@@ -135,6 +133,10 @@ fieldset>div>p {
     font-size: 1.8rem;
     font-weight: 600;
 
+}
+
+div#social{
+    position: relative;
 }
 
 
