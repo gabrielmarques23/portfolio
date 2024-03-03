@@ -144,31 +144,3 @@ fieldset>div>p {
     font-size: 1.8rem;
     font-weight: 600;
 }
-
-/*
-div#bgPhoto01{
-    position: relative;
-    background: var(--bg01) url(../imagens/profile-preto-branco300px.png) local no-repeat;
-    background-position: center right;
-    height: 30rem;
-    
-    transition: background-image 0.3s ease;
-}
-
-main#principalContainer{
-    width: 100vw;
-}
-
-main>section#groupBox {
-
-    height: 35vh;
-
-    max-width: 30rem;
-    max-height: 30rem;
-    
-    font-size: 4rem;
-    
-    transition: width .4s,height .4s;
-    transition-timing-function: ease;
-}
-*/
