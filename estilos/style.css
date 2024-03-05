@@ -110,7 +110,7 @@ main>section#groupBox {
     margin: auto;
 
     max-width: 30rem;
-    max-height: 30rem;
+    max-height: 50rem;
 
     font-size: 4rem;
 }
@@ -154,5 +154,5 @@ div#social {
 
 }
 div#social > a{
-    padding: .5rem;
+    padding: 1rem .5rem;
 }
