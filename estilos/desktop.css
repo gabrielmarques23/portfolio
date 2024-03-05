@@ -89,9 +89,9 @@ nav a#projects:hover {
 div#bgPhoto01{
     background: var(--bg01) url(../imagens/profile-cinza-branco-fundo.png) no-repeat;
     background-attachment: fixed;
-    background-position: center right;
+    background-position: top right;
 
-    height: 52rem;
+    height: 100vh;
 
     transition: background-image 0.3s ease;
 
