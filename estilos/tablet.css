@@ -86,20 +86,21 @@ nav a#projects:hover {
     background-color: #3f3f3fd5;
 }
 
-div#bgPhoto01 {
-    position: relative;
-    background: url(../imagens/profile-preto-branco300px.png) local no-repeat;
-    background-position: center right 9%;
-    height: 30rem;
-    transition: background-image 0.3s ease;
-    z-index: 1;
-}
-
+/*-------section: principalContainer-------*/
 main#principalContainer {
     width: 100vw;
     position: relative;
     top: 5rem;
+    
+}
 
+div#bgPhoto01 {
+position: relative;
+background: url(../imagens/profile-preto-branco300px.png) local no-repeat;
+background-position: center right 9%;
+    height: 30rem;
+    transition: background-image 0.3s ease;
+    z-index: 1;
 }
 
 main>section#groupBox {
@@ -157,3 +158,5 @@ div#social > a{
     padding: .5rem;
     z-index: 1;
 }
+
+/*-------section: projectsContainer-------*/
