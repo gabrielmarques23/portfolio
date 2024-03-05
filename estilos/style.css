@@ -48,6 +48,7 @@ nav {
     padding: .5rem;
 
 }
+
 nav>a {
     background-color: var(--bg02);
     color: var(--tt01);
@@ -58,37 +59,43 @@ nav>a {
     margin-right: 1rem;
     border-radius: 2rem;
 }
-nav a#contact{
+
+nav a#contact {
     background-color: var(--bg04);
 }
-nav a#contact:hover{
+
+nav a#contact:hover {
     background-color: #5900d5;
 }
-nav a#about{
+
+nav a#about {
     background-color: var(--bg03);
 }
-nav a#about:hover{
-    background-color: #3f3f3fd5;
-}
-nav a#projetcs{
-    background-color: var(--bg03);
-}
-nav a#projects:hover{
+
+nav a#about:hover {
     background-color: #3f3f3fd5;
 }
 
-div#bgPhoto01{
+nav a#projetcs {
+    background-color: var(--bg03);
+}
+
+nav a#projects:hover {
+    background-color: #3f3f3fd5;
+}
+
+div#bgPhoto01 {
     position: relative;
-    
+
     background: url(../imagens/profile-cinza-preto200px.png) center center no-repeat;
-    
+
     padding-bottom: 24rem;
     height: 20rem;
 
     transition: background-image 0.3s ease 0s;
 }
 
-main#principalContainer{
+main#principalContainer {
     width: 100vw;
 }
 
@@ -96,21 +103,24 @@ main>section#groupBox {
     display: flex;
     justify-content: center;
     place-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
 
     margin: auto;
 
     max-width: 30rem;
     max-height: 30rem;
-    
+
     font-size: 4rem;
 }
 
 section>fieldset {
     border-radius: 1.5rem;
     border: 2px solid #757575;
-    
+
     padding: 0rem 2rem 2rem 1rem;
-    
+
     text-align: left;
 }
 
@@ -125,7 +135,7 @@ fieldset>h2 {
     font-family: var(--font01);
     text-decoration: underline;
     text-align: left;
-    
+
     color: var(--tt03);
 }
 
@@ -135,8 +145,14 @@ fieldset>div>p {
 
 }
 
-div#social{
+div#social {
     position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
 }
-
-
+div#social > a{
+    padding: .5rem;
+}

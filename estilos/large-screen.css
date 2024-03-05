@@ -144,3 +144,19 @@ fieldset>div>p {
     font-size: 2rem;
     font-weight: 500;
 }
+
+div#social {
+    position: absolute;
+    
+    display: flex;
+    justify-content: flex-end;
+    
+    align-items: center;
+}
+div#social > a{
+    padding: .5rem;
+}
+div#social > a:hover{
+    transform: translate(0rem, .5rem);
+    transition: .2s;
+}

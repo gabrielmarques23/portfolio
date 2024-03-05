@@ -144,3 +144,15 @@ fieldset>div>p {
     font-size: 1.8rem;
     font-weight: 600;
 }
+
+div#social {
+    position: absolute;
+    
+    display: flex;
+    justify-content: flex-end;
+    
+    align-items: center;
+}
+div#social > a{
+    padding: .5rem;
+}
