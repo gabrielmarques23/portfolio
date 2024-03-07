@@ -28,7 +28,6 @@ a {
     text-decoration: none;
 }
 
-
 body {
     background-color: var(--bg01);
     color: white;
@@ -87,7 +86,7 @@ nav a#projects:hover {
 
 /*-------section: principalContainer-------*/
 main#principalContainer {
-    width: 100vw;
+    margin: auto;
 }
 
 div#bgPhoto01 {
@@ -159,4 +158,25 @@ div#social > a{
     padding: 1rem .5rem;
 }
 
-/*-------section: projectsContainer-------*/
+/*-------section: highlightsBoxes-------*/
+section#projectsContainer{
+    height: 100%;
+}
+section#projectsContainer > h2{
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--font01);
+
+    color: var(--tt03);
+
+}
+div.highlightsBoxes{
+    display: inline-block;
+
+    background-color: var(--bg03);
+
+    height: 20rem;
+    width: 15rem;
+    padding: .5rem;
+}
