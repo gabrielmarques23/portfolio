@@ -11,6 +11,7 @@
     --bg02: #3f3f3f;
     --bg03: #424242;
     --bg04: #6200EE;
+    --bg05: #3f3f3f4f;
 
     --tt01: #F5F5F5;
     --tt02: #9E9E9E;
@@ -38,7 +39,7 @@ header#header {
     display: flex;
     padding: 1rem;
     justify-content: center;
-    
+
     font-size: 3rem;
 }
 
@@ -46,15 +47,15 @@ nav {
     text-align: center;
     font-size: 2.5rem;
     padding: .5rem;
-    
+
 }
 
 nav>a {
     background-color: var(--bg02);
     color: var(--tt01);
-    
+
     font-weight: 600;
-    
+
     padding: .9rem 1.5rem;
     margin-right: 1rem;
     border-radius: 2rem;
@@ -100,6 +101,7 @@ main#principalContainer {
     background: url(../imagens/profile-cinza-preto200px.png) center center no-repeat;
 
     height: 20rem;
+    padding: 15rem;
 
     transition: background-image 0.3s ease 0s;
 }
@@ -157,16 +159,21 @@ div#social {
     align-items: center;
     justify-content: flex-end;
 
+    padding: 1rem;
+
 }
-div#social > a{
+
+div#social>a {
     padding: 1rem .5rem;
 }
 
 /*-------section: highlightsBoxes-------*/
-section#projectsContainer{
+section#projectsContainer {
     height: 100%;
+    background: #111111;
 }
-section#projectsContainer > h2{
+
+section#projectsContainer>h2 {
     display: block;
     text-align: center;
     font-size: 2.5rem;
@@ -175,6 +182,7 @@ section#projectsContainer > h2{
     color: var(--tt03);
 
 }
+
 #boxes {
     display: inline-flex;
     flex-wrap: wrap;
@@ -183,14 +191,16 @@ section#projectsContainer > h2{
     align-items: center;
 }
 
-span.highlightsBoxes {
+.highlightsBoxes {
     display: inline-block;
-    
-    background-color: var(--bg03);
 
-    margin: auto;
-    margin: 0.5rem;
-    height: 20rem;
-    width: 40vw;
+    background-color: var(--bg05);
+
+    margin: 0.7rem 1rem;
+    height: 21rem;
+    width: 31vw;
+    min-width: 13rem;
+    max-width: 18rem;
     border-radius: 1rem;
+
 }
