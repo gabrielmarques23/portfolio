@@ -89,18 +89,18 @@ main#principalContainer {
     margin: auto;
 }
 
-#principalSection{
-    height: 100vh;
+#principalSection {
+    height: 84vh;
+    display: grid;
+    align-content: space-around;
+    justify-content: center;
 }
 
 #bgPhoto01 {
-    position: relative;
-    
     background: url(../imagens/profile-cinza-preto200px.png) center center no-repeat;
-    
-    padding-bottom: 24rem;
+
     height: 20rem;
-    
+
     transition: background-image 0.3s ease 0s;
 }
 
@@ -175,7 +175,7 @@ section#projectsContainer > h2{
     color: var(--tt03);
 
 }
-div#boxes {
+#boxes {
     display: inline-flex;
     flex-wrap: wrap;
     align-content: center;
@@ -183,15 +183,14 @@ div#boxes {
     align-items: center;
 }
 
-span.highlightsBoxes{
+span.highlightsBoxes {
     display: inline-block;
-    margin: auto;
-
+    
     background-color: var(--bg03);
 
-    height: 25rem;
-    width: 35vw;
+    margin: auto;
     margin: 0.5rem;
-    
+    height: 20rem;
+    width: 40vw;
     border-radius: 1rem;
 }
