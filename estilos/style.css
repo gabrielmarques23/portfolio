@@ -60,27 +60,27 @@ nav>a {
     border-radius: 2rem;
 }
 
-nav a#contact {
+#contact {
     background-color: var(--bg04);
 }
 
-nav a#contact:hover {
+#contact:hover {
     background-color: #5900d5;
 }
 
-nav a#about {
+#about {
     background-color: var(--bg03);
 }
 
-nav a#about:hover {
+#about:hover {
     background-color: #3f3f3fd5;
 }
 
-nav a#projetcs {
+#projetcs {
     background-color: var(--bg03);
 }
 
-nav a#projects:hover {
+#projects:hover {
     background-color: #3f3f3fd5;
 }
 
@@ -89,7 +89,11 @@ main#principalContainer {
     margin: auto;
 }
 
-div#bgPhoto01 {
+#principalSection{
+    height: 100vh;
+}
+
+#bgPhoto01 {
     position: relative;
     
     background: url(../imagens/profile-cinza-preto200px.png) center center no-repeat;
@@ -100,7 +104,7 @@ div#bgPhoto01 {
     transition: background-image 0.3s ease 0s;
 }
 
-main>section#groupBox {
+#groupBox {
     display: flex;
     justify-content: center;
     place-items: center;
@@ -171,12 +175,23 @@ section#projectsContainer > h2{
     color: var(--tt03);
 
 }
-div.highlightsBoxes{
+div#boxes {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+span.highlightsBoxes{
     display: inline-block;
+    margin: auto;
 
     background-color: var(--bg03);
 
-    height: 20rem;
-    width: 15rem;
-    padding: .5rem;
+    height: 25rem;
+    width: 35vw;
+    margin: 0.5rem;
+    
+    border-radius: 1rem;
 }
