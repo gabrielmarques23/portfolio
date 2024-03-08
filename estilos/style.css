@@ -91,7 +91,7 @@ main#principalContainer {
 }
 
 #principalSection {
-    height: 84vh;
+    height: 85vh;
     display: grid;
     align-content: space-around;
     justify-content: center;
