@@ -37,6 +37,11 @@ body {
     overflow-y: scroll;
 }
 
+body::-webkit-scrollbar {
+    width: 0rem;
+    height: 0rem;
+}
+
 header#header {
     display: flex;
     padding: 1rem;
@@ -150,7 +155,7 @@ fieldset>h2 {
 
 fieldset>div>p {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 400;
 
 }
 
@@ -170,45 +175,53 @@ div#social>a {
 }
 
 /*-------section: aboutMeContainer-------*/
-section#aboutMeContainer{
+section#aboutMeContainer {
     background: #111111;
 
     max-width: 45rem;
-    height: 50vh;
-    
+    min-height: 25rem;
+    max-height: 95vh;
+
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 2rem;
     border-radius: 2rem;
 
 }
+
 #aboutMeContainer>h2 {
-    display: block;
+    position: relative;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
     text-align: center;
     font-size: 2.5rem;
     font-family: var(--font01);
 
     color: var(--tt03);
 }
-#aboutMeContainer>div{
+
+#aboutMeContainer>div {
     position: relative;
     max-width: 30rem;
 }
 
-#textAboutMe>div{
+#textAboutMe>div {
     margin: auto;
     display: grid;
     justify-content: center;
 }
 
-#textAboutMe>div>p{
+#textAboutMe>div>p {
     font-weight: 1.8rem;
     font-size: 1.7rem;
 
     max-width: 35rem;
 
     text-align: justify;
-    
+
 }
 
 /*-------section: projectsContainer-------*/
@@ -219,7 +232,7 @@ section#projectsContainer {
 
     max-width: 45rem;
     height: 50rem;
-    
+
     margin: auto;
     margin-bottom: 2rem;
     border-radius: 2rem;
@@ -247,9 +260,13 @@ section#projectsContainer>h2 {
 .highlightsBoxes {
     display: inline-block;
 
+    display: grid;
+    align-items: end;
+    align-content: space-between;
+
     background-color: var(--bg05);
 
-    margin: 0.7rem 1rem;
+    margin: 1rem 1rem;
     height: 21rem;
     width: 31vw;
     min-width: 13rem;
@@ -258,4 +275,36 @@ section#projectsContainer>h2 {
 
 }
 
+.highlightsBoxes:hover {
+    opacity: .9;
+    transition: .2s;
+}
 
+
+.icon-info {
+    display: inline-block;
+   
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGwtb3BhY2l0eT0iMCIgZmlsbD0iI2RkZGRkZCIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgZm9udC1mYW1pbHk9Im5vbmUiIGZvbnQtd2VpZ2h0PSJub25lIiBmb250LXNpemU9Im5vbmUiIHRleHQtYW5jaG9yPSJub25lIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6IG5vcm1hbCI+PHBhdGggZD0iTTAsMjU2di0yNTZoMjU2djI1NnoiIGlkPSJiZ1JlY3RhbmdsZSI+PC9wYXRoPjwvZz48ZyBmaWxsPSIjOWU5ZTllIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48ZyB0cmFuc2Zvcm09InNjYWxlKDEwLjY2NjY3LDEwLjY2NjY3KSI+PHBhdGggZD0iTTEyLDJjLTUuNTExLDAgLTEwLDQuNDg5IC0xMCwxMGMwLDUuNTExIDQuNDg5LDEwIDEwLDEwYzUuNTExLDAgMTAsLTQuNDg5IDEwLC0xMGMwLC01LjUxMSAtNC40ODksLTEwIC0xMCwtMTB6TTEyLDRjNC40MzAxMiwwIDgsMy41Njk4OCA4LDhjMCw0LjQzMDEyIC0zLjU2OTg4LDggLTgsOGMtNC40MzAxMiwwIC04LC0zLjU2OTg4IC04LC04YzAsLTQuNDMwMTIgMy41Njk4OCwtOCA4LC04ek0xMSw3djJoMnYtMnpNMTEsMTF2Nmgydi02eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==') 50% 50% no-repeat;
+    background-size: 100%;
+
+    width: 25px;
+    height: 25px;
+
+    position: relative;
+    top: 20%;
+    left: 80%;
+
+    cursor: pointer;
+}
+
+.projectDescription {
+    background-color: #ffffff31;
+
+    height: 2.5rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+.projectDescription>h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
