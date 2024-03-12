@@ -98,7 +98,7 @@ main#principalContainer {
 }
 
 #principalSection {
-    height: 83vh;
+    height: 85vh;
     display: grid;
     align-content: space-around;
     justify-content: center;
@@ -237,7 +237,6 @@ div#TechnicalAbilities {
 
 /*-------section: projectsContainer-------*/
 section#projectsContainer {
-
     background: #111111;
 
     max-width: 45rem;
@@ -246,7 +245,6 @@ section#projectsContainer {
     margin-bottom: 2rem;
     border-radius: 2rem;
     padding-bottom: 1.5rem;
-
 
 }
 
@@ -290,7 +288,6 @@ section#projectsContainer>h2 {
     opacity: .9;
 }
 
-
 .icon-info {
     display: inline-block;
 
@@ -329,4 +326,17 @@ section#projectsContainer>h2 {
     font-family: var(--font02);
     font-size: 1.3rem;
     font-weight: 500;
+}
+
+/*-------section: contactContainer-------*/
+section#contactContainer {
+    background: #111111;
+
+    max-width: 45rem;
+
+    margin: auto;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    padding-bottom: 1.5rem;
+
 }
