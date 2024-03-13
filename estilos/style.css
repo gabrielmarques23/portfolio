@@ -42,6 +42,7 @@ body::-webkit-scrollbar {
     height: 0rem;
 }
 
+/*-------Header: header-------*/
 header#header {
     display: flex;
     padding: 1rem;
@@ -99,8 +100,10 @@ main#principalContainer {
 
 #principalSection {
     height: 85vh;
-    display: grid;
-    align-content: space-around;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: center;
 }
 
