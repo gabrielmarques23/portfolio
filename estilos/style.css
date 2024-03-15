@@ -114,10 +114,9 @@ main#principalContainer {
 
 #principalSection {
     height: 85vh;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
+    align-items: center;
 }
 
 #bgPhoto01 {
@@ -125,6 +124,7 @@ main#principalContainer {
     height: 20rem;
     padding: 15rem;
     transition: background-image 0.3s ease;
+    z-index: 1;
 }
 
 #groupBox {
