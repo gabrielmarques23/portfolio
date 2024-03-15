@@ -123,7 +123,7 @@ main#principalContainer {
     background: url(../imagens/profile-cinza-preto200px.png) center center no-repeat;
     height: 20rem;
     padding: 15rem;
-    transition: background-image 0.3s ease;
+    transition: background-image 0.1s ease;
     z-index: 1;
 }
 

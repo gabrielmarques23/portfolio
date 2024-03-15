@@ -74,10 +74,8 @@ header#header {
 nav {
     display: flex;
     padding: .5rem;
-
     text-align: center;
     font-size: 2.5rem;
-
 }
 
 nav>a {
@@ -129,16 +127,16 @@ main#principalContainer {
 
 #bgPhoto01 {
     position: relative;
-    background: url(../imagens/profile-preto-branco\ 500px.png) right top 3rem no-repeat;
-    background-size: 37rem;
-    height: 40rem;
-    transition: background-image 0.3s ease;
+    background: url(../imagens/profile-preto-branco.png) right top 3rem no-repeat;
+    background-size: 50vw;
+    height: 45rem;
+    transition: background-image 0.1s ease;
     z-index: 1;
 }
 
 #groupBox {
     position: relative;
-    bottom: 25rem;
+    bottom: 30rem;
     left: 2rem;
     width: 50vw;
     min-width: 32rem;
@@ -164,7 +162,6 @@ fieldset>h2 {
     font-family: var(--font01);
     text-decoration: underline;
     text-align: left;
-
     color: var(--tt03);
 }
 
@@ -177,7 +174,6 @@ fieldset>div>p {
 #social {
     display: flex;
     justify-content: flex-start;
-
     align-items: center;
 }
 
@@ -222,9 +218,7 @@ section#projectsContainer>h2 {
     text-align: center;
     font-size: 2.5rem;
     font-family: var(--font01);
-
     color: var(--tt03);
-
 }
 
 #boxes {
@@ -244,7 +238,6 @@ section#projectsContainer>h2 {
     border-radius: 1rem;
     align-content: space-between;
     transition: width 0.5s linear;
-
 }
 
 .highlightsBoxes:hover {
@@ -253,19 +246,14 @@ section#projectsContainer>h2 {
 
 .icon-info {
     display: inline-block;
-
     background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGwtb3BhY2l0eT0iMCIgZmlsbD0iI2RkZGRkZCIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgZm9udC1mYW1pbHk9Im5vbmUiIGZvbnQtd2VpZ2h0PSJub25lIiBmb250LXNpemU9Im5vbmUiIHRleHQtYW5jaG9yPSJub25lIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6IG5vcm1hbCI+PHBhdGggZD0iTTAsMjU2di0yNTZoMjU2djI1NnoiIGlkPSJiZ1JlY3RhbmdsZSI+PC9wYXRoPjwvZz48ZyBmaWxsPSIjOWU5ZTllIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48ZyB0cmFuc2Zvcm09InNjYWxlKDEwLjY2NjY3LDEwLjY2NjY3KSI+PHBhdGggZD0iTTEyLDJjLTUuNTExLDAgLTEwLDQuNDg5IC0xMCwxMGMwLDUuNTExIDQuNDg5LDEwIDEwLDEwYzUuNTExLDAgMTAsLTQuNDg5IDEwLC0xMGMwLC01LjUxMSAtNC40ODksLTEwIC0xMCwtMTB6TTEyLDRjNC40MzAxMiwwIDgsMy41Njk4OCA4LDhjMCw0LjQzMDEyIC0zLjU2OTg4LDggLTgsOGMtNC40MzAxMiwwIC04LC0zLjU2OTg4IC04LC04YzAsLTQuNDMwMTIgMy41Njk4OCwtOCA4LC04ek0xMSw3djJoMnYtMnpNMTEsMTF2Nmgydi02eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==') 50% 50% no-repeat;
     background-size: 100%;
-
     width: 25px;
     height: 25px;
-
     position: relative;
     top: 20%;
     left: 80%;
-
     cursor: pointer;
-
     transition: transform .3s ease;
 }
 
@@ -276,9 +264,7 @@ section#projectsContainer>h2 {
 .projectDescription {
     display: grid;
     align-items: center;
-
     background-color: #ffffff31;
-
     height: 3rem;
     border-radius: 0rem 0rem 1rem 1rem;
 }
