@@ -117,7 +117,7 @@ main#principalContainer {
 }
 
 #principalSection {
-    height: 84vh;
+    height: 82vh;
     display: grid;
     align-items: center;
     align-content: stretch;
@@ -125,19 +125,18 @@ main#principalContainer {
 
 #bgPhoto01 {
     position: relative;
-    background: url(../imagens/profile-preto-branco-fundo500px.png) right no-repeat;
-    height: 45rem;
+    background: url(../imagens/profile-preto-branco-fundo500px.png) top right no-repeat;
+    height: 50rem;
     transition: background-image 0.1s ease;
     z-index: 0;
 }
 
 #groupBox {
     position: relative;
-    bottom: 30rem;
+    bottom: 35rem;
     left: 2rem;
-    width: 50vw;
-    min-width: 32rem;
-    font-size: 4rem;
+    width: 45vw;
+    min-width: 39rem;
     transition: width 0.5s linear;
 }
 
@@ -149,13 +148,13 @@ section>fieldset {
 }
 
 fieldset>legend {
-    font-size: 4.3rem;
+    font-size: 5rem;
     font-family: var(--font02);
     color: var(--tt01);
 }
 
 fieldset>h2 {
-    font-size: 2rem;
+    font-size: 2.8rem;
     font-family: var(--font01);
     text-decoration: underline;
     text-align: left;
@@ -163,7 +162,7 @@ fieldset>h2 {
 }
 
 fieldset>div>p {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     font-weight: 500;
     max-width: 42vw;
 }
