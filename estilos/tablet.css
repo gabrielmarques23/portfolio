@@ -127,10 +127,9 @@ main#principalContainer {
 
 #bgPhoto01 {
     position: relative;
-    background: url(../imagens/profile-preto-branco.png) right top 3rem no-repeat;
-    background-size: 50vw;
+    background: url(../imagens/profile-preto-branco333.png) right top 3rem no-repeat;
+    background-size: 45vw;
     height: 45rem;
-    transition: background-image 0.3s ease;
     z-index: 1;
 }
 
