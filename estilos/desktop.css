@@ -125,11 +125,11 @@ main#principalContainer {
 #bgPhoto01 {
     position: relative;
     background: url(../imagens/background-color-lines.png) center right no-repeat;
-    height: 62rem;
+    height: 65rem;
     max-height: 100%;
     background-size: 55vw;
     z-index: -1;
-    transition: background-size 0.3s linear(-0.12 -10.29%, 0.35 38.97%, 1 100%)
+    transition: background-size 0.1s linear(-0.12 -10.29%, 0.35 38.97%, 1 100%)
 }
 
 #bgPhoto02image {
@@ -193,7 +193,7 @@ fieldset>div>p {
 
 /*-------section: aboutMeContainer-------*/
 section#aboutMeContainer {
-    
+
     max-width: 50rem;
     min-width: 45rem;
 }
@@ -241,21 +241,21 @@ section#projectsContainer>h2 {
 
 #boxes {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
 
 .highlightsBoxes {
     position: relative;
     display: grid;
+    align-content: space-between;
     background-color: var(--bg05);
     margin: 1rem 1rem;
-    height: 23rem;
-    width: 29vw;
-    max-width: 18rem;
+    height: 25rem;
+    width: 25vw;
+    max-width: 20rem;
     border-radius: 1rem;
     align-content: space-between;
-    transition: width 0.5s linear;
 }
 
 .highlightsBoxes:hover {
@@ -297,5 +297,5 @@ section#projectsContainer>h2 {
 
 /*-------section: contactContainer-------*/
 #contactContainer {
-    margin: auto;   
+    margin: auto;
 }
