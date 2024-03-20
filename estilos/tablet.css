@@ -129,17 +129,16 @@ main#principalContainer {
     position: relative;
     background: url(../imagens/profile-preto-branco333.png) right top 3rem no-repeat;
     background-size: 45vw;
-    height: 45rem;
+    height: 50rem;
     z-index: 1;
 }
 
 #groupBox {
     position: relative;
-    bottom: 30rem;
+    bottom: 40rem;
     left: 2rem;
     width: 50vw;
     min-width: 32rem;
-    font-size: 4rem;
     transition: width 0.5s linear;
 }
 
