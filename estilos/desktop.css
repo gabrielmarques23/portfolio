@@ -120,12 +120,11 @@ main#principalContainer {
     height: 84vh;
     display: grid;
     align-items: center;
-    align-content: stretch;
 }
 
 #bgPhoto01 {
     position: relative;
-    background: url(../imagens/background-color-lines.png) center right 1rem no-repeat fixed;
+    background: url(../imagens/background-color-lines.png) center right no-repeat;
     height: 62rem;
     max-height: 100%;
     background-size: 55vw;
@@ -143,7 +142,7 @@ main#principalContainer {
     position: relative;
     bottom: 50rem;
     left: 4rem;
-    width: 45vw;
+    width: 40vw;
     min-width: 39rem;
     transition: width 0.4s linear;
 }
@@ -193,6 +192,11 @@ fieldset>div>p {
 }
 
 /*-------section: aboutMeContainer-------*/
+section#aboutMeContainer {
+    
+    max-width: 50rem;
+    min-width: 45rem;
+}
 
 #aboutMeContainer>div {
     position: relative;
@@ -222,6 +226,10 @@ div#TechnicalSkills>p {
 }
 
 /*-------section: projectsContainer-------*/
+#projectsContainer {
+    max-width: 100%;
+    border-radius: 0px;
+}
 
 section#projectsContainer>h2 {
     display: block;
@@ -288,3 +296,6 @@ section#projectsContainer>h2 {
 }
 
 /*-------section: contactContainer-------*/
+#contactContainer {
+    margin: auto;   
+}
