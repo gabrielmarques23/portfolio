@@ -38,13 +38,12 @@ a {
     font-size: 3rem;
     font-family: var(--font01);
     color: var(--tt03);
-    color: var(--tt03);
     border-bottom: 0.2rem solid var(--bg04);
     width: 16rem;
 }
 
-section#presentation,
-section#technicalSkills,
+#presentation,
+#technicalSkills,
 #projectsContainer,
 #contactContainer {
     background: #111111;
@@ -197,7 +196,13 @@ fieldset>div>p {
 
 /*-------section: aboutMeContainer-------*/
 section#aboutMeContainer {
-    height: 90vh;
+    height: 100%;
+    min-height: 50rem;
+    display: flex;
+    justify-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 #presentation {
@@ -213,11 +218,14 @@ section#aboutMeContainer {
     max-width: 35rem;
 }
 
-div#TechnicalSkills {
-    padding: 3rem;
+#technicalSkills {
+    width: 50rem;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
 }
 
-div#TechnicalSkills>p {
+#technicalSkills>div>p {
     font-size: 1.7rem;
     text-align: justify;
     max-width: 35rem;
@@ -228,10 +236,11 @@ div#TechnicalSkills>p {
 #projectsContainer {
     max-width: 100%;
     border-radius: 0px;
+    text-align: center;
 }
 
 section#projectsContainer>h2 {
-    display: block;
+    display: inline;
     text-align: center;
     font-size: 2.5rem;
     font-family: var(--font01);
