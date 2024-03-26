@@ -14,6 +14,8 @@
     --bg05: #3f3f3f4f;
 
     --bgBox01: #3f3f3f4f;
+    --bgBox02: #111111;
+
 
 
     --tt01: #F5F5F5;
@@ -43,7 +45,7 @@ a {
 #aboutMeContainer,
 #technicalSkills,
 #contactContainer {
-    background: #111111;
+    background: var(--bgBox02);
     max-width: 70vw;
     min-width: 45rem;
     margin: auto;
@@ -218,7 +220,7 @@ div#TechnicalSkills>p {
 
 section#projectsContainer{
     width: 100%;
-    background: #111111;
+    background: var(--bgBox02);
     margin-bottom: 2.5rem;
     padding-bottom: 1.5rem;  
 }
