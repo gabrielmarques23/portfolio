@@ -67,18 +67,17 @@ body::-webkit-scrollbar {
 }
 
 header#header {
-    display: flex;
     padding: 1rem;
-    justify-content: end;
-    font-size: 3rem;
-    z-index: 1;
 }
 
 nav {
     display: flex;
-    padding: .5rem;
     text-align: center;
     font-size: 2.5rem;
+    width: 100%;
+    padding: 1rem;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 nav>a {
@@ -127,7 +126,7 @@ main#principalContainer {
 
 #bgPhoto01 {
     position: relative;
-    background: url(../imagens/background-color-lines.png) center right no-repeat;
+    background: url(../imagens/background-color-lines.png) top right no-repeat;
     height: 65rem;
     max-height: 100%;
     background-size: 55vw;
@@ -136,7 +135,7 @@ main#principalContainer {
 }
 
 #bgPhoto02image {
-    background: url(../imagens/profile-preto-branco333.png) center right 5rem no-repeat;
+    background: url(../imagens/profile-preto-branco333.png) top right 5rem no-repeat;
     background-size: 35vw;
     height: 85%;
 }
@@ -249,20 +248,19 @@ section#projectsContainer>h2 {
 
 #boxes {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .highlightsBoxes {
     position: relative;
     display: grid;
-    align-content: space-between;
     background-color: var(--bg05);
-    margin: 1rem 1rem;
-    height: 25rem;
-    width: 25vw;
-    max-width: 20rem;
-    border-radius: 1rem;
+    margin: 2rem 2rem;
+    height: 45rem;
+    width: 35vw;
+    max-width: 37rem;
+    border-radius: 1.5rem;
     align-content: space-between;
 }
 
@@ -277,8 +275,8 @@ section#projectsContainer>h2 {
     width: 25px;
     height: 25px;
     position: relative;
-    top: 20%;
-    left: 80%;
+    top: 2px;
+    left: 90%;
     cursor: pointer;
     transition: transform .3s ease;
 }
