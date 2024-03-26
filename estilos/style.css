@@ -41,8 +41,8 @@ a {
 }
 
 section#aboutMeContainer,
-#contactContainer,
-#projectsContainer {
+section#contactContainer,
+section#projectsContainer {
     background: var(--bgBox02);
     max-width: 45rem;
     margin: auto;
@@ -157,7 +157,7 @@ fieldset>legend {
 }
 
 fieldset>h2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
     font-family: var(--font01);
     text-decoration: underline;
     text-align: left;
@@ -165,7 +165,7 @@ fieldset>h2 {
 }
 
 fieldset>div>p {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 400;
 }
 
@@ -196,24 +196,16 @@ div#social>a {
  }
 
  #presentation>div>p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: justify;
     max-width: 35rem;
 }
 
 #technicalSkills>div>p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: justify;
     max-width: 35rem;
     margin: auto;
-}
-
-div#TechnicalSkills>p {
-    font-size: 1.3rem;
-    text-align: justify;
-    max-width: 35rem;
-    margin: auto;
-
 }
 
 /*-------section: projectsContainer-------*/
