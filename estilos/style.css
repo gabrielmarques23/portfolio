@@ -113,8 +113,8 @@ main#principalContainer {
 #bgPhoto01 {
     background: url(../imagens/profile-cinza-preto.png) center center no-repeat;
     background-size: contain;
-    height: 30rem;
-    width: 30rem;
+    height: 27rem;
+    width: 27rem;
     border-radius: 100%;
     margin: auto;
     margin-bottom: 20px;
@@ -165,8 +165,6 @@ div#social {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 1rem;
 }
 
 div#social>a {
@@ -188,13 +186,13 @@ div#social>a {
 }
 
 #presentation>div>p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: justify;
     max-width: 35rem;
 }
 
 #technicalSkills>div>p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: justify;
     max-width: 35rem;
     margin: auto;
@@ -222,9 +220,9 @@ div#social>a {
     display: grid;
     background-color: var(--bg05);
     margin: 1rem 1rem;
-    height: 32rem;
-    width: 25rem;
-    border-radius: 1rem;
+    height: 40rem;
+    width: 30rem;
+    border-radius: 1.5rem;
     transition: width .5s linear;
 }
 
@@ -234,11 +232,12 @@ div#social>a {
 
 .icon-info {
     background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGwtb3BhY2l0eT0iMCIgZmlsbD0iI2RkZGRkZCIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgZm9udC1mYW1pbHk9Im5vbmUiIGZvbnQtd2VpZ2h0PSJub25lIiBmb250LXNpemU9Im5vbmUiIHRleHQtYW5jaG9yPSJub25lIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6IG5vcm1hbCI+PHBhdGggZD0iTTAsMjU2di0yNTZoMjU2djI1NnoiIGlkPSJiZ1JlY3RhbmdsZSI+PC9wYXRoPjwvZz48ZyBmaWxsPSIjOWU5ZTllIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48ZyB0cmFuc2Zvcm09InNjYWxlKDEwLjY2NjY3LDEwLjY2NjY3KSI+PHBhdGggZD0iTTEyLDJjLTUuNTExLDAgLTEwLDQuNDg5IC0xMCwxMGMwLDUuNTExIDQuNDg5LDEwIDEwLDEwYzUuNTExLDAgMTAsLTQuNDg5IDEwLC0xMGMwLC01LjUxMSAtNC40ODksLTEwIC0xMCwtMTB6TTEyLDRjNC40MzAxMiwwIDgsMy41Njk4OCA4LDhjMCw0LjQzMDEyIC0zLjU2OTg4LDggLTgsOGMtNC40MzAxMiwwIC04LC0zLjU2OTg4IC04LC04YzAsLTQuNDMwMTIgMy41Njk4OCwtOCA4LC04ek0xMSw3djJoMnYtMnpNMTEsMTF2Nmgydi02eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==') 50% 50% no-repeat;
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
+    background-size: 100%;
     position: absolute;
-    top: 2px;
-    right: 3px;
+    top: 5px;
+    right: 5px;
     cursor: pointer;
 }
 
@@ -248,8 +247,8 @@ div#social>a {
 
 .projectDescription {
     background-color: #ffffff31;
-    height: 3rem;
-    border-radius: 0rem 0rem 1rem 1rem;
+    height: 4rem;
+    border-radius: 0rem 0rem 2rem 2rem;
     align-content: center;
     position: absolute;
     width: 100%;
@@ -260,7 +259,7 @@ div#social>a {
     color: var(--tt01);
     text-align: center;
     font-family: var(--font02);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
