@@ -113,21 +113,22 @@ nav>a {
 /*-------section: principalContainer-------*/
 main#principalContainer {
     position: relative;
-}
+} 
 
 #principalSection {
-    height: 85vh;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
 }
 
 #bgPhoto01 {
-    background: url(../imagens/profile-cinza-preto200px.png) center center no-repeat;
-    height: 20rem;
-    padding: 15rem;
+    background: url(../imagens/profile-cinza-preto.png) center center no-repeat;
+    background-size: contain;
+    height: 32rem;
+    width: 32rem;
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;	
     transition: background-image 0.3s ease;
-    z-index: 1;
 }
 
 #groupBox {
