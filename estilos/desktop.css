@@ -16,6 +16,9 @@
     --bgBox01: #3f3f3f4f;
     --bgBox02: #111111;
 
+    --bgHv01: #3f3f3fd5;
+    --bgHv02: #5900d5;
+
     --tt01: #F5F5F5;
     --tt02: #9E9E9E;
     --tt03: #6200EE;
@@ -65,27 +68,28 @@ body::-webkit-scrollbar {
     height: 0rem;
 }
 
+/*-------Header: header-------*/
+
 header#header {
-    padding: 1rem;
+    display: flex;
+    height: 5rem;
+    justify-content: flex-end;
+    margin: 2rem 0rem 2rem 0rem;
 }
 
 nav {
-    display: flex;
     text-align: center;
-    font-size: 2.5rem;
-    width: 100%;
-    padding: 1rem;
-    justify-content: flex-end;
-    align-items: center;
+    font-size: 3.2rem;
+    height: 100%;
 }
 
 nav>a {
-    background-color: var(--bg02);
+    background-color: var(--bg03);
     color: var(--tt01);
     font-weight: 600;
-    padding: 1rem 2rem;
-    margin-right: 5rem;
+    padding: 1rem 2.1rem;
     border-radius: 2rem;
+    margin-right: 5.1rem;
 }
 
 #contact {
@@ -93,54 +97,42 @@ nav>a {
 }
 
 #contact:hover {
-    background-color: #5900d5;
+    background-color: var(--bgHv02);
 }
 
-#about {
-    background-color: var(--bg03);
-}
-
-#about:hover {
-    background-color: #3f3f3fd5;
-}
-
-#projetcs {
-    background-color: var(--bg03);
-}
-
+#about:hover,
 #projects:hover {
-    background-color: #3f3f3fd5;
+    background-color: var(--bgHv01);
 }
+
 
 /*-------section: principalContainer-------*/
 main#principalContainer {
-    position: relative;
 }
 
 #principalSection {
-    height: 90vh;
-    display: grid;
-    align-items: center;
+    height: 100vh;
 }
 
 #bgPhoto01 {
-    position: relative;
+    position: absolute;
     background: url(../imagens/background-color-lines.png) top right no-repeat;
-    height: 65rem;
-    max-height: 100%;
+    height: 100%;
     background-size: 55vw;
-    z-index: -1;
+    z-index: 0;
+    width: 100%;
 }
 
 #bgPhoto02image {
     background: url(../imagens/profile-preto-branco333.png) top right 5rem no-repeat;
     background-size: 35vw;
-    height: 85%;
+    height: 100%;
+    z-index: 1;
 }
 
 #groupBox {
     position: relative;
-    bottom: 50rem;
+    top: 10rem;
     left: 4rem;
     width: 40vw;
     min-width: 39rem;
@@ -183,7 +175,6 @@ fieldset>div>p {
 
 #social>a {
     padding: .5rem;
-    transform: translate(0rem, .5rem);
 }
 
 #social>a :hover {
@@ -207,6 +198,8 @@ section#aboutMeContainer {
     display: grid;
     justify-items: center;
     justify-content: center;
+    transition: width, height, .3s linear;
+
 }
 
 #presentation>div>p {
@@ -220,6 +213,7 @@ section#aboutMeContainer {
     display: grid;
     justify-items: center;
     justify-content: center;
+    transition: width, height, .3s linear;
 }
 
 #technicalSkills>div>p {
@@ -247,19 +241,19 @@ section#projectsContainer>h2 {
 
 #boxes {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .highlightsBoxes {
     position: relative;
     background-color: var(--bg05);
-    margin: 2rem 2rem;
+    margin: 3rem 5rem;
     height: 45rem;
     width: 33vw;
     max-width: 35rem;
     border-radius: 1.5rem;
-    transition: width 0.2s linear;
+    transition: width, height, .2s linear;
 }
 
 .highlightsBoxes:hover {
@@ -269,8 +263,8 @@ section#projectsContainer>h2 {
 .icon-info {
     background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGwtb3BhY2l0eT0iMCIgZmlsbD0iI2RkZGRkZCIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgZm9udC1mYW1pbHk9Im5vbmUiIGZvbnQtd2VpZ2h0PSJub25lIiBmb250LXNpemU9Im5vbmUiIHRleHQtYW5jaG9yPSJub25lIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6IG5vcm1hbCI+PHBhdGggZD0iTTAsMjU2di0yNTZoMjU2djI1NnoiIGlkPSJiZ1JlY3RhbmdsZSI+PC9wYXRoPjwvZz48ZyBmaWxsPSIjOWU5ZTllIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48ZyB0cmFuc2Zvcm09InNjYWxlKDEwLjY2NjY3LDEwLjY2NjY3KSI+PHBhdGggZD0iTTEyLDJjLTUuNTExLDAgLTEwLDQuNDg5IC0xMCwxMGMwLDUuNTExIDQuNDg5LDEwIDEwLDEwYzUuNTExLDAgMTAsLTQuNDg5IDEwLC0xMGMwLC01LjUxMSAtNC40ODksLTEwIC0xMCwtMTB6TTEyLDRjNC40MzAxMiwwIDgsMy41Njk4OCA4LDhjMCw0LjQzMDEyIC0zLjU2OTg4LDggLTgsOGMtNC40MzAxMiwwIC04LC0zLjU2OTg4IC04LC04YzAsLTQuNDMwMTIgMy41Njk4OCwtOCA4LC04ek0xMSw3djJoMnYtMnpNMTEsMTF2Nmgydi02eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==') 50% 50% no-repeat;
     background-size: 100%;
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
     position: absolute;
     top: 4px;
     right: 6px;
@@ -284,7 +278,7 @@ section#projectsContainer>h2 {
 
 .projectDescription {
     background-color: #ffffff31;
-    height: 3rem;
+    height: 3.2rem;
     border-radius: 0rem 0rem 1rem 1rem;
     align-content: center;
     position: absolute;
@@ -296,7 +290,7 @@ section#projectsContainer>h2 {
     color: var(--tt01);
     text-align: center;
     font-family: var(--font02);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
 }
 
