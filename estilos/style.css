@@ -16,6 +16,9 @@
     --bgBox01: #3f3f3f4f;
     --bgBox02: #111111;
 
+    --bgHv01: #3f3f3fd5;
+    --bgHv02: #5900d5;
+
     --tt01: #F5F5F5;
     --tt02: #9E9E9E;
     --tt03: #6200EE;
@@ -66,23 +69,22 @@ body::-webkit-scrollbar {
 /*-------Header: header-------*/
 header#header {
     display: flex;
-    padding: 1rem;
+    height: 5rem;
     justify-content: center;
-    font-size: 3rem;
+    margin: 2rem 0rem 2rem 0rem;
 }
 
 nav {
     text-align: center;
-    font-size: 2.5rem;
-    padding: .5rem;
+    font-size: 3rem;
+    height: 100%;
 }
 
 nav>a {
-    background-color: var(--bg02);
+    background-color: var(--bg03);
     color: var(--tt01);
     font-weight: 600;
-    padding: .9rem 1.5rem;
-    margin-right: 1rem;
+    padding: 1rem 1.5rem;
     border-radius: 2rem;
 }
 
@@ -91,29 +93,18 @@ nav>a {
 }
 
 #contact:hover {
-    background-color: #5900d5;
+    background-color: var(--bgHv02);
 }
 
-#about {
-    background-color: var(--bg03);
-}
-
-#about:hover {
-    background-color: #3f3f3fd5;
-}
-
-#projetcs {
-    background-color: var(--bg03);
-}
-
+#about:hover,
 #projects:hover {
-    background-color: #3f3f3fd5;
+    background-color: var(--bgHv01);
 }
 
 /*-------section: principalContainer-------*/
 main#principalContainer {
     position: relative;
-} 
+}
 
 #principalSection {
     height: 100vh;
@@ -122,12 +113,12 @@ main#principalContainer {
 #bgPhoto01 {
     background: url(../imagens/profile-cinza-preto.png) center center no-repeat;
     background-size: contain;
-    height: 32rem;
-    width: 32rem;
+    height: 30rem;
+    width: 30rem;
     border-radius: 100%;
     margin: auto;
     margin-bottom: 20px;
-    margin-top: 20px;	
+    margin-top: 20px;
     transition: background-image 0.3s ease;
 }
 
@@ -194,9 +185,9 @@ div#social>a {
     display: grid;
     justify-content: center;
     margin-bottom: 2.5rem;
- }
+}
 
- #presentation>div>p {
+#presentation>div>p {
     font-size: 1.5rem;
     text-align: justify;
     max-width: 35rem;
