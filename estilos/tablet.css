@@ -16,7 +16,8 @@
     --bgBox01: #3f3f3f4f;
     --bgBox02: #111111;
 
-
+    --bgHv01: #3f3f3fd5;
+    --bgHv02: #5900d5;
 
     --tt01: #F5F5F5;
     --tt02: #9E9E9E;
@@ -65,30 +66,28 @@ body::-webkit-scrollbar {
     height: 0rem;
 }
 
+/*-------Header: header-------*/
+
 header#header {
     display: flex;
-    padding: 1rem;
-    justify-content: end;
-    font-size: 3rem;
-    z-index: 1;
+    height: 5rem;
+    justify-content: flex-end;
+    margin: 2rem 0rem 2rem 0rem;
 }
 
 nav {
-    display: flex;
-    padding: .5rem;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3.2rem;
+    height: 100%;
 }
 
 nav>a {
-    background-color: var(--bg02);
+    background-color: var(--bg03);
     color: var(--tt01);
-
     font-weight: 600;
-
     padding: 1rem 2rem;
-    margin-right: 5rem;
     border-radius: 2rem;
+    margin-right: 5rem;
 }
 
 #contact {
@@ -96,23 +95,12 @@ nav>a {
 }
 
 #contact:hover {
-    background-color: #5900d5;
+    background-color: var(--bgHv02);
 }
 
-#about {
-    background-color: var(--bg03);
-}
-
-#about:hover {
-    background-color: #3f3f3fd5;
-}
-
-#projetcs {
-    background-color: var(--bg03);
-}
-
+#about:hover,
 #projects:hover {
-    background-color: #3f3f3fd5;
+    background-color: var(--bgHv01);
 }
 
 /*-------section: principalContainer-------*/
