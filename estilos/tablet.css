@@ -47,7 +47,7 @@ a {
 #technicalSkills,
 #contactContainer {
     background: var(--bgBox02);
-    max-width: 70vw;
+    max-width: 55vw;
     min-width: 45rem;
     margin: auto;
     margin-bottom: 2.5rem;
@@ -106,26 +106,29 @@ nav>a {
 /*-------section: principalContainer-------*/
 main#principalContainer {
     position: relative;
+    height: 100vh;
 }
 
 #principalSection {
-    height: 83vh;
+    height: 65rem;;
     display: grid;
     align-items: center;
     align-content: stretch;
 }
 
 #bgPhoto01 {
-    position: relative;
-    background: url(../imagens/profile-preto-branco333.png) right top 3rem no-repeat;
-    background-size: 45vw;
-    height: 50rem;
+    position: absolute;
+    background: url(../imagens/profile-preto-branco333.png) right top no-repeat;
+    background-size: 40vw;
+    height: 55rem;
     z-index: 1;
+    width: 45rem;
+    right: 0;
 }
 
 #groupBox {
     position: relative;
-    bottom: 35rem;
+    bottom: 10rem;
     left: 2rem;
     width: 50vw;
     min-width: 32rem;
@@ -140,13 +143,13 @@ section>fieldset {
 }
 
 fieldset>legend {
-    font-size: 4.3rem;
+    font-size: 5rem;
     font-family: var(--font02);
     color: var(--tt01);
 }
 
 fieldset>h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: var(--font01);
     text-decoration: underline;
     text-align: left;
@@ -154,9 +157,9 @@ fieldset>h2 {
 }
 
 fieldset>div>p {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 500;
-    max-width: 42vw;
+    max-width: 45vw;
 }
 
 #social {
@@ -185,22 +188,15 @@ fieldset>div>p {
  }
 
  #presentation>div>p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: justify;
-    max-width: 35rem;
+    max-width: 40rem;
 }
 
 #technicalSkills>div>p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: justify;
-    max-width: 35rem;
-    margin: auto;
-}
-
-div#TechnicalSkills>p {
-    font-size: 1.7rem;
-    text-align: justify;
-    max-width: 35rem;
+    max-width: 40rem;
     margin: auto;
 }
 
