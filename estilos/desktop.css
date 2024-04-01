@@ -112,7 +112,7 @@ nav>a {
 }
 
 #principalSection {
-    height: 70rem;;
+    height: 70rem;
     display: grid;
     align-items: center;
     align-content: stretch;
@@ -121,7 +121,7 @@ nav>a {
 #bgPhoto01 {
     position: absolute;
     background: url(../imagens/background-color-lines.png) top right no-repeat;
-    height: 65rem;
+    height: 60rem;
     background-size: 55vw;
     z-index: 0;
     width: 100%;
@@ -136,7 +136,7 @@ nav>a {
 
 #groupBox {
     position: relative;
-    bottom: 15rem;
+    bottom: 5rem;
     left: 4rem;
     width: 40vw;
     min-width: 39rem;
@@ -194,7 +194,7 @@ section#aboutMeContainer {
     justify-items: center;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: flex-start;
 }
 
 #presentation {
