@@ -110,7 +110,7 @@ main#principalContainer {
 }
 
 #principalSection {
-    height: 65rem;;
+    height: 55rem;;
     display: grid;
     align-items: center;
     align-content: stretch;
@@ -231,7 +231,7 @@ section#projectsContainer{
     height: 40rem;
     width: 30rem;
     border-radius: 2rem;
-    transition: width 0.5s linear;
+    transition: width, height, .2s linear;
 }
 
 .highlightsBoxes:hover {
