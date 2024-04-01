@@ -108,16 +108,15 @@ nav>a {
 /*-------section: principalContainer-------*/
 main#principalContainer {
     position: relative;
-    height: 100vh;
 }
 
 #principalSection {
     height: 60rem;
     display: grid;
-    align-items: start;
     justify-items: center;
     justify-content: center;
-    align-content: space-evenly;
+    align-content: stretch;
+    align-items: center;
 }
 
 #bgPhoto01 {
@@ -133,8 +132,6 @@ main#principalContainer {
     display: flex;
     place-items: center;
     max-width: 34rem;
-    font-size: 4rem;
-    margin: auto;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -168,6 +165,7 @@ fieldset>div>p {
 div#social {
     position: relative;
     display: flex;
+    align-items: center;
 }
 
 div#social>a {
