@@ -288,6 +288,9 @@ section#projectsContainer>h2 {
     align-content: center;
     position: absolute;
     width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     bottom: 0;
 }
 
