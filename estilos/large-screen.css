@@ -119,6 +119,13 @@ main#principalContainer {
     align-content: stretch;
 }
 
+#lineDivisor {
+    display: inline-block;
+    width: 90%;
+    padding-bottom: 1rem;
+    color: transparent;
+}
+
 #bgPhoto01 {
     position: absolute;
     background: url(../imagens/background-color-lines.png) top right 2.5rem no-repeat;

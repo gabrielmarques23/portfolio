@@ -115,6 +115,13 @@ main#principalContainer {
     align-items: center;
 }
 
+#lineDivisor {
+    display: inline-block;
+    width: 90%;
+    padding-bottom: 1rem;
+    color: transparent;
+}
+
 #bgPhoto01 {
     position: absolute;
     background: url(../imagens/profile-preto-branco333.png) top right 5rem no-repeat;

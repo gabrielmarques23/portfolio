@@ -119,6 +119,13 @@ main#principalContainer {
     align-items: center;
 }
 
+#lineDivisor {
+    display: inline-block;
+    width: 90%;
+    padding-bottom: 1rem;
+    color: transparent;
+}
+
 #bgPhoto01 {
     background: url(../imagens/profile-cinza-preto.png) center center no-repeat;
     background-size: contain;
