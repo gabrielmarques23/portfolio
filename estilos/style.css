@@ -69,7 +69,7 @@ body::-webkit-scrollbar {
 /*-------Header: header-------*/
 header#header {
     height: 5rem;
-    margin: 1rem 0rem 0rem 0rem;
+    margin: 1rem 0rem 1rem 0rem;
 }
 
 nav {
@@ -112,10 +112,10 @@ main#principalContainer {
 
 #principalSection {
     height: 60rem;
-    display: grid;
-    justify-items: center;
-    justify-content: center;
-    align-content: stretch;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -124,14 +124,15 @@ main#principalContainer {
     background-size: contain;
     height: 27rem;
     width: 27rem;
+    margin: 2rem;
     border-radius: 100%;
     position: relative;
 }
 
 #groupBox {
+    max-width: 34rem;
     display: flex;
     place-items: center;
-    max-width: 34rem;
     justify-content: center;
     flex-wrap: wrap;
 }
