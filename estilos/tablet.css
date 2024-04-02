@@ -43,7 +43,7 @@ a {
     color: var(--tt03);
 }
 
-#aboutMeContainer,
+#presentation,
 #technicalSkills,
 #contactContainer {
     background: var(--bgBox02);
@@ -110,26 +110,25 @@ main#principalContainer {
 }
 
 #principalSection {
-    height: 55rem;;
+    height: 55rem;
     display: grid;
     align-items: center;
-    align-content: stretch;
 }
 
 #bgPhoto01 {
     position: absolute;
-    background: url(../imagens/profile-preto-branco333.png) right top no-repeat;
+    background: url(../imagens/profile-preto-branco333.png) top right 5rem no-repeat;
     background-size: 40vw;
     height: 55rem;
-    z-index: 1;
     width: 45rem;
     right: 0;
+    z-index: 1;
 }
 
 #groupBox {
     position: relative;
     bottom: 5rem;
-    left: 2rem;
+    left: 4rem;
     width: 50vw;
     min-width: 32rem;
     transition: width 0.5s linear;
@@ -175,22 +174,31 @@ fieldset>div>p {
 
 /*-------section: aboutMeContainer-------*/
 
-#aboutMeContainer>div {
-    position: relative;
-    max-width: 30rem;
+section#aboutMeContainer {
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
 
 #presentation {
-    position: relative;
+    width: 40rem;
     display: grid;
     justify-content: center;
-    margin-bottom: 3.5rem;
- }
+    transition: width, height, .3s linear;
+}
 
- #presentation>div>p {
+#presentation>div>p {
     font-size: 2rem;
     text-align: justify;
     max-width: 40rem;
+}
+
+#technicalSkills {
+    width: 40rem;
+    display: grid;
+    justify-content: center;
+    transition: width, height, .3s linear;
 }
 
 #technicalSkills>div>p {
@@ -202,11 +210,11 @@ fieldset>div>p {
 
 /*-------section: projectsContainer-------*/
 
-section#projectsContainer{
+section#projectsContainer {
     width: 100%;
     background: var(--bgBox02);
     margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;  
+    padding-bottom: 1.5rem;
 }
 
 #projectsContainer>h2 {
