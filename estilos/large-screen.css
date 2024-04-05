@@ -7,10 +7,12 @@
     --font01: 'MuseoModerno', sans-serif;
     --font02: 'Sometype Mono', monospace;
 
+    --color1: #6200EE;
+
+
     --bg01: #191919;
     --bg02: #3f3f3f;
     --bg03: #424242;
-    --bg04: #6200EE;
 
     --bgBox01: #3f3f3f4f;
     --bgBox02: #111111;
@@ -20,7 +22,6 @@
 
     --tt01: #F5F5F5;
     --tt02: #9E9E9E;
-    --tt03: #6200EE;
 }
 
 * {
@@ -34,14 +35,19 @@ a {
     text-decoration: none;
 }
 
+.h2span{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
 .h2config {
     position: relative;
-    text-align: center;
     font-size: 3rem;
     font-family: var(--font01);
-    color: var(--tt03);
-    border-bottom: 0.2rem solid var(--bg04);
-    width: 16rem;
+    color: var(--color1);
+    border-top: 0.2rem solid var(--color1);
+    display: inline-block;
 }
 
 #presentation,
@@ -91,7 +97,7 @@ nav>a {
 }
 
 #contact {
-    background-color: var(--bg04);
+    background-color: var(--color1);
 }
 
 #contact:hover {
@@ -102,7 +108,8 @@ nav>a {
     background-color: var(--bg03);
 }
 
-#about:hover, #projects:hover {
+#about:hover,
+#projects:hover {
     background-color: #3f3f3fd5;
 }
 
@@ -151,7 +158,7 @@ main#principalContainer {
     bottom: 10rem;
     left: 5rem;
     width: 40vw;
-    max-width: 50rem;
+    max-width: 55rem;
     transition: width 0.4s linear;
 }
 
@@ -173,13 +180,13 @@ fieldset>h2 {
     font-family: var(--font01);
     text-decoration: underline;
     text-align: left;
-    color: var(--tt03);
+    color: var(--color1);
 }
 
 fieldset>div>p {
     font-size: 2.5rem;
     font-weight: 500;
-    max-width: 40rem;
+    max-width: 45rem;
 }
 
 #social {
@@ -206,20 +213,7 @@ section#aboutMeContainer {
     align-content: center;
 }
 
-#presentation {
-    width: 57rem;
-    display: grid;
-    justify-items: center;
-    justify-content: center;
-    transition: width, height, .3s linear;
-}
-
-#presentation>div>p {
-    font-size: 2rem;
-    text-align: justify;
-    max-width: 40rem;
-}
-
+#presentation,
 #technicalSkills {
     width: 57rem;
     display: grid;
@@ -228,6 +222,7 @@ section#aboutMeContainer {
     transition: width, height, .3s linear;
 }
 
+#presentation>div>p,
 #technicalSkills>div>p {
     font-size: 2rem;
     text-align: justify;
@@ -236,19 +231,12 @@ section#aboutMeContainer {
 }
 
 /*-------section: projectsContainer-------*/
-#projectsContainer {
+section#projectsContainer {
     width: 100%;
     text-align: center;
     background: var(--bgBox02);
     margin-bottom: 2.5rem;
     padding-bottom: 1.5rem;
-}
-
-section#projectsContainer>h2 {
-    display: inline;
-    font-size: 3rem;
-    font-family: var(--font01);
-    color: var(--tt03);
 }
 
 #boxes {
