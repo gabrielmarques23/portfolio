@@ -43,7 +43,20 @@ a {
     text-decoration: none;
 }
 
-.h2span{
+body,
+html {
+    background-color: var(--bg01);
+    font-family: var(--font03);
+    color: var(--tt01);
+}
+
+body::-webkit-scrollbar {
+    width: 0rem;
+    height: 0rem;
+}
+
+
+.h2span {
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -58,7 +71,7 @@ a {
     display: inline-block;
 }
 
-.boldTxt{
+.boldTxt {
     font-size: var(--szTxtPrincipalSec);
     font-weight: 600;
 }
@@ -73,18 +86,6 @@ a {
     margin-bottom: 2.5rem;
     border-radius: 2rem;
     padding-bottom: 1.5rem;
-}
-
-body, html {
-    background-color: var(--bg01);
-    font-family: var(--font03);
-    color: var(--tt01);
-
-}
-
-body::-webkit-scrollbar {
-    width: 0rem;
-    height: 0rem;
 }
 
 /*-------Header: header-------*/
@@ -137,11 +138,16 @@ main#principalContainer {
     align-content: stretch;
 }
 
+div.divisor {
+    position: relative;
+    width: 100%;
+    display: block;
+    bottom: 5rem
+}
+
 #lineDivisor {
-    display: inline-block;
+    display: inline;
     width: 90%;
-    padding-bottom: 1rem;
-    color: transparent;
 }
 
 #bgPhoto01 {
