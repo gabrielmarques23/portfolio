@@ -259,7 +259,7 @@ section#langSymbols {
     justify-content: center;
 }
 
-.square {
+.squareLang {
     background: var(--bg05);
     height: 10rem;
     width: 10rem;
@@ -268,7 +268,7 @@ section#langSymbols {
     border: .2rem solid var(--bg02);
 }
 
-.square:hover{
+.squareLang:hover{
     filter: contrast(0);
 }
 
