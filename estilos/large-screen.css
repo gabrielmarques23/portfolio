@@ -252,6 +252,26 @@ section#aboutMeContainer {
     margin: auto;
 }
 
+section#langSymbols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+
+.square {
+    background: var(--bg05);
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: .2rem solid var(--bg02);
+}
+
+.square:hover{
+    filter: contrast(0);
+}
+
 /*-------section: projectsContainer-------*/
 section#projectsContainer {
     width: 100%;
@@ -272,8 +292,8 @@ section#projectsContainer {
     background-color: var(--bgBox01);
     margin: 3rem 5rem;
     height: 50rem;
-    min-width: 28vw;
-    max-width: 33rem;
+    width: 35vw;
+    max-width: 38rem;
     border-radius: 2rem;
     transition: width, height, .2s linear;
 }
