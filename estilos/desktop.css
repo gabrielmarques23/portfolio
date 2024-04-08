@@ -247,6 +247,26 @@ section#aboutMeContainer {
     margin: auto;
 }
 
+section#langSymbols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+
+.squareLang {
+    background: var(--bg05);
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: .2rem solid var(--bg02);
+}
+
+.squareLang:hover{
+    filter: contrast(0);
+}
+
 /*-------section: projectsContainer-------*/
 section#projectsContainer {
     width: 100%;
