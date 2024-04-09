@@ -45,6 +45,10 @@ a {
     text-decoration: none;
 }
 
+ul{
+    list-style: none;
+}
+
 body,
 html {
     background-color: var(--bg01);
@@ -52,9 +56,21 @@ html {
     color: var(--tt01);
 }
 
-body::-webkit-scrollbar {
-    width: 0rem;
-    height: 0rem;
+::-webkit-scrollbar {
+    width:10px; /
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6300ee6e;
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg01);
+}
+
+::-webkit-scrollbar-track-piece:end {
+    background-color:  var(--bg01);
 }
 
 #headerDiv{
@@ -297,7 +313,7 @@ section#projectsContainer {
 .highlightsBoxes {
     position: relative;
     background-color: var(--bgBox01);
-    margin: 3rem 5rem;
+    margin: 3rem 3rem;
     height: 50rem;
     width: 35vw;
     max-width: 38rem;
