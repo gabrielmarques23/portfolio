@@ -57,6 +57,10 @@ body::-webkit-scrollbar {
     height: 0rem;
 }
 
+#headerDiv{
+    padding: 1rem 0rem;
+}
+
 .h2span {
     display: inline-block;
     text-align: center;
@@ -94,7 +98,8 @@ header#header {
     display: flex;
     height: 5rem;
     justify-content: flex-end;
-    margin: 1rem 0rem 1rem 0rem;
+    max-width: 1440px;
+    margin: auto;
 }
 
 nav {
@@ -132,7 +137,8 @@ nav>a {
 /*-------section: principalContainer-------*/
 main#principalContainer {
     position: relative;
-    height: 100vh;
+    max-width: 1440px;
+    margin: auto;
 }
 
 #principalSection {
@@ -275,7 +281,6 @@ section#langSymbols {
 /*-------section: projectsContainer-------*/
 section#projectsContainer {
     width: 100%;
-    text-align: center;
     background: var(--bgBox02);
     margin-bottom: 2.5rem;
     padding-bottom: 1.5rem;
@@ -285,6 +290,8 @@ section#projectsContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: auto;
+    max-width: 100rem;
 }
 
 .highlightsBoxes {
