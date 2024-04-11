@@ -28,7 +28,7 @@
     --tt02: #9e9e9e00;
 
     --szTxtHeader: 1.8rem;
-    --szTxtPrincipalSec: 2rem;
+    --szTxtPrincipalSec: 1.9rem;
     --szTxtAboutMeSec: var(--szTxtPrincipalSec);
     --szTxtProjectSec: 1.5rem;
     --szTxtContactSec: 1.7rem;
@@ -94,6 +94,18 @@ html {
     padding: 0 15px;
 }
 
+div.divisor {
+    position: relative;
+    width: 100%;
+    display: block;
+    bottom: 3rem
+}
+
+#lineDivisor {
+    display: inline;
+    width: 90%;
+}
+
 #presentation,
 #technicalSkills,
 #contactContainer {
@@ -103,7 +115,7 @@ html {
     margin: auto;
     margin-bottom: 2.5rem;
     border-radius: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 3.5rem;
 }
 
 /*-------Header: header-------*/
@@ -136,7 +148,7 @@ li>a {
     font-size: var(--szTxtHeader);
     font-weight: 600;
     border-radius: 2rem;
-    padding: 1rem 1.5rem;
+    padding: .9rem 1.5rem;
     height: 100%;
     position: relative;
     display: block;
@@ -147,7 +159,7 @@ li>a {
 }
 
 #contact:hover {
-    background-color: #5900d5;
+    background-color: var(--bgHv02);
 }
 
 #about,
@@ -169,54 +181,47 @@ main#principalContainer {
 }
 
 #principalSection {
-    height: 70rem;
     display: grid;
     align-items: center;
     align-content: stretch;
 }
 
-div.divisor {
-    position: relative;
-    width: 100%;
-    display: block;
-    bottom: 3rem
-}
-
-#lineDivisor {
-    display: inline;
-    width: 90%;
+.princSecContent{
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #bgPhoto01 {
-    position: absolute;
-    background: url(../imagens/background-color-lines.png) top right 2.5rem no-repeat;
-    background-size: 66rem;
-    height: 66rem;
-    width: 68rem;
-    right: 0;
+    position: relative;
+    background: url(../imagens/background-color-lines.png) top 5rem left no-repeat;
+    background-size: 60rem;
+    height: 65rem;
+    width: 64rem;
     z-index: 0;
 }
 
 #bgPhoto02image {
     position: absolute;
     background: url(../imagens/profile-preto-branco333.png) center right 10rem no-repeat;
-    background-size: 42rem;
+    background-size: 40rem;
     height: 100%;
-    width: 65rem;
-    right: 0;
+    width: 100%;
     z-index: 1;
 }
 
 #groupBox {
     position: relative;
-    bottom: 10rem;
+    bottom: 5rem;
     left: 5rem;
-    width: 45vw;
+    width: 42vw;
     max-width: 55rem;
     transition: width 0.4s linear;
 }
 
-section>fieldset {
+div>fieldset {
     border-radius: 1.5rem;
     border: 2px solid #757575;
     padding: 0rem 3rem 1rem 1rem;
@@ -281,7 +286,7 @@ section#aboutMeContainer {
     font-size: var(--szTxtAboutMeSec);
     font-weight: 200;
     text-align: left;
-    max-width: 40rem;
+    max-width: 45rem;
     margin: auto;
 }
 
@@ -296,7 +301,7 @@ section#langSymbols {
     background: var(--bg05);
     height: 10rem;
     width: 10rem;
-    margin: 1rem;
+    margin: .7rem;
     border-radius: 1rem;
     border: .2rem solid var(--bg02);
 }
