@@ -25,8 +25,8 @@
     --tt01: #eeeeee;
     --tt02: #9e9e9e00;
 
-    --szTxtHeader: 2.9rem;
-    --szTxtPrincipalSec: 1.9rem;
+    --szTxtHeader: 1.7rem;
+    --szTxtPrincipalSec: 1.8rem;
     --szTxtAboutMeSec: var(--szTxtPrincipalSec);
     --szTxtProjectSec: 1.5rem;
     --szTxtContactSec: 1.7rem;
@@ -75,67 +75,6 @@ body::-webkit-scrollbar {
     font-weight: 600;
 }
 
-#presentation,
-#technicalSkills,
-#contactContainer {
-    background: var(--bgBox02);
-    max-width: 55vw;
-    min-width: 45rem;
-    margin: auto;
-    margin-bottom: 2.5rem;
-    border-radius: 2rem;
-    padding-bottom: 1.5rem;
-}
-
-/*-------Header: header-------*/
-
-header#header {
-    display: flex;
-    height: 5rem;
-    justify-content: flex-end;
-    margin: 2rem 0rem 2rem 0rem;
-}
-
-nav {
-    text-align: center;
-    font-size: var(--szTxtHeader);
-    height: 100%;
-}
-
-nav>a {
-    background-color: var(--bg03);
-    color: var(--tt01);
-    font-weight: 600;
-    padding: 1rem 2rem;
-    border-radius: 2rem;
-    margin-right: 5rem;
-}
-
-#contact {
-    background-color: var(--color1);
-}
-
-#contact:hover {
-    background-color: var(--bgHv02);
-}
-
-#about:hover,
-#projects:hover {
-    background-color: var(--bgHv01);
-}
-
-/*-------section: principalContainer-------*/
-main#principalContainer {
-    position: relative;
-    height: 100vh;
-}
-
-#principalSection {
-    height: 55rem;
-    display: grid;
-    align-items: center;
-}
-
 div.divisor {
     position: relative;
     width: 100%;
@@ -148,11 +87,98 @@ div.divisor {
     width: 90%;
 }
 
+#presentation,
+#technicalSkills,
+#contactContainer {
+    background: var(--bgBox02);
+    max-width: 55vw;
+    min-width: 45rem;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    border-radius: 2rem;
+    padding-bottom: 3.5rem;
+}
+
+/*-------Header: header-------*/
+
+header#header {
+    position: fixed;
+    width: 100%;
+    padding: 0.5rem;
+    top: 0px;
+    z-index: 2;
+}
+
+.headerDiv {
+    height: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+}
+
+li>a {
+    color: var(--tt01);
+    font-size: var(--szTxtHeader);
+    font-weight: 600;
+    border-radius: 2rem;
+    padding: .9rem 1.5rem;
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
+#contact {
+    background-color: var(--color1);
+}
+
+#contact:hover {
+    background-color: var(--bgHv02);
+}
+
+#about,
+#projects {
+    background-color: var(--bg03);
+}
+
+#about:hover,
+#projects:hover {
+    background-color: var(--bgHv01);
+}
+
+/*-------section: principalContainer-------*/
+main#principalContainer {
+    position: relative;
+    height: 100vh;
+    margin: auto;
+}
+
+#principalSection {
+    display: grid;
+    align-items: center;
+    align-content: stretch;
+}
+
+.princSecContent{
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #bgPhoto01 {
-    position: absolute;
-    background: url(../imagens/profile-preto-branco333.png) top right 5rem no-repeat;
+    position: relative;
+    background: url(../imagens/profile-preto-branco333.png) center right 5rem no-repeat;
     background-size: 40vw;
-    height: 55rem;
+    height: 60rem;
     width: 45rem;
     right: 0;
     z-index: 1;
@@ -160,18 +186,17 @@ div.divisor {
 
 #groupBox {
     position: relative;
-    bottom: 5rem;
     left: 4rem;
     width: 50vw;
     min-width: 32rem;
     transition: width 0.5s linear;
 }
 
-section>fieldset {
+div>fieldset {
     border-radius: 1.5rem;
     border: 2px solid #757575;
     padding: 0rem 3rem 1rem 1rem;
-    text-align: justify;
+    text-align: left;
 }
 
 fieldset>legend {
