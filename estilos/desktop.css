@@ -255,14 +255,13 @@ section#aboutMeContainer {
     justify-items: center;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #presentation,
 #technicalSkills {
     width: 53rem;
-    display: grid;
-    justify-items: center;
-    justify-content: center;
     transition: width, height, .3s linear;
 }
 
@@ -275,7 +274,7 @@ section#aboutMeContainer {
     margin: auto;
 }
 
-section#langSymbols {
+#langSymbols {
     display: flex;
     flex-wrap: wrap;
     justify-items: center;
@@ -298,7 +297,6 @@ section#langSymbols {
 /*-------section: projectsContainer-------*/
 section#projectsContainer {
     width: 100%;
-    text-align: center;
     background: var(--bgBox02);
     margin-bottom: 2.5rem;
     padding-bottom: 1.5rem;
@@ -313,7 +311,7 @@ section#projectsContainer {
 .highlightsBoxes {
     position: relative;
     background-color: var(--bg05);
-    margin: 3rem 5rem;
+    margin: 3rem;
     height: 45rem;
     width: 33vw;
     max-width: 35rem;

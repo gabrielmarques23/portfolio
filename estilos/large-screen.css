@@ -290,7 +290,7 @@ section#aboutMeContainer {
     margin: auto;
 }
 
-section#langSymbols {
+#langSymbols {
     display: flex;
     flex-wrap: wrap;
     justify-items: center;
