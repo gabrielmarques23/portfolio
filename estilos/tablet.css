@@ -256,6 +256,26 @@ section#aboutMeContainer {
     margin: auto;
 }
 
+#langSymbols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+
+.squareLang {
+    background: var(--bg05);
+    height: 18rem;
+    width: 18rem;
+    margin: 1.5rem;
+    border-radius: 1rem;
+    border: .2rem solid var(--bg02);
+}
+
+.squareLang:hover{
+    filter: contrast(0);
+}
+
 /*-------section: projectsContainer-------*/
 
 section#projectsContainer {
@@ -267,15 +287,14 @@ section#projectsContainer {
 
 #boxes {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .highlightsBoxes {
     position: relative;
-    display: grid;
     background-color: var(--bg05);
-    margin: 2rem 2rem;
+    margin: 2rem;
     height: 40rem;
     width: 30rem;
     border-radius: 2rem;
