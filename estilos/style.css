@@ -98,6 +98,26 @@ div.divisor {
     border-radius: 2rem;
     padding-bottom: 3rem;
 }
+    
+.myBtn {
+    position: fixed;
+    display: block;
+    background-color: var(--bg03);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .3rem;
+    margin: 1rem;
+    border-radius: 50%;
+    top: 80%;
+    right: 0;
+}
+
+.myBtn:hover{
+    transform: translate(0rem, .4rem);
+    transition: .2s;
+    border: .2rem solid var(--tt01);
+}
 
 /*-------Header: header-------*/
 header#header {
@@ -135,7 +155,7 @@ li>a {
     position: relative;
 }
 
-.LogoGM{
+.LogoGM {
     position: absolute;
     margin: 1rem;
     left: 0;
@@ -162,7 +182,7 @@ main#principalContainer {
     align-content: stretch;
 }
 
-.princSecContent{
+.princSecContent {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -262,9 +282,10 @@ section#aboutMeContainer {
     border: .2rem solid var(--bg02);
 }
 
-.squareLang:hover{
+.squareLang:hover {
     filter: contrast(0);
 }
+
 /*-------section: projectsContainer-------*/
 
 #boxes {
