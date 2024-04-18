@@ -127,6 +127,10 @@ header#header {
     z-index: 2;
 }
 
+.nav-bar-hamburger{
+    display: none;
+}
+
 .headerDiv {
     max-width: 1440px;
     height: 100%;

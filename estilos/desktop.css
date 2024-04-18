@@ -114,6 +114,10 @@ header#header {
     z-index: 2;
 }
 
+.nav-bar-hamburger{
+    display: none;
+}
+
 .headerDiv {
     height: 100%;
     display: flex;
