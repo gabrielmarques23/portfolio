@@ -18,7 +18,6 @@
     }
 }
 
-
 :root {
     --font01: 'MuseoModerno', sans-serif;
     --font02: 'Sometype Mono', monospace;
@@ -139,17 +138,73 @@ header#header {
     padding: 0.5rem;
 }
 
+.nav-bar-hamburger {
+    display: grid;
+    position: absolute;
+    right: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.click-open-menu {
+    position: relative;
+    display: block;
+    height: 5rem;
+    width: 5rem;
+}
+
+.btnHamb {
+    background: transparent;
+    border: none;
+    width: 5rem;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+    top: .5rem;
+}
+
+.click-close-menu {
+    display: block;
+    position: absolute;
+}
+
+.btnClose {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+
+.changeNav {
+    display: none;
+}
+
+
+
 .navHeaderDiv {
     background: var(--bg02);
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
     width: 25vw;
-    min-width: 14rem;
+    min-width: 15rem;
     border-radius: 1rem;
     position: absolute;
     right: 0;
     top: 0;
     margin: 1rem;
     z-index: 5;
+    display: none;
+}
+
+.oppenHeaderNav {
+    display: block;
+}
+
+.hiddenHeaderNav {
+    display: none;
 }
 
 ul {
