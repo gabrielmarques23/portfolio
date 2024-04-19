@@ -4,6 +4,18 @@ let btnCloseNav = document.querySelector('button.btnClose');
 
 let headerNav = document.querySelector('.navHeaderDiv');
 
+function clickToOpenNav() {
+    btnOpenNav.classList.add('changeNav');
+    btnCloseNav.classList.remove('changeNav');
+    openNav()
+};
+
+function clickToCloseNav() {
+    btnOpenNav.classList.remove('changeNav');
+    btnCloseNav.classList.add('changeNav');
+    hiddenNav()
+};
+
 function openNav() {
     headerNav.classList.remove('hiddenHeaderNav');
     headerNav.classList.add('.oppenHeaderNav');
@@ -13,17 +25,6 @@ function hiddenNav() {
     headerNav.classList.remove('.oppenHeaderNav');
 }
 
-btnOpenNav.addEventListener("click", function () {
-    btnOpenNav.classList.add('changeNav');
-    btnCloseNav.classList.remove('changeNav');
-    openNav()
-});
-
-btnCloseNav.addEventListener("click", function () {
-    btnOpenNav.classList.remove('changeNav');
-    btnCloseNav.classList.add('changeNav');
-    hiddenNav()
-});
 
 //Button to Scroll to Top
 let clickBtnToTop = document.querySelector('button.myBtnToUp');
