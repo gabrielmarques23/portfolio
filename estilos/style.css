@@ -4,20 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-@keyframes moveBackground {
-    0% {
-        transform: translateY(3px);
-    }
-
-    50% {
-        transform: translateY(-3px);
-    }
-
-    100% {
-        transform: translateY(3px);
-    }
-}
-
 :root {
     --font01: 'MuseoModerno', sans-serif;
     --font02: 'Sometype Mono', monospace;
@@ -130,6 +116,20 @@ div.divisor {
 .myBtnToUp:hover {
     background-color: var(--bg03);
     transition: .3s linear;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateY(3px);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
 }
 
 /*-------Header: header-------*/
