@@ -104,6 +104,40 @@ div.divisor {
     padding-bottom: 3.5rem;
 }
 
+.myBtnToUp {
+    position: fixed;
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .3rem;
+    margin: 1rem;
+    border-radius: 50%;
+    top: 80%;
+    right: 0;
+    animation: moveBackground 2s linear infinite;
+}
+
+.myBtnToUp:hover {
+    background-color: var(--bg03);
+    transition: .3s linear;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateY(3px);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}
+
 /*-------Header: header-------*/
 
 header#header {
