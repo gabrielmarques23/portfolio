@@ -113,11 +113,6 @@ div.divisor {
     animation: moveBackground 2s linear infinite;
 }
 
-.myBtnToUp:hover {
-    background-color: var(--bg03);
-    transition: .3s linear;
-}
-
 @keyframes moveBackground {
     0% {
         transform: translateY(3px);
@@ -138,49 +133,12 @@ header#header {
     padding: 0.5rem;
 }
 
-.nav-bar-hamburger {
-    display: grid;
+.nav-bar-hamburger{
     position: absolute;
-    right: 0;
     top: 0;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-}
-
-.click-open-menu {
-    position: relative;
-    display: block;
-    height: 5rem;
-    width: 5rem;
-}
-
-.btnHamb {
-    background: transparent;
-    border: none;
-    width: 5rem;
-    cursor: pointer;
+    right: 0;
+    margin: 1rem;
     z-index: 10;
-    position: relative;
-    top: .5rem;
-}
-
-.click-close-menu {
-    display: block;
-    position: absolute;
-}
-
-.btnClose {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 10;
-    position: relative;
-}
-
-.changeNav {
-    display: none;
 }
 
 .navHeaderDiv {
@@ -194,16 +152,63 @@ header#header {
     top: 0;
     margin: 1rem;
     z-index: 5;
-    display: none;
 }
 
-.oppenHeaderNav {
+.openHeaderNav{
     display: block;
 }
 
 .hiddenHeaderNav {
     display: none;
 }
+
+#checkbox {
+    display: none;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition-duration: .3s;
+  }
+  
+  .bars {
+    width: 100%;
+    height: .5rem;
+    background-color: var(--color1);
+    border-radius: .5rem;
+    transition-duration: .3s;
+  }
+  
+  #checkbox:checked + .toggle .bars {
+    margin-left: 11.5px;
+  }
+  
+  #checkbox:checked + .toggle #bar2 {
+    transform: rotate(135deg);
+    margin-left: 0;
+    transform-origin: center;
+    transition-duration: .3s;
+  }
+  
+  #checkbox:checked + .toggle #bar1 {
+    transform: rotate(45deg);
+    transition-duration: .3s;
+    transform-origin: left center;
+  }
+  
+  #checkbox:checked + .toggle #bar3 {
+    transform: rotate(-45deg);
+    transition-duration: .3s;
+    transform-origin: left center;
+  }
 
 ul {
     list-style: none;

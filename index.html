@@ -31,23 +31,15 @@
             </div>
 
             <div class="nav-bar-hamburger">
-
-                <div class="click-open-menu">
-                    <button class="btnHamb" onclick="clickToOpenNav()">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB20lEQVR4nO2WWW7bMBRFs4P0v+mmEqDDBryBDitouoB2Y/4iTUlPsqzRmqxZlEjhBSYQw67jjxZN/cMDHOj3Ary6eDc3Go1G8+cg4jcp5VIIAXvHcQTOOfR9D13XQdu20DSNsqoqKMsSiqKAPM8hyzJlmqaQJAlEUQRhGEIQBOD7vtLzPNhsNuA4Dti2Dc+YprlkjH29FOrTPM8opUQhBI7jiJxzHIYB+77HruuwbVtsmgarqsKyLHG322FRFJjnOWZZhmmaYpIkGMcxRlGEYRhiEATo+z56noebzQbX6zU6joO2bSMAoGVZaJomGoaBq9Xqw1mweZ5/XTkUEkJ+ngWTUn68ZihK6f77/sXn5Jx/GYZh+dqdsixr3yswDAMopUAIWVJKP//Fb6HR/BsQ8Y0Q4kFKuZim6eAwDMqu65R1XSvLsjyY5/kiTdODcRwrwzBUep6ndF33oG3bSgB4AIDbS6HeSSmD5y2bpulkOo5no67rk+n4fTa22+3JdBzPhuu6J9NxNBuBYRh3Z8Hmef5xxVDIGNvv2ONZMCHE45VDISHk+0tPeTdNk3/FUD5j7O2lnt1yzu9fs+iWZSkZY0pK6YIQcn+x/BrN/0Cf1o4+rVN9Wms0Gs3NKU/V9nuaqKDzMwAAAABJRU5ErkJggg==">
-                    </button>
-                </div>
-
-                <div class="click-close-menu">
-                    <button class="btnClose changeNav" onclick="clickToCloseNav()">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtUlEQVR4nO2WSwqEMBBEvYSi9z9OXI0Lj/NkUJDJwv6kBmHGgqy0eN1tUqbrHv2lgAGYjzU0+IvbD/TAi1MrMAWgOT97pbUWT+VHp+93a5Us2IRfQN3gvhoV1tgcntEER+EyaAQuhzq/22I8Cx/DDxldaTttgOugAbgeGgC7E+4bo9bAyW2uNjh3HCcc4ZCJ10tFEkkGJxGDEjg3/hbnKNQBL9mrizuRmvzslZfQZU3of/Qb2gDIApP3EFwGCQAAAABJRU5ErkJggg==">
-                    </button>
-                </div>
-
+                <input type="checkbox" id="checkbox" onclick="toggleNav()">
+                    <label for="checkbox" class="toggle">
+                        <div class="bars" id="bar1"></div>
+                        <div class="bars" id="bar2"></div>
+                        <div class="bars" id="bar3"></div>
+                    </label>
             </div>
 
-            <nav class="navHeaderDiv hiddenHeaderNav oppenHeaderNav">
+            <nav class="navHeaderDiv hiddenHeaderNav">
                 <ul>
                     <li><a href="#" id="about">Sobre mim</a></li>
                     <li><a href="#" id="projects">Projetos</a></li>
