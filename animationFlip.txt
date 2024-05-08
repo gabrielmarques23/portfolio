@@ -1,0 +1,150 @@
+JAVASCRIPT
+
+let flip = document.getElementById('flip');
+
+flip.addEventListener("click", function() {
+     flip.classList.toggle("active");
+		console.log(flip.classList)
+    });
+
+==============================================
+
+
+
+
+CSS
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 4px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: blue;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.map{
+	background:#2196F3;
+	position:absolute;
+	svg{
+		fill:#1F8DE4;
+	}
+}
+.pin {
+	position:absolute;
+	z-index:1;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:3px;
+	cursor:pointer;
+	
+	svg {
+		fill: #FFCC30;
+		animation: pin-dropping 1s ease-in-out alternate infinite;
+	}
+	.pin_shadow{
+		width:25px;
+		height:4px;
+		background: #2079BF;
+		border-radius:50%;
+		animation: shadow 1s ease-in-out alternate infinite;
+	}
+}
+@keyframes pin-dropping {
+	0%{ transform: translateY(0px)}
+	100%{ transform: translateY(-8px)}	
+	}
+@keyframes shadow {
+	0%{ width:25px}
+	100%{ width:20px}	
+	}
+
+.card{
+	width:240px;
+	height:190px;
+	position:absolute;
+	z-index:1;
+	border-radius:4px;
+	text-align:center;
+	overflow:hidden;
+	line-height:19px;
+	background:white;
+	display:flex;
+	flex-direction:column;
+	box-shadow: 3px 7px 12px 0px rgba(0,0,0,.2);
+	justify-content: space-between;
+	img{
+		width:100%;
+	}
+	.name{
+		font-weight:bold;
+		color:#5f6062;
+	}
+	.card-foot{
+		height:30px;
+		display:flex;
+		justify-content: space-between;
+		position:relative;
+		.button{
+			width:50%;
+			color:#177AC8;;
+			cursor: pointer;
+		}
+		
+	}
+	.card-foot::before{
+			content:'';
+			display:block;
+			height:75%;
+			width:1px;
+			background:#81C5FB;
+			position:absolute;
+			right:120px;
+		}
+}
+
+.flip{
+	perspective: 1000px;
+	width:240px;
+	cursor:pointer;
+	z-index:1;
+	position:relative;
+	width:240px;
+	height:190px;
+}
+.flip-inner{
+	position:relative;
+	transition:transform .5s;
+	transform-style:preserve-3d;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	height:100%;	
+}
+
+.card,.pin {
+	backface-visibility:hidden;
+}
+.card {
+  transform: rotateY(180deg);
+}
+.flip.active .flip-inner {
+  transform: rotateY(180deg);
+}
