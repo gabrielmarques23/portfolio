@@ -1,28 +1,28 @@
 
-let btnOpenNav = document.querySelector('button.btnHamb');
-let btnCloseNav = document.querySelector('button.btnClose');
+//function clickToOpenNav() {
+//    btnOpenNav.classList.add('changeNav');
+//    btnCloseNav.classList.remove('changeNav');
+//    openNav()
+//}
 
 let headerNav = document.querySelector('.navHeaderDiv');
+let checkbox = document.querySelector('#checkbox');
 
-function clickToOpenNav() {
-    btnOpenNav.classList.add('changeNav');
-    btnCloseNav.classList.remove('changeNav');
-    openNav()
-};
-
-function clickToCloseNav() {
-    btnOpenNav.classList.remove('changeNav');
-    btnCloseNav.classList.add('changeNav');
-    hiddenNav()
-};
+function toggleNav() {
+if(checkbox.checked){
+    openNav() 
+} else{
+    closeNav()
+}
+}
 
 function openNav() {
     headerNav.classList.remove('hiddenHeaderNav');
-    headerNav.classList.add('.oppenHeaderNav');
+    headerNav.classList.add('.openHeaderNav');
 }
-function hiddenNav() {
+function closeNav() {
     headerNav.classList.add('hiddenHeaderNav');
-    headerNav.classList.remove('.oppenHeaderNav');
+    headerNav.classList.remove('.openHeaderNav');
 }
 
 
