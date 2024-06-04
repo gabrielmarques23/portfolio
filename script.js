@@ -1,10 +1,4 @@
 
-//function clickToOpenNav() {
-//    btnOpenNav.classList.add('changeNav');
-//    btnCloseNav.classList.remove('changeNav');
-//    openNav()
-//}
-
 let headerNav = document.querySelector('.navHeaderDiv');
 let checkbox = document.querySelector('#checkbox');
 
@@ -17,17 +11,15 @@ if(checkbox.checked){
 }
 
 function openNav() {
-    headerNav.classList.remove('hiddenHeaderNav');
-    headerNav.classList.add('.openHeaderNav');
+    headerNav.classList.add('visibleHeaderNav');
 }
 function closeNav() {
-    headerNav.classList.add('hiddenHeaderNav');
-    headerNav.classList.remove('.openHeaderNav');
+    headerNav.classList.remove('visibleHeaderNav');
 }
 
 
 //Button to Scroll to Top
-let clickBtnToTop = document.querySelector('button.myBtnToUp');
+let clickBtnToTop = document.querySelector('.myBtnToUp');
 
 window.onscroll = function () {
     if (document.documentElement.scrollTop > 550 || document.body.scrollTop > 550) {
