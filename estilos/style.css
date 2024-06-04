@@ -133,42 +133,44 @@ header#header {
     padding: 0.5rem;
 }
 
-.nav-bar-hamburger{
+.nav-bar-hamburger {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1rem;
+    margin: .5rem;
     z-index: 10;
 }
 
 .navHeaderDiv {
-    background: var(--bg02);
-    padding: 3rem 2rem;
+    background: #000000c9;
+    padding: 6rem 0rem;
     width: 25vw;
     min-width: 15rem;
-    border-radius: 1rem;
+    border-radius: 0rem 0rem 0rem 2rem;
     position: absolute;
-    right: 0;
+    right: -90rem;
     top: 0;
-    margin: 1rem;
+    transition: right .5s ease, opacity .5s ease;
+    opacity: 0;
     z-index: 5;
 }
+.navHeaderDiv.visibleHeaderNav{
+    right: 0;
+    opacity: 1;
+}
 
-.openHeaderNav{
+.openHeaderNav {
     display: block;
 }
 
-.hiddenHeaderNav {
-    display: none;
-}
 
 #checkbox {
     display: none;
-  }
-  
-  .toggle {
+}
+
+.toggle {
     position: relative;
-    width: 4rem;
+    width: 3.5rem;
     height: 4rem;
     cursor: pointer;
     display: flex;
@@ -177,38 +179,38 @@ header#header {
     justify-content: center;
     gap: 1rem;
     transition-duration: .3s;
-  }
-  
-  .bars {
+}
+
+.bars {
     width: 100%;
-    height: .5rem;
+    height: .3rem;
     background-color: var(--color1);
     border-radius: .5rem;
-    transition-duration: .3s;
-  }
-  
-  #checkbox:checked + .toggle .bars {
+    transition-duration: .2s;
+}
+
+#checkbox:checked+.toggle .bars {
     margin-left: 11.5px;
-  }
-  
-  #checkbox:checked + .toggle #bar2 {
+}
+
+#checkbox:checked+.toggle #bar2 {
     transform: rotate(135deg);
-    margin-left: 0;
+    margin-left: 3px;
     transform-origin: center;
-    transition-duration: .3s;
-  }
-  
-  #checkbox:checked + .toggle #bar1 {
+    transition-duration: .2s;
+}
+
+#checkbox:checked+.toggle #bar1 {
     transform: rotate(45deg);
-    transition-duration: .3s;
+    transition-duration: .2s;
     transform-origin: left center;
-  }
-  
-  #checkbox:checked + .toggle #bar3 {
+}
+
+#checkbox:checked+.toggle #bar3 {
     transform: rotate(-45deg);
-    transition-duration: .3s;
+    transition-duration: .2s;
     transform-origin: left center;
-  }
+}
 
 ul {
     list-style: none;
