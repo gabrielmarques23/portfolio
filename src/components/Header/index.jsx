@@ -1,11 +1,12 @@
 import { Container } from "./style";
+import { Nav } from "./Nav/indexNav";
 
 export function Header() {
     return (
         <Container>
-            <Header>
-                Hello world!!
-            </Header>
+            <div>
+                <Nav />
+            </div>
         </Container>
     )
 }
