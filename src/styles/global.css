@@ -1,0 +1,18 @@
+:root {
+  --bg: #0c0c0e;
+  --text: #f4f4f5;
+  --muted: rgba(244, 244, 245, 0.68);
+  --orange: #ff7a1a;
+  --font: 'Poppins', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
