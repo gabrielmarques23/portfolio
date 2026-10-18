@@ -14,5 +14,4 @@ body {
   color: var(--text);
   font-family: var(--font);
   line-height: 1.6;
-  overflow-x: hidden;
 }
