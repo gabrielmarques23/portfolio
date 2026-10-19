@@ -1,12 +1,16 @@
-import { Container } from "./style";
+import { Container, Card, Name, PhotoLeft, PhotoRight } from "./style";
 import { Glow } from "../../components/Glow";
-import { Card } from "./style";
-import { Name } from "./style";
+import fotoReal from "../../../imagens/fotoReal.png";
+import fotoAvatar from "../../../imagens/fotoAvatar.png";
 
 export function Details() {
   return (
     <Container>
       <Glow />
+
+      <PhotoLeft src={fotoReal} alt="" />
+      <PhotoRight src={fotoAvatar} alt="" />
+
 
       <Card>
         <p>Card de vidro</p>
