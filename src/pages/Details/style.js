@@ -74,14 +74,20 @@ export const Name = styled.h1`
 `;
 
 const Photo = styled.img`
-  position: absolute;
+  position: absolute;¬
   bottom: 10;
-  height: 80%;
-  max-width: 38%;
+  height: 100%;
+  max-width: 100%;
   object-fit: cover;
-  opacity: 0.55;
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, #00000000 30%);
-  mask-image: linear-gradient(to top, transparent 0%, #000 30%);
+  opacity: 0.95;
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 65%, transparent 100%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, #000 55%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, #000 55%, transparent 100%),
+    radial-gradient(ellipse 100% 100% at 90% 50%, #000 55%, transparent 100%);
+  mask-composite: intersect;
 `;
 
 export const PhotoLeft = styled(Photo)`
