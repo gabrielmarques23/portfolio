@@ -4,6 +4,13 @@
   --muted: rgba(244, 244, 245, 0.68);
   --orange: #ff7a1a;
   --font: 'Poppins', system-ui, sans-serif;
+
+  --glass-blur: 5px;
+  --glass-blur-webkit: 7px;
+  --glass-border-color: rgba(255, 255, 255, 0.25);
+  --glass-shadow-inset: inset 1px 1px 2px rgb(255 255 255 / 15%),
+    inset -1px -1px 3px rgb(255 255 255 / 10%),
+    inset 0 0 12px rgb(255 255 255 / 10%);
 }
 
 *, *::before, *::after { box-sizing: border-box; }

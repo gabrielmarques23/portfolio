@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { glassEffect } from "../../styles/glass";
 
 export const Container = styled.div`
   position: relative;
@@ -12,51 +13,13 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
- box-sizing: border-box;
+  box-sizing: border-box;
   width: min(562px, 100%);
-  position: relative;
   padding: 2.2rem 2rem;
   border-radius: 25px;
   border: none;
-  background: transparent;
 
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(7px);
-
-  box-shadow:
-    inset 1px 1px 2px rgb(255 255 255 / 15%),
-    inset -1px -1px 3px rgb(255 255 255 / 10%),
-    inset 0 0 12px rgb(255 255 255 / 10%);
-
-  isolation: isolate;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 1px;
-    border-radius: inherit;
-    pointer-events: none;
-
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-
-    mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    border: 1px solid rgb(255 255 255 / 25%);
-    border-radius: 26px;
-    pointer-events: none;
-  }
+  ${glassEffect}
 `;
 
 export const Name = styled.h1`
@@ -74,7 +37,7 @@ export const Name = styled.h1`
 `;
 
 const Photo = styled.img`
-  position: absolute;¬
+  position: absolute;
   bottom: 10;
   height: 100%;
   max-width: 100%;
@@ -97,6 +60,3 @@ export const PhotoLeft = styled(Photo)`
 export const PhotoRight = styled(Photo)`
   right: 0;
 `;
-
-
-
