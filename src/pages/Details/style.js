@@ -1,62 +1,68 @@
 import styled from "styled-components";
-import { glassEffect } from "../../styles/glass";
 
-export const Container = styled.div`
+export const PageContainer = styled.main`
   position: relative;
-  overflow: hidden;
   min-height: 100vh;
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  gap: 2.5rem;
-  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1.5rem;
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @media (max-width: 768px) {
+    padding: 0.75rem;
+  }
 `;
 
-export const Card = styled.div`
-  box-sizing: border-box;
-  width: min(562px, 100%);
-  padding: 2.2rem 2rem;
-  border-radius: 25px;
-  border: none;
-
-  ${glassEffect}
-`;
-
-export const Name = styled.h1`
+export const MainContent = styled.div`
   position: relative;
-  z-index: 1;
-  display: grid;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: clamp(3.2rem, 13vw, 10rem);
-  font-weight: 800;
-  line-height: 0.95;
-  color: transparent;
-  -webkit-text-stroke: .7px #ffffff83;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0 5.25rem;
+
+  @media (max-width: 1200px) {
+    padding: 0 4.5rem;
+  }
+
+  @media (max-width: 900px) {
+    padding: 0;
+  }
 `;
 
-const Photo = styled.img`
-  position: absolute;
-  bottom: 10;
-  height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-  opacity: 0.95;
-  -webkit-mask-image:
-    linear-gradient(to bottom, #000 65%, transparent 100%),
-    radial-gradient(ellipse 100% 100% at 50% 50%, #000 55%, transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to bottom, #000 55%, transparent 100%),
-    radial-gradient(ellipse 100% 100% at 90% 50%, #000 55%, transparent 100%);
-  mask-composite: intersect;
+export const CenterStage = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  padding: 1rem 0;
 `;
 
-export const PhotoLeft = styled(Photo)`
-  left: 0;
-`;
+export const CardsFooter = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1.5rem;
+  margin-top: auto;
+  flex-shrink: 0;
+  padding-top: 1rem;
+  z-index: 10;
 
-export const PhotoRight = styled(Photo)`
-  right: 0;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    padding-bottom: 5.5rem;
+  }
 `;

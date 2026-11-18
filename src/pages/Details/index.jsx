@@ -1,27 +1,52 @@
-import { Container, Card, Name, PhotoLeft, PhotoRight } from "./style";
+import { useState } from "react";
+import { PageContainer, MainContent, CenterStage, CardsFooter } from "./style";
 import { Glow } from "../../components/Glow";
-import fotoReal from "../../../imagens/fotoReal.png";
+import { CanvasFrame } from "../../components/CanvasFrame";
+import { Dock } from "../../components/Dock";
+import { TopBar } from "../../components/TopBar";
+import { Hero } from "../../components/Hero";
+import { ProjectCard } from "../../components/ProjectCard";
+import { MetricsCard } from "../../components/MetricsCard";
+import { portfolioData } from "../../data/portfolio";
 import fotoAvatar from "../../../imagens/fotoAvatar.png";
 
 export function Details() {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
   return (
-    <Container>
+    <PageContainer id="home">
       <Glow />
 
-      <PhotoLeft src={fotoReal} alt="" />
-      <PhotoRight src={fotoAvatar} alt="" />
+      <CanvasFrame>
+        <Dock items={portfolioData.navigation} />
 
+        <MainContent>
+          <TopBar
+            categories={portfolioData.categories}
+            onSelectCategory={setSelectedCategory}
+            ctaText="Fale Comigo"
+            ctaHref="mailto:contato.gabmarques@gmail.com"
+          />
 
-      <Card>
-        <p>Card de vidro</p>
-      </Card>
+          <CenterStage>
+            <Hero
+              heroData={portfolioData.hero}
+              profileData={portfolioData.profile}
+            />
+          </CenterStage>
 
-      <Name>
-        <span>GABRIEL</span>
-        <span>MARQUES</span>
-      </Name>
+          <CardsFooter data-category={selectedCategory}>
+            <MetricsCard
+              profile={portfolioData.profile}
+              metrics={portfolioData.metrics}
+              stack={portfolioData.stack}
+              avatarSrc={fotoAvatar}
+            />
 
-    </Container>
-  )
+            <ProjectCard project={portfolioData.featuredProject} />
+          </CardsFooter>
+        </MainContent>
+      </CanvasFrame>
+    </PageContainer>
+  );
 }
-
