@@ -4,12 +4,9 @@ export const PageContainer = styled.main`
   position: relative;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
+  padding: clamp(.75rem, 3vw, 3rem);
   background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
   .skip-link {
     position: fixed;
     top: 1rem;
@@ -24,41 +21,43 @@ export const PageContainer = styled.main`
     transform: translateY(0);
   }
   @media (max-width: ${({ theme }) => theme.BREAKPOINTS.tablet}) {
-    padding: .75rem .75rem calc(7rem + env(safe-area-inset-bottom));
+    padding-bottom: calc(7rem + env(safe-area-inset-bottom));
   }
 `;
 
 export const MainContent = styled.div`
   position: relative;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  flex: 1 1 auto;
-  min-height: 0;
-  padding: 0 1rem 0 5.5rem;
-  flex-wrap: wrap;
-  align-content: center;
-  @media (max-width: ${({ theme }) => theme.BREAKPOINTS.tablet}) {
-    padding: 0;
-  }
+  min-width: 0;
 `;
 
 export const CenterStage = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   width: 100%;
-  padding: clamp(2.5rem, 5vw, 5rem) 0;
 `;
 
 export const CardsFooter = styled.div`
+  position: relative;
+  z-index: 2;
   display: flex;
-  align-items: stretch;
-  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
   width: 100%;
-  gap: ${({ theme }) => theme.SPACE.large};
+  margin-top: -190px;
+  padding: 0 1.5rem 1.5rem 6rem;
+
+  @media (max-width: 1100px) {
+    gap: 1.5rem;
+    padding-left: 5.5rem;
+    margin-top: -120px;
+  }
   @media (max-width: ${({ theme }) => theme.BREAKPOINTS.tablet}) {
     flex-direction: column;
+    align-items: stretch;
+    margin-top: -35px;
+    padding: 0 1rem 1rem;
+    gap: 1rem;
   }
 `;

@@ -33,6 +33,7 @@ export function Hero({ heroData, profileData }) {
       </HybridTitle>
 
       <Subtitle>{description}</Subtitle>
+
     </HeroSection>
   );
 }

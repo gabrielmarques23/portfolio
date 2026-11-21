@@ -9,8 +9,8 @@ export const DockContainer = styled.nav`
   --dock-padding-y: 0.75rem;
 
   position: absolute;
-  left: 1rem;
-  top: 50%;
+  left: 1.25rem;
+  top: 46%;
   transform: translateY(-50%);
   width: fit-content;
   max-width: fit-content;
@@ -18,9 +18,9 @@ export const DockContainer = styled.nav`
   flex-direction: column;
   gap: var(--dock-gap);
   padding: var(--dock-padding-y) var(--dock-padding-x);
-  border-radius: 24px;
+  border-radius: 999px;
   z-index: 30;
-  background: rgba(22, 22, 28, 0.45);
+  background: rgba(12, 24, 37, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
 
