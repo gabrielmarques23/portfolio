@@ -28,11 +28,15 @@ export const AvatarBox = styled.div`
   overflow: hidden;
   border-radius: 16px;
   background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
   img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    -webkit-user-drag: none;
   }
 `;
 

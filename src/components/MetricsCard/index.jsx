@@ -11,12 +11,18 @@ import {
 } from "./style";
 
 export function MetricsCard({ profile, metrics = [], stack = [], avatarSrc }) {
+  const preventImageAction = (event) => event.preventDefault();
+
   return (
     <MetricsContainer aria-labelledby="profile-title">
       <ProfileHeader>
-        <AvatarBox>
+        <AvatarBox
+          onDragStart={preventImageAction}
+          onContextMenu={preventImageAction}
+          onCopy={preventImageAction}
+        >
           {avatarSrc ? (
-            <img src={avatarSrc} alt={profile?.name || "Avatar"} />
+            <img src={avatarSrc} alt={profile?.name || "Avatar"} draggable={false} />
           ) : (
             <span style={{ fontSize: "1.2rem", fontWeight: "700" }}>GM</span>
           )}

@@ -11,7 +11,7 @@ import { Hero } from "../../components/Hero";
 import { ProjectCard } from "../../components/ProjectCard";
 import { MetricsCard } from "../../components/MetricsCard";
 import { portfolioData } from "../../data/portfolio";
-import fotoAvatar from "../../../imagens/fotoAvatar.png";
+import fotoPerfil from "../../../imagens/fotoPerfil.jpg";
 
 export function Details() {
   return (
@@ -37,7 +37,7 @@ export function Details() {
               profile={portfolioData.profile}
               metrics={portfolioData.metrics}
               stack={portfolioData.stack}
-              avatarSrc={fotoAvatar}
+              avatarSrc={fotoPerfil}
             />
           </CardsFooter>
         </MainContent>
