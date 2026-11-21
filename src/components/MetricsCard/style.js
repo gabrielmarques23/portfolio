@@ -6,8 +6,6 @@ export const MetricsContainer = styled.aside`
   width: min(100%, 340px);
   padding: 1.5rem;
   border-radius: 38px;
-  background: #172431;
-  box-shadow: 0 24px 50px -25px rgba(0, 0, 0, .7);
   @media (max-width: 900px) {
     width: 100%;
     border-radius: 28px;

@@ -7,10 +7,6 @@ export const CardContainer = styled.section`
   align-self: flex-end;
   padding: 1.75rem;
   border-radius: 40px;
-  background: linear-gradient(145deg, rgba(45, 73, 99, .78), rgba(15, 27, 41, .9));
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, .7), inset 0 1px 0 rgba(255, 255, 255, .12);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
