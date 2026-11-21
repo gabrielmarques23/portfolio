@@ -1,8 +1,30 @@
-# React + Vite
+# Portfólio · Gabriel Marques
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal em React 18, Vite e styled-components. Interface escura com destaque editorial, projeto em evidência e navegação por âncoras.
 
-Currently, two official plugins are available:
+## Desenvolvimento
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```sh
+npm install
+npm run dev
+```
+
+## Verificações
+
+```sh
+npm run lint
+npm run build
+npm run preview
+```
+
+## Organização
+
+- `src/pages/Details`: composição da página.
+- `src/components`: componentes e estilos locais.
+- `src/data/portfolio.js`: conteúdo, tecnologias e navegação.
+- `src/styles`: tema, estilos globais e superfície compartilhada dos cards.
+- `imagens`: imagens existentes do portfólio.
+
+Os filtros foram retirados enquanto há somente um projeto em destaque. A prévia do Aura Glass é uma composição decorativa, não uma captura do projeto; o link leva ao perfil GitHub. Métricas de experiência e entregas foram preservadas do conteúdo original e devem ser confirmadas pelo proprietário antes de publicação.
+
+`estilos/`, `script.js` e os componentes antigos `Header`, `Nav` e `Button` foram preservados como legado, fora do fluxo atual. Não há publicação automática.
