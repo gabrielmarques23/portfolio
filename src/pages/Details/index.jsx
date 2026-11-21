@@ -1,6 +1,9 @@
-import { useState } from "react";
-import { PageContainer, MainContent, CenterStage, CardsFooter } from "./style";
-import { Glow } from "../../components/Glow";
+import {
+  PageContainer,
+  MainContent,
+  CenterStage,
+  CardsFooter
+} from "./style";
 import { CanvasFrame } from "../../components/CanvasFrame";
 import { Dock } from "../../components/Dock";
 import { TopBar } from "../../components/TopBar";
@@ -11,22 +14,15 @@ import { portfolioData } from "../../data/portfolio";
 import fotoAvatar from "../../../imagens/fotoAvatar.png";
 
 export function Details() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
   return (
     <PageContainer id="home">
-      <Glow />
+      <a className="skip-link" href="#projects">Pular para o projeto</a>
 
       <CanvasFrame>
         <Dock items={portfolioData.navigation} />
 
         <MainContent>
-          <TopBar
-            categories={portfolioData.categories}
-            onSelectCategory={setSelectedCategory}
-            ctaText="Fale Comigo"
-            ctaHref="mailto:contato.gabmarques@gmail.com"
-          />
+          <TopBar />
 
           <CenterStage>
             <Hero
@@ -35,15 +31,14 @@ export function Details() {
             />
           </CenterStage>
 
-          <CardsFooter data-category={selectedCategory}>
+          <CardsFooter>
+            <ProjectCard project={portfolioData.featuredProject} />
             <MetricsCard
               profile={portfolioData.profile}
               metrics={portfolioData.metrics}
               stack={portfolioData.stack}
               avatarSrc={fotoAvatar}
             />
-
-            <ProjectCard project={portfolioData.featuredProject} />
           </CardsFooter>
         </MainContent>
       </CanvasFrame>

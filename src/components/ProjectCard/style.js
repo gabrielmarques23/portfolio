@@ -1,143 +1,144 @@
 import styled from "styled-components";
-import { glassEffect } from "../../styles/glass";
+import { cardSurface } from "../../styles/glass";
 
-export const CardContainer = styled.article`
-  width: 100%;
-  max-width: 360px;
-  border-radius: 26px;
-  padding: 1.35rem;
+export const CardContainer = styled.section`
+  ${cardSurface}
+  flex: 1.55;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-
-  ${glassEffect}
-  background: rgba(22, 22, 28, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 122, 26, 0.35);
-  }
-
-  @media (max-width: 900px) {
-    max-width: 100%;
-  }
-`;
-
-export const MediaPreview = styled.div`
-  position: relative;
-  width: 100%;
-  height: 140px;
-  border-radius: 18px;
-  overflow: hidden;
-  background: ${({ $gradient }) =>
-    $gradient || "linear-gradient(135deg, rgba(89, 0, 213, 0.4) 0%, rgba(255, 122, 26, 0.3) 100%)"};
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .glow-ring {
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 122, 26, 0.6) 0%, transparent 70%);
-    filter: blur(20px);
-  }
-
-  .pattern-mesh {
-    position: absolute;
-    inset: 0;
-    opacity: 0.2;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
-    background-size: 14px 14px;
-  }
+  gap: 1.25rem;
 `;
 
 export const CardHeader = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
 `;
 
 export const Tag = styled.span`
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.COLORS.ORANGE};
-  background: rgba(255, 122, 26, 0.12);
-  border: 1px solid rgba(255, 122, 26, 0.25);
-  padding: 0.25rem 0.65rem;
-  border-radius: 9999px;
+  font-size: .875rem;
+  font-weight: 500;
+  color: ${({ theme }) => theme.COLORS.ACCENT};
 `;
 
-export const MetricBadge = styled.span`
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
-  letter-spacing: -0.01em;
+export const MediaPreview = styled.div`
+  display: grid;
+  place-items: center;
+  min-height: 240px;
+  padding: 1.75rem;
+  border: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
+  border-radius: 16px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 30% 0%, rgba(${({ theme }) => theme.COLORS.ACCENT_RGB}, .16), transparent 70%), linear-gradient(135deg, #182636, #111923);
+  .preview-window {
+    width: min(100%,320px);
+    padding: 1rem;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 16px;
+    background: rgba(255,255,255,.04);
+    box-shadow: 0 20px 40px rgba(0,0,0,.25);
+  }
+  .window-bar {
+    display: flex;
+    gap: 5px;
+  }
+  .window-bar i {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.3);
+  }
+  .window-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .15rem;
+    padding: 1rem;
+  }
+  .window-content svg {
+    color: ${({ theme }) => theme.COLORS.ACCENT};
+    margin-bottom: .4rem;
+  }
+  .window-content span {
+    font-family: ${({ theme }) => theme.FONTS.serif};
+    font-size: 2rem;
+  }
+  .window-content small {
+    font-size: .875rem;
+    color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
+  }
+  .window-tiles {
+    display: flex;
+    gap: .5rem;
+  }
+  .window-tiles span {
+    height: 24px;
+    flex: 1;
+    border-radius: 6px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.06);
+  }
 `;
 
 export const CardContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: .5rem;
 `;
 
-export const ProjectTitle = styled.h3`
+export const ProjectTitle = styled.h2`
   margin: 0;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: ${({ theme }) => theme.COLORS.WHITE};
-  letter-spacing: -0.02em;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 600;
+  letter-spacing: -.03em;
 `;
 
 export const ProjectDescription = styled.p`
   margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.7;
   color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 `;
 
 export const CardFooter = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  gap: .75rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
 `;
 
 export const Subtext = styled.span`
-  font-size: 0.78rem;
+  font-size: .875rem;
   color: ${({ theme }) => theme.COLORS.TEXT_MUTED};
 `;
 
 export const ActionButton = styled.a`
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  color: ${({ theme }) => theme.COLORS.WHITE};
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  min-height: 44px;
+  padding: .65rem 1rem;
+  border-radius: ${({ theme }) => theme.RADII.control};
+  background: ${({ theme }) => theme.COLORS.ACCENT};
+  color: ${({ theme }) => theme.COLORS.TEXT_ON_ACCENT};
+  font-size: .875rem;
+  font-weight: 600;
   text-decoration: none;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-
   &:hover {
-    background: ${({ theme }) => theme.COLORS.ORANGE};
-    border-color: ${({ theme }) => theme.COLORS.ORANGE};
-    color: #fff;
-    transform: scale(1.1) rotate(45deg);
+    background: ${({ theme }) => theme.COLORS.ACCENT_HOVER};
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
 `;

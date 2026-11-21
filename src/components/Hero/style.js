@@ -25,6 +25,7 @@ export const HeroSection = styled.section`
   padding: clamp(1.25rem, 2.5vh, 2.25rem) 1rem clamp(0.75rem, 1.8vh, 1.5rem);
   margin: 0 auto;
   max-width: 920px;
+  width: 100%;
   z-index: 10;
 
   @media (max-width: 768px) {
@@ -40,7 +41,7 @@ export const StatusBadge = styled.div`
   border-radius: 9999px;
   background: rgba(16, 185, 129, 0.08);
   border: 1px solid rgba(16, 185, 129, 0.25);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.03em;
   color: #34d399;
@@ -64,13 +65,12 @@ export const HybridTitle = styled.h1`
   flex-direction: column;
   align-items: center;
   gap: 0.15rem;
-  user-select: none;
 `;
 
 export const TitleLineSans = styled.span`
   font-family: ${({ theme }) => theme.FONTS?.sans || "'Poppins', sans-serif"};
-  font-size: clamp(1.8rem, 4.2vw, 3.8rem);
-  font-weight: 800;
+  font-size: clamp(1.3rem, 3.5vw, 3.1rem);
+  font-weight: 600;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: ${({ theme }) => theme.COLORS.WHITE};
@@ -83,21 +83,26 @@ export const TitleLineSerif = styled.span`
   font-family: ${({ theme }) => theme.FONTS?.serif || "'Instrument Serif', serif"};
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(2.6rem, 6.5vw, 5.5rem);
+  font-size: clamp(4rem, 8vw, 7rem);
   line-height: 0.9;
   letter-spacing: -0.01em;
-  background: linear-gradient(135deg, #ff9a4d 0%, #ff7a1a 45%, #ec4899 100%);
+  background: linear-gradient(
+    135deg,
+    ${({ theme }) => theme.COLORS.ACCENT_GRADIENT_START} 0%,
+    ${({ theme }) => theme.COLORS.ACCENT} 45%,
+    ${({ theme }) => theme.COLORS.ACCENT_GRADIENT_END} 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0 0.5rem;
+  padding: .1em .2em;
 `;
 
 export const Subtitle = styled.p`
-  max-width: 580px;
+  max-width: 560px;
   margin: 0 auto;
-  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
-  line-height: 1.55;
+  font-size: 1rem;
+  line-height: 1.75;
   color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.01em;
 `;

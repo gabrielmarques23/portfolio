@@ -8,31 +8,37 @@ export const PageContainer = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem 1.5rem;
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  @media (max-width: 768px) {
-    padding: 0.75rem;
+  padding: 1.5rem;
+  background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  .skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 100;
+    padding: 1rem;
+    border-radius: 12px;
+    background: #18181c;
+    transform: translateY(-200%);
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+  @media (max-width: ${({ theme }) => theme.BREAKPOINTS.tablet}) {
+    padding: .75rem .75rem calc(7rem + env(safe-area-inset-bottom));
   }
 `;
 
 export const MainContent = styled.div`
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   flex: 1 1 auto;
   min-height: 0;
-  padding: 0 5.25rem;
-
-  @media (max-width: 1200px) {
-    padding: 0 4.5rem;
-  }
-
-  @media (max-width: 900px) {
+  padding: 0 1rem 0 5.5rem;
+  flex-wrap: wrap;
+  align-content: center;
+  @media (max-width: ${({ theme }) => theme.BREAKPOINTS.tablet}) {
     padding: 0;
   }
 `;
@@ -42,27 +48,17 @@ export const CenterStage = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 1 1 auto;
-  min-height: 0;
   width: 100%;
-  padding: 1rem 0;
+  padding: clamp(2.5rem, 5vw, 5rem) 0;
 `;
 
 export const CardsFooter = styled.div`
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: stretch;
+  justify-content: space-evenly;
   width: 100%;
-  gap: 1.5rem;
-  margin-top: auto;
-  flex-shrink: 0;
-  padding-top: 1rem;
-  z-index: 10;
-
-  @media (max-width: 900px) {
+  gap: ${({ theme }) => theme.SPACE.large};
+  @media (max-width: ${({ theme }) => theme.BREAKPOINTS.tablet}) {
     flex-direction: column;
-    align-items: stretch;
-    gap: 1.25rem;
-    padding-bottom: 5.5rem;
   }
 `;

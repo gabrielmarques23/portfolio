@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const Container = styled.button`
-background-color: ${({ theme }) => theme.COLORS.PURPLE};
-color: ${({ theme }) => theme.COLORS.WHITE};
+background-color: ${({ theme }) => theme.COLORS.ACCENT};
+color: ${({ theme }) => theme.COLORS.TEXT_ON_ACCENT};
 
 display: grid;
 align-content: center;
@@ -16,6 +16,6 @@ font-size: 1rem;
 font-weight: normal;
 
  &:hover{
-    opacity: 0.9;
+    background-color: ${({ theme }) => theme.COLORS.ACCENT_HOVER};
  }
 `;

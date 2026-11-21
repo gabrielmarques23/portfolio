@@ -13,12 +13,12 @@ const Blob = styled.span`
   filter: blur(150px);
 `;
 
-export const Orange = styled(Blob)`
+export const Accent = styled(Blob)`
   width: 46vw;
   height: 46vw;
   left: 27vw;
   top: 8vh;
-  background: ${({ theme }) => theme.COLORS.ORANGE};
+  background: ${({ theme }) => theme.COLORS.ACCENT};
   opacity: 0.38;
 `;
 

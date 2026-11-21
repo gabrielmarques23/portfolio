@@ -12,7 +12,7 @@ import {
 
 export function MetricsCard({ profile, metrics = [], stack = [], avatarSrc }) {
   return (
-    <MetricsContainer>
+    <MetricsContainer aria-labelledby="profile-title">
       <ProfileHeader>
         <AvatarBox>
           {avatarSrc ? (
@@ -22,8 +22,8 @@ export function MetricsCard({ profile, metrics = [], stack = [], avatarSrc }) {
           )}
         </AvatarBox>
         <ProfileInfo>
-          <h4>{profile?.name || "Gabriel Marques"}</h4>
-          <span>{profile?.role || "Fullstack Creative Developer"}</span>
+          <h2 id="profile-title">{profile?.name || "Gabriel Marques"}</h2>
+          <span>{profile?.role || "Desenvolvedor fullstack"}</span>
         </ProfileInfo>
       </ProfileHeader>
 
@@ -31,16 +31,16 @@ export function MetricsCard({ profile, metrics = [], stack = [], avatarSrc }) {
         <StatsGrid>
           {metrics.map((item, index) => (
             <StatItem key={index}>
-              <strong>{item.value}</strong>
-              <span>{item.label}</span>
+              <dt>{item.label}</dt>
+              <dd>{item.value}</dd>
             </StatItem>
           ))}
         </StatsGrid>
       )}
 
       {stack.length > 0 && (
-        <StackSection>
-          <span className="section-label">Core Stack</span>
+        <StackSection id="skills" aria-labelledby="skills-title">
+          <h3 id="skills-title">Tecnologias & habilidades</h3>
           <StackChips>
             {stack.map((tech, index) => (
               <Chip key={index}>{tech}</Chip>

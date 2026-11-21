@@ -1,10 +1,10 @@
-import { Container,Orange,Blue } from "./style";
+import { Container, Accent, Blue } from "./style";
 
 export function Glow() {
-    return (
-        <Container aria-hidden="true">
-        <Orange/>
-        <Blue/>
-        </Container>
-    );
+  return (
+    <Container aria-hidden="true">
+      <Accent />
+      <Blue />
+    </Container>
+  );
 }

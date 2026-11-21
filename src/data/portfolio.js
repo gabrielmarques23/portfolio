@@ -1,25 +1,24 @@
 export const portfolioData = {
   profile: {
     name: "Gabriel Marques",
-    role: "Fullstack Creative Developer & UI/UX Specialist",
-    statusText: "Available for select opportunities",
+    role: "Desenvolvedor fullstack & UI/UX",
+    statusText: "Disponível para novas oportunidades",
     available: true,
     location: "São Paulo, Brasil"
   },
 
   hero: {
-    badge: "Available for select opportunities",
-    titlePrefix: "A NEW WAY OF",
-    titleSerif: "Building",
-    titleSuffix: "DIGITAL EXPERIENCES",
+    badge: "Disponível para novas oportunidades",
+    titlePrefix: "CÓDIGO COM",
+    titleSerif: "intenção.",
+    titleSuffix: "EXPERIÊNCIAS COM IDENTIDADE",
     description:
-      "Combinando arquitetura de software sólida, interatividade fluida e direção visual editorial para criar aplicações web que impressionam e performam."
+      "Desenvolvo aplicações web que unem engenharia, interfaces cuidadosas e interações que fazem sentido."
   },
 
   metrics: [
-    { label: "Anos de Experiência", value: "+4" },
-    { label: "Projetos Entregues", value: "+20" },
-    { label: "Satisfação & NPS", value: "100%" }
+    { label: "Anos de experiência", value: "+4" },
+    { label: "Projetos entregues", value: "+20" }
   ],
 
   stack: [
@@ -34,30 +33,15 @@ export const portfolioData = {
   ],
 
   navigation: [
-    { id: "home", label: "Início", icon: "Home", href: "#" },
+    { id: "home", label: "Início", icon: "Home", href: "#home" },
     { id: "projects", label: "Projetos", icon: "Folder", href: "#projects" },
     { id: "skills", label: "Habilidades", icon: "Code", href: "#skills" },
     { id: "contact", label: "Contato", icon: "Mail", href: "mailto:contato.gabmarques@gmail.com" }
   ],
 
-  categories: [
-    { id: "all", label: "Todos os Trabalhos" },
-    { id: "creative", label: "Creative Dev" },
-    { id: "frontend", label: "Frontend & UI" },
-    { id: "fullstack", label: "Fullstack" }
-  ],
-
   featuredProject: {
-    tag: "FEATURED WORK",
     title: "Aura Glass Interface",
-    category: "Interactive UI & Web App",
-    metric: "4.9★ Review · +300% Engagement",
-    description: "Design system de vidro fosco com renderização GPU acelerada e micro-interações responsivas.",
-    link: "https://github.com/gabmarques"
-  },
-
-  socialLinks: [
-    { name: "GitHub", url: "https://github.com/gabmarques", icon: "Github" },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: "ExternalLink" }
-  ]
+    description: "Exploração de interfaces com vidro fosco, camadas de luz e microinterações. Um estudo sobre equilíbrio entre expressão visual e clareza.",
+    link: "https://github.com/gabrielmarques23"
+  }
 };

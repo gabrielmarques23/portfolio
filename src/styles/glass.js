@@ -2,35 +2,17 @@ import { css } from "styled-components";
 
 export const glassEffect = css`
   position: relative;
-  background: transparent;
-  backdrop-filter: blur(var(--glass-blur, 5px));
-  -webkit-backdrop-filter: blur(var(--glass-blur-webkit, 7px));
-  box-shadow: var(--glass-shadow-inset);
   isolation: isolate;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+`;
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 1px;
-    border-radius: inherit;
-    pointer-events: none;
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    border: 1px solid var(--glass-border-color, rgba(255, 255, 255, 0.25));
-    border-radius: inherit;
-    pointer-events: none;
-  }
+export const cardSurface = css`
+  ${glassEffect}
+  min-width: 0;
+  padding: ${({ theme }) => theme.SPACE.large};
+  border-radius: ${({ theme }) => theme.RADII.card};
+  background: ${({ theme }) => theme.COLORS.SURFACE};
+  border: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
+  box-shadow: 0 16px 40px -24px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.04);
 `;

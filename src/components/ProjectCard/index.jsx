@@ -3,7 +3,6 @@ import {
   MediaPreview,
   CardHeader,
   Tag,
-  MetricBadge,
   CardContent,
   ProjectTitle,
   ProjectDescription,
@@ -11,38 +10,52 @@ import {
   Subtext,
   ActionButton
 } from "./style";
-import { ArrowUpRight, Sparkles } from "../Icons";
+import { Code } from "../Icons";
 
 export function ProjectCard({ project }) {
   if (!project) return null;
 
   return (
-    <CardContainer>
-      <MediaPreview $gradient={project.gradient}>
-        <div className="glow-ring" />
-        <div className="pattern-mesh" />
-        <Sparkles size={36} color="rgba(255, 255, 255, 0.4)" strokeWidth={1.5} />
-      </MediaPreview>
-
+    <CardContainer id="projects" aria-labelledby="project-title">
       <CardHeader>
-        <Tag>{project.tag || "FEATURED"}</Tag>
-        {project.metric && <MetricBadge>{project.metric}</MetricBadge>}
+        <Tag>Projeto em destaque</Tag>
+        <Subtext>Interface & desenvolvimento</Subtext>
       </CardHeader>
 
+      <MediaPreview aria-hidden="true">
+        <div className="preview-window">
+          <div className="window-bar">
+            <i />
+            <i />
+            <i />
+          </div>
+          <div className="window-content">
+            <Code size={36} strokeWidth={1.2} />
+            <span>Aura Glass</span>
+            <small>Explorando interfaces</small>
+          </div>
+          <div className="window-tiles">
+            <span />
+            <span />
+            <span />
+          </div>
+        </div>
+      </MediaPreview>
+
       <CardContent>
-        <ProjectTitle>{project.title}</ProjectTitle>
+        <ProjectTitle id="project-title">{project.title}</ProjectTitle>
         <ProjectDescription>{project.description}</ProjectDescription>
       </CardContent>
 
       <CardFooter>
-        <Subtext>{project.category || "Design & Development"}</Subtext>
+        <Subtext>Estudo de interface</Subtext>
         <ActionButton
-          href={project.link || "#"}
+          href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Ver detalhes de ${project.title}`}
         >
-          <ArrowUpRight size={18} strokeWidth={2.2} />
+          Explorar GitHub
+          <span className="sr-only"> (abre em nova aba)</span>
         </ActionButton>
       </CardFooter>
     </CardContainer>
