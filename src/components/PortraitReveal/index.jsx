@@ -65,7 +65,7 @@ export function PortraitReveal({ name }) {
       const bounds = element.getBoundingClientRect();
       targetX = Math.max(0, Math.min(bounds.width, event.clientX - bounds.left));
       targetY = Math.max(0, Math.min(bounds.height, event.clientY - bounds.top));
-      targetRadius = Math.min(bounds.width * .2, 90);
+      targetRadius = Math.min(bounds.width * .2, 92);
       if (!active) {
         x = targetX;
         y = targetY;

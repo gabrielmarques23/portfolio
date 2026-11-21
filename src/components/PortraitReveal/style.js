@@ -29,12 +29,12 @@ export const Portrait = styled.div`
     @supports ((mask-image: radial-gradient(black, transparent)) or (-webkit-mask-image: radial-gradient(black, transparent))) {
       .portrait-real {
         visibility: visible;
-        -webkit-mask-image: radial-gradient(circle at var(--portrait-x) var(--portrait-y), black calc(var(--portrait-radius) * .1), transparent var(--portrait-radius));
-        mask-image: radial-gradient(circle at var(--portrait-x) var(--portrait-y), black calc(var(--portrait-radius) * .1), transparent var(--portrait-radius));
+        -webkit-mask-image: radial-gradient(circle at var(--portrait-x) var(--portrait-y), black calc(var(--portrait-radius) * .2), transparent var(--portrait-radius));
+        mask-image: radial-gradient(circle at var(--portrait-x) var(--portrait-y), black calc(var(--portrait-radius) * .2), transparent var(--portrait-radius));
       }
       .portrait-avatar {
-        -webkit-mask-image: radial-gradient(circle at var(--portrait-x) var(--portrait-y), transparent calc(var(--portrait-radius) * .1), black var(--portrait-radius));
-        mask-image: radial-gradient(circle at var(--portrait-x) var(--portrait-y), transparent calc(var(--portrait-radius) * .1), black var(--portrait-radius));
+        -webkit-mask-image: radial-gradient(circle at var(--portrait-x) var(--portrait-y), transparent calc(var(--portrait-radius) * .2), black var(--portrait-radius));
+        mask-image: radial-gradient(circle at var(--portrait-x) var(--portrait-y), transparent calc(var(--portrait-radius) * .2), black var(--portrait-radius));
       }
     }
   }
