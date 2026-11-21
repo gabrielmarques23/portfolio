@@ -41,12 +41,21 @@ export const CardsFooter = styled.div`
   z-index: 2;
   display: flex;
   flex-direction: row-reverse;
-  align-items: flex-end;
+  align-items: stretch;
   justify-content: space-between;
   gap: 2rem;
   width: 100%;
   margin-top: -190px;
   padding: 0 1.5rem 1.5rem 6rem;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
+
+  && > * {
+    align-self: stretch;
+  }
 
   @media (max-width: 1100px) {
     gap: 1.5rem;
@@ -55,9 +64,15 @@ export const CardsFooter = styled.div`
   }
   @media (max-width: ${({ theme }) => theme.BREAKPOINTS.tablet}) {
     flex-direction: column;
-    align-items: stretch;
-    margin-top: -35px;
+    align-items: center;
+    margin-top: 0;
     padding: 0 1rem 1rem;
     gap: 1rem;
+
+    && > * {
+      align-self: center;
+      width: 100%;
+      max-width: 560px;
+    }
   }
 `;

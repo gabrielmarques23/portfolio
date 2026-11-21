@@ -31,11 +31,10 @@ export const HeroSection = styled.section`
     padding-inline: 4rem;
   }
   @media (max-width: 900px) {
-    min-height: 650px;
-    padding: 2rem 1rem 0;
+    min-height: 0;
+    padding: 2rem 1rem;
   }
   @media (max-width: 600px) {
-    min-height: 610px;
     padding-top: 1.5rem;
   }
 `;
