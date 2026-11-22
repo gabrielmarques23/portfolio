@@ -29,3 +29,6 @@ build/
 # Temporary files
 *.tmp
 *.temp
+
+# Registro local da missão
+/work/preview/plano-projetos.md
