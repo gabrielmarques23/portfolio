@@ -1,92 +1,44 @@
 import styled from "styled-components";
 import { cardSurface } from "../../styles/glass";
 
-export const CardContainer = styled.section`
+export const CardContainer = styled.button`
   ${cardSurface}
-  width: min(100%, 380px);
-  align-self: flex-end;
-  padding: 1.75rem;
-  border-radius: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  @media (max-width: 900px) {
-    width: 100%;
-    border-radius: 28px;
+  flex: 0 0 195px;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: border-color .2s, transform .2s;
+  &[aria-pressed="true"] {
+    border-color: ${({ theme }) => theme.COLORS.ACCENT};
+    transform: translateY(-4px);
   }
+  &:hover { border-color: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; }
+  @media (max-width: 600px) { flex-basis: 180px; }
 `;
 
-export const CardHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: .75rem;
-  flex-wrap: wrap;
+export const CardArt = styled.div`
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 170px;
+  overflow: hidden;
+  background: ${({ $variant }) => $variant === "orbit"
+    ? "repeating-radial-gradient(ellipse at 60% 80%, #193b5c 0 14px, #101e2c 15px 30px)"
+    : $variant === "nexo"
+      ? "repeating-linear-gradient(135deg, #101e2c 0 30px, #193b5c 31px 60px)"
+      : "radial-gradient(circle at 30% 10%, #3B9EFF, #193b5c 55%, #101e2c)"};
+  span { font: italic 110px 'Instrument Serif', Georgia, serif; color: #d4ebff; }
+  img { width: 100%; height: 100%; object-fit: cover; }
 `;
 
-export const Tag = styled.span`
-  font-size: .875rem;
-  font-weight: 500;
-  color: ${({ theme }) => theme.COLORS.ACCENT};
-`;
-
-export const CardContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-`;
-
-export const ProjectTitle = styled.h2`
-  margin: 0;
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
-  font-weight: 600;
-  letter-spacing: -.03em;
-`;
-
-export const ProjectDescription = styled.p`
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.75;
-  color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
-`;
-
-export const CardFooter = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: .75rem;
-  margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
-`;
-
-export const Subtext = styled.span`
-  font-size: .875rem;
-  color: ${({ theme }) => theme.COLORS.TEXT_MUTED};
-`;
-
-export const ActionButton = styled.a`
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: .65rem 1rem;
-  border-radius: 999px;
-  background: ${({ theme }) => theme.COLORS.ACCENT};
-  color: ${({ theme }) => theme.COLORS.TEXT_ON_ACCENT};
-  font-size: .875rem;
-  font-weight: 600;
-  text-decoration: none;
-  &:hover {
-    background: ${({ theme }) => theme.COLORS.ACCENT_HOVER};
-  }
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
+export const CardCopy = styled.span`
+  display: grid;
+  gap: .4rem;
+  padding: 1rem;
+  small { font-size: .75rem; color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02}; }
+  strong { font-size: 1rem; font-weight: 500; }
 `;
