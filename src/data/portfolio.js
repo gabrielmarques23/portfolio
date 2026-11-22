@@ -34,8 +34,8 @@ export const portfolioData = {
 
   navigation: [
     { id: "home", label: "Início", icon: "Home", href: "#home" },
-    { id: "projects", label: "Projetos", icon: "Folder", href: "#projects" },
     { id: "skills", label: "Habilidades", icon: "Code", href: "#skills" },
+    { id: "projects", label: "Projetos", icon: "Folder", href: "#projects" },
     { id: "contact", label: "Contato", icon: "Mail", href: "#contact" }
   ],
 

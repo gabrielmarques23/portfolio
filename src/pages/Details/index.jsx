@@ -14,9 +14,9 @@ export function Details() {
       <a className="skip-link" href="#projects">Pular para os projetos</a>
       <CanvasFrame>
         <Dock items={portfolioData.navigation} />
+        <TopBar />
+        <CenterStage><Hero heroData={portfolioData.hero} profileData={portfolioData.profile} /></CenterStage>
         <MainContent>
-          <TopBar />
-          <CenterStage><Hero heroData={portfolioData.hero} profileData={portfolioData.profile} /></CenterStage>
           <AboutSection aria-labelledby="about-heading">
             <AboutCopy>
               <small>Sobre & habilidades</small>

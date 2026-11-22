@@ -17,7 +17,10 @@ export const CardContainer = styled.button`
     transform: translateY(-4px);
   }
   &:hover { border-color: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; }
-  @media (max-width: 600px) { flex-basis: 180px; }
+  @media (max-width: 750px) {
+    flex-basis: min(clamp(210px, 40vw, 240px), calc(100% - 8px));
+    > div:first-child { height: clamp(185px, 34vw, 200px); }
+  }
 `;
 
 export const CardArt = styled.div`
@@ -41,4 +44,5 @@ export const CardCopy = styled.span`
   padding: 1rem;
   small { font-size: .75rem; color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02}; }
   strong { font-size: 1rem; font-weight: 500; }
+  @media (max-width: 750px) { small { font-size: .875rem; } }
 `;
