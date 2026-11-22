@@ -7,6 +7,7 @@ import {
   TitleLineSerif,
   Subtitle
 } from "./style";
+import { PortraitReveal } from "../PortraitReveal";
 
 export function Hero({ heroData, profileData }) {
   const badgeText = heroData?.badge || profileData?.statusText || "Disponível para novas oportunidades";
@@ -33,6 +34,7 @@ export function Hero({ heroData, profileData }) {
       </HybridTitle>
 
       <Subtitle>{description}</Subtitle>
+      <PortraitReveal name={profileData?.name || "Gabriel Marques"} />
     </HeroSection>
   );
 }

@@ -3,10 +3,16 @@ import { cardSurface } from "../../styles/glass";
 
 export const MetricsContainer = styled.aside`
   ${cardSurface}
-  flex: 1;
+  width: min(100%, 340px);
+  padding: 1.5rem;
+  border-radius: 38px;
+  @media (max-width: 900px) {
+    width: 100%;
+    border-radius: 28px;
+  }
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.1rem;
 `;
 
 export const ProfileHeader = styled.div`
@@ -22,11 +28,15 @@ export const AvatarBox = styled.div`
   overflow: hidden;
   border-radius: 16px;
   background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
   img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    -webkit-user-drag: none;
   }
 `;
 
@@ -48,7 +58,7 @@ export const StatsGrid = styled.dl`
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin: 0;
-  padding: 1.25rem 0;
+  padding: 1rem 0;
   border-block: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
 `;
 
@@ -92,7 +102,7 @@ export const StackChips = styled.ul`
 export const Chip = styled.li`
   font-size: .875rem;
   padding: .35rem .65rem;
-  border-radius: 8px;
+  border-radius: 999px;
   background: rgba(255,255,255,.04);
   border: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
   color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};

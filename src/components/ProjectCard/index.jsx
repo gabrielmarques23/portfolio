@@ -1,63 +1,15 @@
-import {
-  CardContainer,
-  MediaPreview,
-  CardHeader,
-  Tag,
-  CardContent,
-  ProjectTitle,
-  ProjectDescription,
-  CardFooter,
-  Subtext,
-  ActionButton
-} from "./style";
-import { Code } from "../Icons";
+import { CardContainer, CardArt, CardCopy } from "./style";
 
-export function ProjectCard({ project }) {
-  if (!project) return null;
-
+export function ProjectCard({ project, selected, onSelect, buttonRef }) {
   return (
-    <CardContainer id="projects" aria-labelledby="project-title">
-      <CardHeader>
-        <Tag>Projeto em destaque</Tag>
-        <Subtext>Interface & desenvolvimento</Subtext>
-      </CardHeader>
-
-      <MediaPreview aria-hidden="true">
-        <div className="preview-window">
-          <div className="window-bar">
-            <i />
-            <i />
-            <i />
-          </div>
-          <div className="window-content">
-            <Code size={36} strokeWidth={1.2} />
-            <span>Aura Glass</span>
-            <small>Explorando interfaces</small>
-          </div>
-          <div className="window-tiles">
-            <span />
-            <span />
-            <span />
-          </div>
-        </div>
-      </MediaPreview>
-
-      <CardContent>
-        <ProjectTitle id="project-title">{project.title}</ProjectTitle>
-        <ProjectDescription>{project.description}</ProjectDescription>
-      </CardContent>
-
-      <CardFooter>
-        <Subtext>Estudo de interface</Subtext>
-        <ActionButton
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explorar GitHub
-          <span className="sr-only"> (abre em nova aba)</span>
-        </ActionButton>
-      </CardFooter>
+    <CardContainer ref={buttonRef} type="button" aria-pressed={selected} onClick={onSelect}>
+      <CardArt $variant={project.art} aria-hidden="true">
+        {project.image ? <img src={project.image} alt="" loading="lazy" /> : <span>{project.title.slice(0, 1)}</span>}
+      </CardArt>
+      <CardCopy>
+        <small>{project.category}{project.demonstration ? " · Exemplo" : ""}</small>
+        <strong>{project.title}</strong>
+      </CardCopy>
     </CardContainer>
   );
 }

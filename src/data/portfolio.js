@@ -34,14 +34,50 @@ export const portfolioData = {
 
   navigation: [
     { id: "home", label: "Início", icon: "Home", href: "#home" },
-    { id: "projects", label: "Projetos", icon: "Folder", href: "#projects" },
     { id: "skills", label: "Habilidades", icon: "Code", href: "#skills" },
-    { id: "contact", label: "Contato", icon: "Mail", href: "mailto:contato.gabmarques@gmail.com" }
+    { id: "projects", label: "Projetos", icon: "Folder", href: "#projects" },
+    { id: "contact", label: "Contato", icon: "Mail", href: "#contact" }
   ],
 
-  featuredProject: {
-    title: "Aura Glass Interface",
-    description: "Exploração de interfaces com vidro fosco, camadas de luz e microinterações. Um estudo sobre equilíbrio entre expressão visual e clareza.",
-    link: "https://github.com/gabrielmarques23"
-  }
+  projects: [
+    {
+      id: "autostore",
+      title: "AutoStore",
+      category: "Aplicação full-stack · IA",
+      demonstration: false,
+      description: "Catálogo de veículos com busca e filtros, páginas de detalhes, assistente de IA baseado nos dados do catálogo e formulário de interesse.",
+      art: "aura",
+      image: null,
+      challenge: "Desenvolver uma jornada de venda de veículos para um desafio técnico de hackathon, reunindo catálogo, atendimento e captura de leads.",
+      solution: "Aplicação Next.js com consultas via Prisma, endpoints de chat e leads persistidos em PostgreSQL. O assistente combina recuperação por embeddings e similaridade com Google Gemini para contextualizar as respostas nos dados do catálogo.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "Google Gemini"],
+      links: [{ label: "Código no GitHub", href: "https://github.com/gabrielmarques23/AutoStore" }]
+    },
+    {
+      id: "orbit-workspace",
+      title: "Orbit Workspace",
+      category: "Produto digital",
+      demonstration: true,
+      description: "Um espaço de trabalho para organizar tarefas, conectar pessoas e acompanhar ideias.",
+      art: "orbit",
+      image: null,
+      challenge: "Organizar tarefas e informações sem sobrecarregar a experiência de quem trabalha.",
+      solution: "Navegação direta, prioridades visíveis e uma estrutura que acompanha o fluxo da equipe.",
+      technologies: ["React", "TypeScript", "Node.js"],
+      links: []
+    },
+    {
+      id: "nexo-studio",
+      title: "Nexo Studio",
+      category: "Experiência web",
+      demonstration: true,
+      description: "Uma presença digital editorial para um estúdio criativo, com foco em projetos e identidade.",
+      art: "nexo",
+      image: null,
+      challenge: "Apresentar trabalhos criativos com personalidade e espaço para cada história.",
+      solution: "Composição editorial, imagens amplas e detalhes que se revelam conforme a exploração.",
+      technologies: ["React", "Vite", "UI / UX"],
+      links: []
+    }
+  ]
 };

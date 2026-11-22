@@ -20,16 +20,22 @@ export const HeroSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: clamp(1.25rem, 2.5vh, 2.25rem) 1rem clamp(0.75rem, 1.8vh, 1.5rem);
-  margin: 0 auto;
-  max-width: 920px;
+  min-height: 720px;
+  padding: 2rem 5rem 0;
   width: 100%;
-  z-index: 10;
+  overflow: hidden;
 
-  @media (max-width: 768px) {
-    padding: 2rem 0.5rem 1.5rem;
+  @media (max-width: 1100px) {
+    min-height: 670px;
+    padding-inline: 4rem;
+  }
+  @media (max-width: 900px) {
+    min-height: 0;
+    padding: 2rem 1rem;
+  }
+  @media (max-width: 600px) {
+    padding-top: 1.5rem;
   }
 `;
 
@@ -41,7 +47,7 @@ export const StatusBadge = styled.div`
   border-radius: 9999px;
   background: rgba(16, 185, 129, 0.08);
   border: 1px solid rgba(16, 185, 129, 0.25);
-  font-size: 0.875rem;
+  font-size: .875rem;
   font-weight: 500;
   letter-spacing: 0.03em;
   color: #34d399;
@@ -69,8 +75,8 @@ export const HybridTitle = styled.h1`
 
 export const TitleLineSans = styled.span`
   font-family: ${({ theme }) => theme.FONTS?.sans || "'Poppins', sans-serif"};
-  font-size: clamp(1.3rem, 3.5vw, 3.1rem);
-  font-weight: 600;
+  font-size: clamp(1.15rem, 2.5vw, 2.3rem);
+  font-weight: 500;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: ${({ theme }) => theme.COLORS.WHITE};
@@ -83,7 +89,7 @@ export const TitleLineSerif = styled.span`
   font-family: ${({ theme }) => theme.FONTS?.serif || "'Instrument Serif', serif"};
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(4rem, 8vw, 7rem);
+  font-size: clamp(5rem, 10vw, 9rem);
   line-height: 0.9;
   letter-spacing: -0.01em;
   background: linear-gradient(

@@ -1,4 +1,4 @@
-import { HeaderWrapper, Brand, CtaButton } from "./style";
+import { HeaderWrapper, Brand, CtaButton, HeaderInset } from "./style";
 
 export function TopBar({
   ctaText = "Vamos conversar",
@@ -13,6 +13,10 @@ export function TopBar({
           <small>Desenvolvimento & design</small>
         </span>
       </Brand>
+      <HeaderInset>
+        <span>PORTFÓLIO</span>
+        Desenvolvimento & design
+      </HeaderInset>
       <CtaButton href={ctaHref}>{ctaText}</CtaButton>
     </HeaderWrapper>
   );
