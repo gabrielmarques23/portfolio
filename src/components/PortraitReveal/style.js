@@ -5,7 +5,6 @@ export const Portrait = styled.div`
   flex-shrink: 0;
   width: min(100%, 500px);
   height: 600px;
-  margin: 1.5rem auto 0;
   isolation: isolate;
   overflow: hidden;
   user-select: none;
