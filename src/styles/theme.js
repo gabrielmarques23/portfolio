@@ -24,9 +24,9 @@ export default {
     SURFACE: "rgba(24,24,30,.72)"
   },
   FONTS: {
-    sans: "'Poppins', sans-serif",
-    serif: "'Instrument Serif', serif",
-    mono: "'Sometype Mono', monospace"
+    sans: "'Creato Display', system-ui, sans-serif",
+    serif: "'Bochan Serif', Georgia, serif",
+    mono: "'Creato Display', system-ui, sans-serif"
   },
   SPACE: {
     small: ".5rem",

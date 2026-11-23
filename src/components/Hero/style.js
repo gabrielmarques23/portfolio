@@ -65,6 +65,7 @@ export const StatusDot = styled.span`
 `;
 
 export const HybridTitle = styled.h1`
+  max-width: 100%;
   margin: 0 0 clamp(0.65rem, 1.5vh, 1rem);
   line-height: 1.05;
   display: flex;
@@ -74,10 +75,13 @@ export const HybridTitle = styled.h1`
 `;
 
 export const TitleLineSans = styled.span`
-  font-family: ${({ theme }) => theme.FONTS?.sans || "'Poppins', sans-serif"};
-  font-size: clamp(1.15rem, 2.5vw, 2.3rem);
+  font-family: ${({ theme }) => theme.FONTS?.sans || "'Creato Display', system-ui, sans-serif"};
+  font-size: clamp(1.25rem, 2.6vw, 2.3rem);
+  max-width: 100%;
+  text-wrap: balance;
+  line-height: 1.2;
   font-weight: 500;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: ${({ theme }) => theme.COLORS.WHITE};
   background: linear-gradient(180deg, #ffffff 30%, rgba(255, 255, 255, 0.75) 100%);
@@ -86,12 +90,12 @@ export const TitleLineSans = styled.span`
 `;
 
 export const TitleLineSerif = styled.span`
-  font-family: ${({ theme }) => theme.FONTS?.serif || "'Instrument Serif', serif"};
-  font-style: italic;
+  font-family: ${({ theme }) => theme.FONTS?.serif || "'Bochan Serif', Georgia, serif"};
+  font-style: normal;
   font-weight: 400;
-  font-size: clamp(5rem, 10vw, 9rem);
-  line-height: 0.9;
-  letter-spacing: -0.01em;
+  font-size: clamp(5rem, 10.5vw, 9rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
   background: linear-gradient(
     135deg,
     ${({ theme }) => theme.COLORS.ACCENT_GRADIENT_START} 0%,
@@ -101,14 +105,16 @@ export const TitleLineSerif = styled.span`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: .1em .2em;
+  @media (max-width: 600px) { font-size: clamp(4rem, 16vw, 6rem); }
 `;
 
 export const Subtitle = styled.p`
   max-width: 560px;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.75;
   color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
   font-weight: 400;
   letter-spacing: -0.01em;
+  @media (max-width: 600px) { font-size: 1.0625rem; }
 `;

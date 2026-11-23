@@ -30,8 +30,9 @@ export const AboutSection = styled.section`
 `;
 export const AboutCopy = styled.div`
   small { color: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; font-size: .875rem; }
-  h2 { font-size: clamp(1.7rem, 3vw, 2.8rem); line-height: 1.2; font-weight: 500; letter-spacing: -.03em; margin: 1rem 0; }
-  p { color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02}; }
+  h2 { font-size: clamp(1.9rem, 3.4vw, 3.2rem); line-height: 1.2; font-weight: 500; letter-spacing: -.03em; margin: 1rem 0; }
+  p { color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02}; font-size: 1.125rem; }
+  @media (max-width: 600px) { p { font-size: 1.0625rem; } }
   a { display: inline-block; margin-top: .5rem; padding-block: .6rem; color: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; }
 `;
 export const ContactSection = styled.section`
@@ -39,9 +40,10 @@ export const ContactSection = styled.section`
   border-top: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
   text-align: center;
   small { color: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; }
-  h2 { font-size: clamp(1.7rem, 3vw, 2.8rem); font-weight: 500; line-height: 1.25; }
-  p { color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02}; }
-  > a { display: inline-flex; align-items: center; min-height: 44px; padding: .75rem 1.25rem; border-radius: 999px; background: ${({ theme }) => theme.COLORS.ACCENT}; color: ${({ theme }) => theme.COLORS.TEXT_ON_ACCENT}; text-decoration: none; font-weight: 600; }
+  h2 { font-size: clamp(1.9rem, 3.4vw, 3.2rem); font-weight: 500; line-height: 1.25; }
+  p { color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02}; font-size: 1.125rem; }
+  @media (max-width: 600px) { p { font-size: 1.0625rem; } }
+  > a { display: inline-flex; align-items: center; min-height: 44px; padding: .75rem 1.25rem; border-radius: 999px; background: ${({ theme }) => theme.COLORS.ACCENT}; color: ${({ theme }) => theme.COLORS.TEXT_ON_ACCENT}; text-decoration: none; font-weight: 500; }
 `;
 export const Footer = styled.footer`
   display: flex;

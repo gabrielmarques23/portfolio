@@ -13,7 +13,7 @@ border: none;
 border-radius: 1rem;
 
 font-size: 1rem;
-font-weight: normal;
+font-weight: 500;
 
  &:hover{
     background-color: ${({ theme }) => theme.COLORS.ACCENT_HOVER};
