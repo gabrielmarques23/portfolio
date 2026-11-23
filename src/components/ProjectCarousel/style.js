@@ -1,9 +1,23 @@
 import styled from "styled-components";
 export const Picker = styled.div`min-width: 0;`;
 export const Track = styled.div`
-  --edge-fade: 26px;
-  --edge-color-start: ${({ $fadeStart }) => $fadeStart ? "transparent" : "#000"};
-  --edge-color-end: ${({ $fadeEnd }) => $fadeEnd ? "transparent" : "#000"};
+  --edge-fade: 48px;
+  --edge-inset: 34px;
+  --fade-start: 0;
+  --fade-end: 0;
+  --edge-mask: linear-gradient(to right,
+    rgb(0 0 0 / calc(1 - var(--fade-start))) 0,
+    rgb(0 0 0 / calc(1 - var(--fade-start) * .896)) calc(var(--edge-fade) * .2),
+    rgb(0 0 0 / calc(1 - var(--fade-start) * .648)) calc(var(--edge-fade) * .4),
+    rgb(0 0 0 / calc(1 - var(--fade-start) * .352)) calc(var(--edge-fade) * .6),
+    rgb(0 0 0 / calc(1 - var(--fade-start) * .104)) calc(var(--edge-fade) * .8),
+    #000 var(--edge-fade),
+    #000 calc(100% - var(--edge-fade)),
+    rgb(0 0 0 / calc(1 - var(--fade-end) * .104)) calc(100% - var(--edge-fade) * .8),
+    rgb(0 0 0 / calc(1 - var(--fade-end) * .352)) calc(100% - var(--edge-fade) * .6),
+    rgb(0 0 0 / calc(1 - var(--fade-end) * .648)) calc(100% - var(--edge-fade) * .4),
+    rgb(0 0 0 / calc(1 - var(--fade-end) * .896)) calc(100% - var(--edge-fade) * .2),
+    rgb(0 0 0 / calc(1 - var(--fade-end))) 100%);
   position: relative;
   display: flex;
   gap: 1rem;
@@ -12,11 +26,11 @@ export const Track = styled.div`
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   scrollbar-color: #3b6386 transparent;
-  padding: .75rem calc(var(--edge-fade) + 8px) 1rem;
-  scroll-padding-inline: calc(var(--edge-fade) + 8px);
-  -webkit-mask-image: linear-gradient(to right, var(--edge-color-start), #000 var(--edge-fade), #000 calc(100% - var(--edge-fade)), var(--edge-color-end));
-  mask-image: linear-gradient(to right, var(--edge-color-start), #000 var(--edge-fade), #000 calc(100% - var(--edge-fade)), var(--edge-color-end));
-  @media (max-width: 600px) { --edge-fade: 16px; }
+  padding: .75rem var(--edge-inset) 1rem;
+  scroll-padding-inline: var(--edge-inset);
+  -webkit-mask-image: var(--edge-mask);
+  mask-image: var(--edge-mask);
+  @media (max-width: 600px) { --edge-fade: 32px; --edge-inset: 24px; }
 `;
 export const Controls = styled.div`
   display: flex;
