@@ -1,19 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const pulse = keyframes`
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-  }
-`;
+import styled from "styled-components";
 
 export const HeroSection = styled.section`
   position: relative;
@@ -51,8 +36,9 @@ export const StatusBadge = styled.div`
   font-weight: 500;
   letter-spacing: 0.03em;
   color: #34d399;
-  margin-bottom: clamp(0.75rem, 1.8vh, 1.25rem);
+  margin-bottom: clamp(1.25rem, 1.8vh, 1.5rem);
   backdrop-filter: blur(8px);
+  @media (max-width: 600px) { margin-bottom: 1rem; }
 `;
 
 export const StatusDot = styled.span`
@@ -61,17 +47,17 @@ export const StatusDot = styled.span`
   border-radius: 50%;
   background: #10b981;
   box-shadow: 0 0 10px #10b981;
-  animation: ${pulse} 2s infinite ease-in-out;
 `;
 
 export const HybridTitle = styled.h1`
   max-width: 100%;
-  margin: 0 0 clamp(0.65rem, 1.5vh, 1rem);
+  margin: 0 0 1.5rem;
   line-height: 1.05;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.15rem;
+  @media (max-width: 600px) { margin-bottom: 1rem; }
 `;
 
 export const TitleLineSans = styled.span`
@@ -105,11 +91,13 @@ export const TitleLineSerif = styled.span`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: .1em .2em;
-  @media (max-width: 600px) { font-size: clamp(4rem, 16vw, 6rem); }
+  @media (min-width: 601px) and (max-width: 900px) { line-height: .975; }
+  @media (max-width: 600px) { font-size: clamp(2.5rem, 13.5vw, 5.0625rem); }
 `;
 
 export const Subtitle = styled.p`
-  max-width: 560px;
+  max-width: min(100%, 50ch);
+  text-wrap: pretty;
   margin: 0 auto;
   font-size: 1.125rem;
   line-height: 1.75;
