@@ -20,9 +20,9 @@ export const DockContainer = styled.nav`
   padding: var(--dock-padding-y) var(--dock-padding-x);
   border-radius: 999px;
   z-index: 30;
-  background: rgba(12, 24, 37, 0.75);
+  background: rgb(12 24 37 / 50%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.06);
 
   @media (max-width: 900px) {
     --dock-padding-x: 1.15rem;
@@ -42,11 +42,9 @@ export const DockContainer = styled.nav`
 
 export const ActiveIndicator = styled.span`
   position: absolute;
-  top: calc(
-    var(--dock-padding-y) +
-    var(--active-index) * (var(--dock-item-size) + var(--dock-gap))
-  );
+  top: var(--dock-padding-y);
   left: var(--dock-padding-x);
+  transform: translate3d(0, calc(var(--active-index) * (var(--dock-item-size) + var(--dock-gap))), 0);
   width: var(--dock-item-size);
   height: var(--dock-item-size);
   border-radius: 14px;
@@ -55,18 +53,11 @@ export const ActiveIndicator = styled.span`
   pointer-events: none;
   opacity: ${({ $visible }) => ($visible ? 1 : 0)};
   transition:
-    top 0.32s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.2s ease;
+    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 
   @media (max-width: 900px) {
-    top: var(--dock-padding-y);
-    left: calc(
-      var(--dock-padding-x) +
-      var(--active-index) * (var(--dock-item-size) + var(--dock-gap))
-    );
-    transition:
-      left 0.32s cubic-bezier(0.4, 0, 0.2, 1),
-      opacity 0.2s ease;
+    transform: translate3d(calc(var(--active-index) * (var(--dock-item-size) + var(--dock-gap))), 0, 0);
   }
 
   @media (prefers-reduced-motion: reduce) {
