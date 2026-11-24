@@ -1,7 +1,7 @@
 import { useId, useRef, useState } from "react";
 import { ProjectCarousel } from "../ProjectCarousel";
 import { ProjectDetails } from "../ProjectDetails";
-import { Section, SectionHeading, Stage, Backdrop, Summary, ExpandButton } from "./style";
+import { Section, SectionContent, SectionHeading, Stage, StageOverview, Backdrop, Summary, ExpandButton } from "./style";
 
 export function ProjectsSection({ projects = [] }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -22,12 +22,14 @@ export function ProjectsSection({ projects = [] }) {
   };
   return (
     <Section id="projects" aria-labelledby="projects-heading">
+      <SectionContent>
       <SectionHeading><h2 id="projects-heading">Projetos em destaque</h2><p>{projects.every((item) => item.demonstration) ? "Seleção demonstrativa · projetos fictícios" : "Seleção de projetos"}</p></SectionHeading>
       <Stage>
         <Backdrop $variant={project.art} aria-hidden="true">
           {project.image && <img src={project.image} alt="" />}
           <div />
         </Backdrop>
+        <StageOverview>
         <Summary>
           <div aria-live="polite" aria-atomic="true">
             <small>{project.demonstration ? "Exemplo · " : ""}{project.category}</small>
@@ -35,12 +37,14 @@ export function ProjectsSection({ projects = [] }) {
             <p>{project.description}</p>
           </div>
           <ExpandButton ref={expandRef} type="button" aria-expanded={expanded} aria-controls={panelId} onClick={() => setExpanded(!expanded)}>
-            {expanded ? "Fechar projeto ↑" : "Ver projeto ↗"}
+            {expanded ? "Ver menos ↑" : "Ver mais ↓"}
           </ExpandButton>
         </Summary>
         <ProjectCarousel projects={projects} activeIndex={activeIndex} onSelect={selectProject} />
+        </StageOverview>
+        <ProjectDetails key={project.id} project={project} open={expanded} onClose={close} panelId={panelId} />
       </Stage>
-      <ProjectDetails key={project.id} project={project} open={expanded} onClose={close} panelId={panelId} />
+      </SectionContent>
     </Section>
   );
 }
