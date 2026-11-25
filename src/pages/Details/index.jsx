@@ -102,7 +102,7 @@ export function Details() {
               <a href="mailto:contato.gabmarques@gmail.com">Vamos conversar ↗</a>
             </ContactContent>
           </ContactSection>
-          <Footer><FooterContent><span>{portfolioData.profile.name}</span><span>Desenvolvimento & design</span><a href="https://github.com/gabrielmarques23" target="_blank" rel="noopener noreferrer">GitHub (abre em nova aba) ↗</a></FooterContent></Footer>
+          <Footer><FooterContent><span>{portfolioData.profile.name}</span><span>Desenvolvimento & design</span><a href="https://github.com/gabrielmarques23" target="_blank" rel="noopener noreferrer" aria-label="GitHub (abre em nova aba)">GitHub ↗</a></FooterContent></Footer>
         </MainContent>
       </CanvasFrame>
     </PageContainer>

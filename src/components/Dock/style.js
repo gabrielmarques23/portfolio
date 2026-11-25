@@ -9,7 +9,7 @@ export const DockContainer = styled.nav`
   --dock-padding-y: 0.75rem;
 
   position: fixed;
-  left: max(1.5rem, calc((100vw - 1440px) / 2 + 1.25rem));
+  left: 1rem;
   top: 50%;
   transform: translateY(-50%);
   width: fit-content;
