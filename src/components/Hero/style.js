@@ -17,10 +17,7 @@ export const HeroSection = styled.section`
   }
   @media (max-width: 900px) {
     min-height: 0;
-    padding: 2rem 1rem;
-  }
-  @media (max-width: 600px) {
-    padding-top: 1.5rem;
+    padding: 10rem 1rem;
   }
 `;
 
@@ -105,4 +102,13 @@ export const Subtitle = styled.p`
   font-weight: 400;
   letter-spacing: -0.01em;
   @media (max-width: 600px) { font-size: 1.0625rem; }
+`;
+
+export const PortraitMotion = styled.div`
+  flex-shrink: 0;
+  width: min(100%, 500px);
+  transform: translateY(calc(-6rem * (1 - var(--portrait-scroll-progress, 0))));
+
+  @media (max-width: 900px) { display: none; }
+  @media (prefers-reduced-motion: reduce) { transform: none; }
 `;
