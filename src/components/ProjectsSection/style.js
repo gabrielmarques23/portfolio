@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import { sectionContent, darkSectionSurface } from "../../styles/sections";
+import { darkSectionSurface } from "../../styles/sections";
 export const Section = styled.section`
   min-width: 0;
   ${darkSectionSurface}
   border-top: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
 `;
 export const SectionContent = styled.div`
-  ${sectionContent}
+  width: 100%;
+  min-width: 0;
+  padding: 3rem 10vw;
+  min-height: 900px;
+  display: grid;
+  align-content: center;
 `;
 export const SectionHeading = styled.div`
   display: flex;
@@ -29,7 +34,7 @@ export const StageOverview = styled.div`
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(0, 1.6fr);
   align-items: center;
-  min-height: 410px;
+  min-height: 520px;
   padding: 2.5rem 0 2.5rem 2rem;
   @media (max-width: 750px) { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; padding: 1.5rem 0 1.5rem 1rem; }
 `;
