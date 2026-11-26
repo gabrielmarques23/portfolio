@@ -23,9 +23,9 @@ export const HeaderWrapper = styled.header`
 
 export const HeaderInset = styled.div`
   position: absolute;
-  top: -1px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,8 +33,6 @@ export const HeaderInset = styled.div`
   width: 34%;
   min-height: 78px;
   padding: .75rem;
-  border-radius: 0 0 36px 36px;
-  background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
   color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
   font-size: .75rem;
   span {
@@ -42,25 +40,6 @@ export const HeaderInset = styled.div`
     font-size: .75rem;
     letter-spacing: .22em;
     margin-bottom: .2rem;
-  }
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 28px;
-    height: 28px;
-    background: transparent;
-  }
-  &::before {
-    right: 100%;
-    border-radius: 0 28px 0 0;
-    box-shadow: 7px -7px 0 7px ${({ theme }) => theme.COLORS.BACKGROUND_900};
-  }
-  &::after {
-    left: 100%;
-    border-radius: 28px 0 0 0;
-    box-shadow: -7px -7px 0 7px ${({ theme }) => theme.COLORS.BACKGROUND_900};
   }
   @media (max-width: 1100px) {
     width: 28%;

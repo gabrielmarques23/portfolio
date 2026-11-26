@@ -1,8 +1,17 @@
 import styled from "styled-components";
+import { darkSectionSurface } from "../../styles/sections";
 export const Section = styled.section`
   min-width: 0;
-  padding: 3rem clamp(1rem, 3vw, 3rem);
+  ${darkSectionSurface}
   border-top: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
+`;
+export const SectionContent = styled.div`
+  width: 100%;
+  min-width: 0;
+  padding: 3rem 10vw;
+  min-height: 900px;
+  display: grid;
+  align-content: center;
 `;
 export const SectionHeading = styled.div`
   display: flex;
@@ -11,20 +20,22 @@ export const SectionHeading = styled.div`
   flex-wrap: wrap;
   gap: .5rem 1.5rem;
   margin-bottom: 1.5rem;
-  h2 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 500; }
+  h2 { margin: 0; font-size: clamp(1.6rem, 2.7vw, 2.3rem); font-weight: 500; }
   p { margin: 0; color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02}; font-size: .875rem; }
 `;
 export const Stage = styled.div`
   position: relative;
   isolation: isolate;
-  display: grid;
-  grid-template-columns: minmax(0, .9fr) minmax(0, 1.6fr);
-  align-items: center;
-  min-height: 410px;
-  padding: 2.5rem 0 2.5rem 2rem;
   border: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
   border-radius: 28px;
   overflow: hidden;
+`;
+export const StageOverview = styled.div`
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.6fr);
+  align-items: center;
+  min-height: 520px;
+  padding: 2.5rem 0 2.5rem 2rem;
   @media (max-width: 750px) { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; padding: 1.5rem 0 1.5rem 1rem; }
 `;
 export const Backdrop = styled.div`
@@ -48,8 +59,9 @@ export const Summary = styled.div`
   padding-right: 1.5rem;
   overflow-wrap: anywhere;
   small { color: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; font-size: .875rem; }
-  h3 { font-size: clamp(1.8rem, 3.6vw, 3.3rem); letter-spacing: -.04em; line-height: 1.1; margin: 1rem 0; font-weight: 500; }
-  p { color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02}; font-size: 1rem; line-height: 1.75; margin: 0; max-width: 330px; }
+  h3 { font-size: clamp(2rem, 4vw, 3.7rem); letter-spacing: -.04em; line-height: 1.1; margin: 1rem 0; font-weight: 500; }
+  p { color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02}; font-size: 1.125rem; line-height: 1.75; margin: 0; max-width: 330px; }
+  @media (max-width: 600px) { p { font-size: 1.0625rem; } }
 `;
 export const ExpandButton = styled.button`
   min-height: 44px;
@@ -59,7 +71,7 @@ export const ExpandButton = styled.button`
   border-radius: 999px;
   background: ${({ theme }) => theme.COLORS.ACCENT};
   color: ${({ theme }) => theme.COLORS.TEXT_ON_ACCENT};
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   &:hover { background: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; }
 `;

@@ -44,7 +44,7 @@ export const ProfileInfo = styled.div`
   h2 {
     margin: 0 0 .3rem;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
   }
   span {
     display: block;

@@ -1,14 +1,11 @@
 import styled from "styled-components";
-import { cardSurface } from "../../styles/glass";
 export const DetailDisclosure = styled.div`
   display: grid;
   grid-template-rows: ${({ $open }) => $open ? "1fr" : "0fr"};
   opacity: ${({ $open }) => $open ? 1 : 0};
-  margin-top: ${({ $open }) => $open ? "1rem" : "0"};
   transition:
     grid-template-rows 360ms cubic-bezier(.22, 1, .36, 1),
-    opacity 280ms ease-out,
-    margin-top 360ms cubic-bezier(.22, 1, .36, 1);
+    opacity 280ms cubic-bezier(.22, 1, .36, 1);
   @media (prefers-reduced-motion: reduce) { transition: none; }
 `;
 export const DisclosureBody = styled.div`
@@ -16,9 +13,9 @@ export const DisclosureBody = styled.div`
   overflow: hidden;
 `;
 export const DetailPanel = styled.div`
-  ${cardSurface}
   width: 100%;
   padding: clamp(1.25rem, 4vw, 3rem);
+  border-top: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
   overflow-wrap: anywhere;
 `;
 export const DetailHeading = styled.div`

@@ -1,23 +1,32 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { ProjectCard } from "../ProjectCard";
 import { Picker, Track, Controls, ArrowButton } from "./style";
 
 export function ProjectCarousel({ projects, activeIndex, onSelect }) {
   const trackRef = useRef(null);
   const buttons = useRef([]);
-  const [edges, setEdges] = useState({ start: false, end: false });
 
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
+    let fadeWidth = 1;
     const updateEdges = () => {
-      const start = track.scrollLeft > 1;
-      const end = track.scrollLeft + track.clientWidth < track.scrollWidth - 1;
-      setEdges((previous) => previous.start === start && previous.end === end ? previous : { start, end });
+      const remaining = track.scrollWidth - track.clientWidth - track.scrollLeft;
+      // Ease the mask in over the edge distance instead of switching it on after 1px.
+      const strength = (distance) => {
+        const progress = Math.max(0, Math.min(distance / fadeWidth, 1));
+        return progress * progress * (3 - 2 * progress);
+      };
+      track.style.setProperty("--fade-start", strength(track.scrollLeft));
+      track.style.setProperty("--fade-end", strength(remaining));
     };
-    updateEdges();
+    const updateGeometry = () => {
+      fadeWidth = parseFloat(getComputedStyle(track).getPropertyValue("--edge-fade")) || 1;
+      updateEdges();
+    };
+    updateGeometry();
     track.addEventListener("scroll", updateEdges, { passive: true });
-    const observer = new ResizeObserver(updateEdges);
+    const observer = new ResizeObserver(updateGeometry);
     observer.observe(track);
     return () => {
       track.removeEventListener("scroll", updateEdges);
@@ -53,7 +62,7 @@ export function ProjectCarousel({ projects, activeIndex, onSelect }) {
 
   return (
     <Picker>
-      <Track ref={trackRef} $fadeStart={edges.start} $fadeEnd={edges.end} onKeyDown={onKeyDown} role="group" aria-label="Escolher projeto">
+      <Track ref={trackRef} onKeyDown={onKeyDown} role="group" aria-label="Escolher projeto">
         {projects.map((project, index) => (
           <ProjectCard key={project.id} project={project} selected={activeIndex === index}
             buttonRef={(node) => { buttons.current[index] = node; }} onSelect={() => onSelect(index)} />

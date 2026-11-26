@@ -1,19 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const pulse = keyframes`
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-  }
-`;
+import styled from "styled-components";
 
 export const HeroSection = styled.section`
   position: relative;
@@ -32,10 +17,7 @@ export const HeroSection = styled.section`
   }
   @media (max-width: 900px) {
     min-height: 0;
-    padding: 2rem 1rem;
-  }
-  @media (max-width: 600px) {
-    padding-top: 1.5rem;
+    padding: 10rem 1rem;
   }
 `;
 
@@ -51,8 +33,9 @@ export const StatusBadge = styled.div`
   font-weight: 500;
   letter-spacing: 0.03em;
   color: #34d399;
-  margin-bottom: clamp(0.75rem, 1.8vh, 1.25rem);
+  margin-bottom: clamp(1.25rem, 1.8vh, 1.5rem);
   backdrop-filter: blur(8px);
+  @media (max-width: 600px) { margin-bottom: 1rem; }
 `;
 
 export const StatusDot = styled.span`
@@ -61,23 +44,27 @@ export const StatusDot = styled.span`
   border-radius: 50%;
   background: #10b981;
   box-shadow: 0 0 10px #10b981;
-  animation: ${pulse} 2s infinite ease-in-out;
 `;
 
 export const HybridTitle = styled.h1`
-  margin: 0 0 clamp(0.65rem, 1.5vh, 1rem);
+  max-width: 100%;
+  margin: 0 0 1.5rem;
   line-height: 1.05;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.15rem;
+  @media (max-width: 600px) { margin-bottom: 1rem; }
 `;
 
 export const TitleLineSans = styled.span`
-  font-family: ${({ theme }) => theme.FONTS?.sans || "'Poppins', sans-serif"};
-  font-size: clamp(1.15rem, 2.5vw, 2.3rem);
+  font-family: ${({ theme }) => theme.FONTS?.sans || "'Creato Display', system-ui, sans-serif"};
+  font-size: clamp(1.25rem, 2.6vw, 2.3rem);
+  max-width: 100%;
+  text-wrap: balance;
+  line-height: 1.2;
   font-weight: 500;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: ${({ theme }) => theme.COLORS.WHITE};
   background: linear-gradient(180deg, #ffffff 30%, rgba(255, 255, 255, 0.75) 100%);
@@ -86,12 +73,12 @@ export const TitleLineSans = styled.span`
 `;
 
 export const TitleLineSerif = styled.span`
-  font-family: ${({ theme }) => theme.FONTS?.serif || "'Instrument Serif', serif"};
-  font-style: italic;
+  font-family: ${({ theme }) => theme.FONTS?.serif || "'Bochan Serif', Georgia, serif"};
+  font-style: normal;
   font-weight: 400;
-  font-size: clamp(5rem, 10vw, 9rem);
-  line-height: 0.9;
-  letter-spacing: -0.01em;
+  font-size: clamp(5rem, 10.5vw, 9rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
   background: linear-gradient(
     135deg,
     ${({ theme }) => theme.COLORS.ACCENT_GRADIENT_START} 0%,
@@ -101,14 +88,27 @@ export const TitleLineSerif = styled.span`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: .1em .2em;
+  @media (min-width: 601px) and (max-width: 900px) { line-height: .975; }
+  @media (max-width: 600px) { font-size: clamp(2.5rem, 13.5vw, 5.0625rem); }
 `;
 
 export const Subtitle = styled.p`
-  max-width: 560px;
+  max-width: min(100%, 50ch);
+  text-wrap: pretty;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.75;
   color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
   font-weight: 400;
   letter-spacing: -0.01em;
+  @media (max-width: 600px) { font-size: 1.0625rem; }
+`;
+
+export const PortraitMotion = styled.div`
+  flex-shrink: 0;
+  width: min(100%, 500px);
+  transform: translateY(calc(-6rem * (1 - var(--portrait-scroll-progress, 0))));
+
+  @media (max-width: 900px) { display: none; }
+  @media (prefers-reduced-motion: reduce) { transform: none; }
 `;

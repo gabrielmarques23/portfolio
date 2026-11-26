@@ -34,7 +34,7 @@ export const CardArt = styled.div`
     : $variant === "nexo"
       ? "repeating-linear-gradient(135deg, #101e2c 0 30px, #193b5c 31px 60px)"
       : "radial-gradient(circle at 30% 10%, #3B9EFF, #193b5c 55%, #101e2c)"};
-  span { font: italic 110px 'Instrument Serif', Georgia, serif; color: #d4ebff; }
+  span { font: italic 400 110px 'Creato Display', system-ui, sans-serif; color: #d4ebff; }
   img { width: 100%; height: 100%; object-fit: cover; }
 `;
 
