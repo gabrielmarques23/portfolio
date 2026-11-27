@@ -5,18 +5,22 @@ export const CardContainer = styled.button`
   ${cardSurface}
   flex: 0 0 195px;
   padding: 0;
-  border-radius: 20px;
-  overflow: hidden;
+  --glass-radius: 20px;
+  overflow: clip;
+  overflow-clip-margin: 1px;
   text-align: left;
   color: inherit;
   cursor: pointer;
   scroll-snap-align: start;
-  transition: border-color .2s, transform .2s;
+  transition: outline-color .2s, transform .2s;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
   &[aria-pressed="true"] {
-    border-color: ${({ theme }) => theme.COLORS.ACCENT};
+    outline-color: ${({ theme }) => theme.COLORS.ACCENT};
     transform: translateY(-4px);
   }
-  &:hover { border-color: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; }
+  &:hover { outline-color: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; }
+  &:focus-visible { outline: 2px solid ${({ theme }) => theme.COLORS.ACCENT}; outline-offset: 5px; }
   @media (max-width: 750px) {
     flex-basis: min(clamp(210px, 40vw, 240px), calc(100% - 8px));
     > div:first-child { height: clamp(185px, 34vw, 200px); }

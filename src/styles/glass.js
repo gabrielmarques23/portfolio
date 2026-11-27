@@ -1,18 +1,31 @@
 import { css } from "styled-components";
 
 export const glassEffect = css`
+  --glass-radius: 45px;
   position: relative;
+  box-sizing: border-box;
   isolation: isolate;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border: none;
+  border-radius: var(--glass-radius);
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    box-sizing: border-box;
+    border: 1.5px solid rgb(255 255 255 / 15%);
+    border-radius: calc(var(--glass-radius) + 1px);
+    pointer-events: none;
+  }
 `;
 
 export const cardSurface = css`
   ${glassEffect}
+  --glass-radius: ${({ theme }) => theme.RADII.card};
   min-width: 0;
   padding: ${({ theme }) => theme.SPACE.large};
-  border-radius: ${({ theme }) => theme.RADII.card};
-  background: ${({ theme }) => theme.COLORS.SURFACE};
-  border: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
-  box-shadow: 0 16px 40px -24px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.04);
 `;
