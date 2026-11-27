@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { darkSectionSurface } from "../../styles/sections";
+import { glassEffect } from "../../styles/glass";
 export const Section = styled.section`
   min-width: 0;
   ${darkSectionSurface}
@@ -24,11 +25,10 @@ export const SectionHeading = styled.div`
   p { margin: 0; color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02}; font-size: .875rem; }
 `;
 export const Stage = styled.div`
-  position: relative;
-  isolation: isolate;
-  border: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
-  border-radius: 28px;
-  overflow: hidden;
+  ${glassEffect}
+  --glass-radius: 28px;
+  overflow: clip;
+  overflow-clip-margin: 1px;
 `;
 export const StageOverview = styled.div`
   display: grid;
@@ -38,24 +38,8 @@ export const StageOverview = styled.div`
   padding: 2.5rem 0 2.5rem 2rem;
   @media (max-width: 750px) { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; padding: 1.5rem 0 1.5rem 1rem; }
 `;
-export const Backdrop = styled.div`
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  overflow: hidden;
-  background: ${({ $variant }) => $variant === "orbit" ? "linear-gradient(110deg, #0c1825, #182c42)" : $variant === "nexo" ? "linear-gradient(110deg, #101822, #173747)" : "linear-gradient(110deg, #0b1723, #183c61)"};
-  img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .24; }
-  &::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8, 16, 25, .9), rgba(8, 16, 25, .3)); }
-  > div {
-    position: absolute; width: 370px; height: 370px; right: 5%; top: -40px;
-    border: 45px solid rgba(112, 184, 255, .1);
-    box-shadow: 0 0 0 60px rgba(112, 184, 255, .035);
-    border-radius: ${({ $variant }) => $variant === "orbit" ? "20%" : $variant === "nexo" ? "5%" : "50%"};
-    transform: ${({ $variant }) => $variant === "orbit" ? "rotate(25deg) scaleX(.65)" : $variant === "nexo" ? "translateY(80px) rotate(45deg)" : "rotate(-25deg) scaleX(1.3)"};
-    transition: transform .45s, border-radius .45s;
-  }
-`;
 export const Summary = styled.div`
+  .case-study-link { display: block; width: fit-content; padding-block: .65rem; margin-top: .5rem; color: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; font-size: .95rem; }
   padding-right: 1.5rem;
   overflow-wrap: anywhere;
   small { color: ${({ theme }) => theme.COLORS.ACCENT_HOVER}; font-size: .875rem; }

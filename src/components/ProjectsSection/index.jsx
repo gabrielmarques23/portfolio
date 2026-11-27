@@ -1,9 +1,9 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { ProjectCarousel } from "../ProjectCarousel";
 import { ProjectDetails } from "../ProjectDetails";
-import { Section, SectionContent, SectionHeading, Stage, StageOverview, Backdrop, Summary, ExpandButton } from "./style";
+import { Section, SectionContent, SectionHeading, Stage, StageOverview, Summary, ExpandButton } from "./style";
 
-export function ProjectsSection({ projects = [] }) {
+export function ProjectsSection({ projects = [], autoStoreInfoOpen = false, onAutoStoreInfoChange, caseStudyTriggerRef }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
   const expandRef = useRef(null);
@@ -13,6 +13,8 @@ export function ProjectsSection({ projects = [] }) {
   const panelId = useId();
   const project = projects[activeIndex] || projects[0];
   const hasProject = Boolean(project);
+  const hasCaseInformation = project?.id === "autostore" && Boolean(onAutoStoreInfoChange);
+  const informationExpanded = hasCaseInformation ? autoStoreInfoOpen : expanded;
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -88,6 +90,7 @@ export function ProjectsSection({ projects = [] }) {
     if (index < 0 || index >= projects.length) return;
     setActiveIndex(index);
     setExpanded(false);
+    onAutoStoreInfoChange?.(false);
   };
   const close = () => {
     setExpanded(false);
@@ -98,10 +101,6 @@ export function ProjectsSection({ projects = [] }) {
       <SectionContent>
       <SectionHeading ref={headingRef}><h2 id="projects-heading">Projetos em destaque</h2><p>{projects.every((item) => item.demonstration) ? "Seleção demonstrativa · projetos fictícios" : "Seleção de projetos"}</p></SectionHeading>
       <Stage ref={stageRef}>
-        <Backdrop $variant={project.art} aria-hidden="true">
-          {project.image && <img src={project.image} alt="" />}
-          <div />
-        </Backdrop>
         <StageOverview>
         <Summary>
           <div aria-live="polite" aria-atomic="true">
@@ -109,13 +108,19 @@ export function ProjectsSection({ projects = [] }) {
             <h3>{project.title}</h3>
             <p>{project.description}</p>
           </div>
-          <ExpandButton ref={expandRef} type="button" aria-expanded={expanded} aria-controls={panelId} onClick={() => setExpanded(!expanded)}>
-            {expanded ? "Ver menos ↑" : "Ver mais ↓"}
+          <ExpandButton ref={(element) => {
+            expandRef.current = element;
+            if (caseStudyTriggerRef) caseStudyTriggerRef.current = element;
+          }} type="button" aria-expanded={informationExpanded}
+            aria-controls={hasCaseInformation ? "autostore-case" : panelId}
+            onClick={() => hasCaseInformation ? onAutoStoreInfoChange(!autoStoreInfoOpen) : setExpanded(!expanded)}>
+            {informationExpanded ? "Ver menos ↑" : hasCaseInformation ? "Mais informações ↓" : "Ver mais ↓"}
           </ExpandButton>
+          {project.caseStudy && <a className="case-study-link" href={project.caseStudy} onClick={() => onAutoStoreInfoChange?.(true)}>Conheça a experiência ↘</a>}
         </Summary>
         <ProjectCarousel projects={projects} activeIndex={activeIndex} onSelect={selectProject} />
         </StageOverview>
-        <ProjectDetails key={project.id} project={project} open={expanded} onClose={close} panelId={panelId} />
+        {!hasCaseInformation && <ProjectDetails key={project.id} project={project} open={expanded} onClose={close} panelId={panelId} />}
       </Stage>
       </SectionContent>
     </Section>

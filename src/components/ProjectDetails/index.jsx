@@ -1,6 +1,21 @@
 import { CardArt } from "../ProjectCard/style";
 import { DetailDisclosure, DisclosureBody, DetailPanel, DetailHeading, DetailVisual, Columns, DetailLinks } from "./style";
 
+export function ProjectInformation({ project }) {
+  return (
+    <>
+      <Columns>
+        <div><h4>O desafio</h4><p>{project.challenge}</p></div>
+        <div><h4>A solução</h4><p>{project.solution}</p></div>
+        <div><h4>Tecnologias</h4><ul>{project.technologies?.map((technology) => <li key={technology}>{technology}</li>)}</ul></div>
+      </Columns>
+      {project.links?.length > 0 && <DetailLinks aria-label="Links do projeto">{project.links.filter((link) => /^https?:\/\//.test(link.href)).map((link) => (
+        <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label} ↗ <span>(abre em nova aba)</span></a>
+      ))}</DetailLinks>}
+    </>
+  );
+}
+
 export function ProjectDetails({ project, open, onClose, panelId }) {
   return (
     <DetailDisclosure id={panelId} $open={open} role="region" aria-labelledby={`${panelId}-title`}
@@ -18,14 +33,7 @@ export function ProjectDetails({ project, open, onClose, panelId }) {
         </CardArt>
         {project.demonstration && <figcaption>Composição ilustrativa de um projeto fictício.</figcaption>}
       </DetailVisual>
-      <Columns>
-        <div><h4>O desafio</h4><p>{project.challenge}</p></div>
-        <div><h4>A solução</h4><p>{project.solution}</p></div>
-        <div><h4>Tecnologias</h4><ul>{project.technologies?.map((technology) => <li key={technology}>{technology}</li>)}</ul></div>
-      </Columns>
-      {project.links?.length > 0 && <DetailLinks aria-label="Links do projeto">{project.links.filter((link) => /^https?:\/\//.test(link.href)).map((link) => (
-        <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label} ↗ <span>(abre em nova aba)</span></a>
-      ))}</DetailLinks>}
+      <ProjectInformation project={project} />
       </DetailPanel>
       </DisclosureBody>
     </DetailDisclosure>
