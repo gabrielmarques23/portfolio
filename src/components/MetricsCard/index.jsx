@@ -45,7 +45,7 @@ export function MetricsCard({ profile, metrics = [], stack = [], avatarSrc }) {
       )}
 
       {stack.length > 0 && (
-        <StackSection id="skills" aria-labelledby="skills-title">
+        <StackSection aria-labelledby="skills-title">
           <h3 id="skills-title">Tecnologias & habilidades</h3>
           <StackChips>
             {stack.map((tech, index) => (

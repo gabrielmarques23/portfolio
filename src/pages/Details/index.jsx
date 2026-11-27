@@ -76,12 +76,12 @@ export function Details() {
       <a className="skip-link" href="#projects">Pular para os projetos</a>
       <Dock items={portfolioData.navigation} />
       <CanvasFrame>
-        <HeroEnvironment>
+        <HeroEnvironment data-nav-section="home">
           <TopBar />
           <CenterStage><Hero heroData={portfolioData.hero} profileData={portfolioData.profile} /></CenterStage>
         </HeroEnvironment>
         <MainContent>
-          <AboutSection aria-labelledby="about-heading">
+          <AboutSection id="skills" data-nav-section="skills" aria-labelledby="about-heading">
             <AboutContent ref={aboutRef}>
               <AboutCopy>
                 <small data-about-reveal>Sobre & habilidades</small>
