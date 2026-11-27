@@ -1,16 +1,46 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { PageContainer, MainContent, CenterStage, HeroEnvironment, AboutSection, AboutContent, AboutCopy, ContactSection, ContactContent, Footer, FooterContent } from "./style";
 import { CanvasFrame } from "../../components/CanvasFrame";
 import { Dock } from "../../components/Dock";
 import { TopBar } from "../../components/TopBar";
 import { Hero } from "../../components/Hero";
 import { ProjectsSection } from "../../components/ProjectsSection";
+import { AutoStoreCase } from "../../components/AutoStoreCase";
 import { MetricsCard } from "../../components/MetricsCard";
 import { portfolioData } from "../../data/portfolio";
 import fotoPerfil from "../../../imagens/fotoPerfil.jpg";
 
 export function Details() {
   const aboutRef = useRef(null);
+  const caseStudyTriggerRef = useRef(null);
+  const closeFocusRequested = useRef(false);
+  const [autoStoreInfoOpen, setAutoStoreInfoOpen] = useState(() => window.location.hash === "#autostore-case");
+  const autoStoreProject = portfolioData.projects.find((project) => project.id === "autostore");
+  const closeAutoStoreInformation = () => {
+    closeFocusRequested.current = true;
+    setAutoStoreInfoOpen(false);
+  };
+  const afterAutoStoreClose = useCallback(() => {
+    if (closeFocusRequested.current) caseStudyTriggerRef.current?.focus();
+    closeFocusRequested.current = false;
+  }, []);
+
+  useEffect(() => {
+    // Reopening cancels the pending exit, including its requested focus return.
+    if (autoStoreInfoOpen) closeFocusRequested.current = false;
+  }, [autoStoreInfoOpen]);
+
+  useEffect(() => {
+    const revealCase = () => {
+      if (window.location.hash === "#autostore-case") setAutoStoreInfoOpen(true);
+    };
+    window.addEventListener("hashchange", revealCase);
+    window.addEventListener("popstate", revealCase);
+    return () => {
+      window.removeEventListener("hashchange", revealCase);
+      window.removeEventListener("popstate", revealCase);
+    };
+  }, []);
 
   useEffect(() => {
     const section = aboutRef.current;
@@ -76,12 +106,12 @@ export function Details() {
       <a className="skip-link" href="#projects">Pular para os projetos</a>
       <Dock items={portfolioData.navigation} />
       <CanvasFrame>
-        <HeroEnvironment>
+        <HeroEnvironment data-nav-section="home">
           <TopBar />
           <CenterStage><Hero heroData={portfolioData.hero} profileData={portfolioData.profile} /></CenterStage>
         </HeroEnvironment>
         <MainContent>
-          <AboutSection aria-labelledby="about-heading">
+          <AboutSection id="skills" data-nav-section="skills" aria-labelledby="about-heading">
             <AboutContent ref={aboutRef}>
               <AboutCopy>
                 <small data-about-reveal>Sobre & habilidades</small>
@@ -93,7 +123,10 @@ export function Details() {
               <MetricsCard profile={portfolioData.profile} metrics={portfolioData.metrics} stack={portfolioData.stack} avatarSrc={fotoPerfil} />
             </AboutContent>
           </AboutSection>
-          <ProjectsSection projects={portfolioData.projects} />
+          <ProjectsSection projects={portfolioData.projects} autoStoreInfoOpen={autoStoreInfoOpen}
+            onAutoStoreInfoChange={setAutoStoreInfoOpen} caseStudyTriggerRef={caseStudyTriggerRef} />
+          <AutoStoreCase project={autoStoreProject} informationOpen={autoStoreInfoOpen}
+            onInformationClose={closeAutoStoreInformation} onCloseComplete={afterAutoStoreClose} />
           <ContactSection id="contact" aria-labelledby="contact-heading">
             <ContactContent>
               <small>Contato</small>

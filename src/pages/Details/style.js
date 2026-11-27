@@ -21,7 +21,7 @@ export const HeroEnvironment = styled.div`
     linear-gradient(145deg, #142334, #0a1420 60%, #101e2c);
 `;
 export const CenterStage = styled.div`position: relative; width: 100%;`;
-export const AboutSection = styled.section`
+export const AboutSection = styled.section.attrs({ "data-dock-tone": "light" })`
   background: #FBFCF6;
   color: #142334;
 `;
@@ -35,7 +35,8 @@ export const AboutContent = styled.div`
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
-  > aside { width: 100%; max-width: 560px; justify-self: end; background: #101e2c; color: ${({ theme }) => theme.COLORS.TEXT_COLOR_01}; }
+  > aside { --metrics-muted: #475569; --metrics-divider: rgb(20 35 52 / 12%); width: 100%; max-width: 560px; justify-self: end; color: #142334; background: rgb(20 35 52 / 7%); box-shadow: 0 12px 32px -12px rgb(20 35 52 / 18%); }
+  > aside::after { border-color: rgb(20 35 52 / 18%); }
   @media (min-width: 900px) { padding: 3rem 10vw; }
   @media (max-width: 750px) { grid-template-columns: minmax(0, 1fr); > aside { justify-self: center; } }
 `;
@@ -47,7 +48,7 @@ export const AboutCopy = styled.div`
   a { display: inline-block; margin-top: .5rem; padding-block: .6rem; color: #075985; }
   a:focus-visible { outline-color: #075985; }
 `;
-export const ContactSection = styled.section`
+export const ContactSection = styled.section.attrs({ "data-dock-tone": "light" })`
   background: #FBFCF6;
   color: #142334;
   border-top: 1px solid rgb(20 35 52 / 12%);
@@ -64,7 +65,7 @@ export const ContactContent = styled.div`
   > a { display: inline-flex; align-items: center; min-height: 44px; padding: .75rem 1.25rem; border-radius: 999px; background: ${({ theme }) => theme.COLORS.ACCENT}; color: ${({ theme }) => theme.COLORS.TEXT_ON_ACCENT}; text-decoration: none; font-weight: 500; }
   > a:focus-visible { outline-color: #075985; }
 `;
-export const Footer = styled.footer`
+export const Footer = styled.footer.attrs({ "data-dock-tone": "light" })`
   background: #FBFCF6;
   color: #142334;
   border-top: 1px solid rgb(20 35 52 / 12%);

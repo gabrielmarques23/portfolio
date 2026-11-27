@@ -5,10 +5,10 @@ export const MetricsContainer = styled.aside`
   ${cardSurface}
   width: min(100%, 340px);
   padding: 1.5rem;
-  border-radius: 38px;
+  --glass-radius: 38px;
   @media (max-width: 900px) {
     width: 100%;
-    border-radius: 28px;
+    --glass-radius: 28px;
   }
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ export const ProfileInfo = styled.div`
   span {
     display: block;
     font-size: .875rem;
-    color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
+    color: var(--metrics-muted, ${({ theme }) => theme.COLORS.TEXT_COLOR_02});
   }
 `;
 
@@ -59,7 +59,7 @@ export const StatsGrid = styled.dl`
   gap: 1rem;
   margin: 0;
   padding: 1rem 0;
-  border-block: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
+  border-block: 1px solid var(--metrics-divider, ${({ theme }) => theme.COLORS.BORDER_LIGHT});
 `;
 
 export const StatItem = styled.div`
@@ -75,7 +75,7 @@ export const StatItem = styled.div`
   }
   dt {
     font-size: .875rem;
-    color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
+    color: var(--metrics-muted, ${({ theme }) => theme.COLORS.TEXT_COLOR_02});
   }
 `;
 
@@ -104,6 +104,6 @@ export const Chip = styled.li`
   padding: .35rem .65rem;
   border-radius: 999px;
   background: rgba(255,255,255,.04);
-  border: 1px solid ${({ theme }) => theme.COLORS.BORDER_LIGHT};
-  color: ${({ theme }) => theme.COLORS.TEXT_COLOR_02};
+  border: 1px solid var(--metrics-divider, ${({ theme }) => theme.COLORS.BORDER_LIGHT});
+  color: var(--metrics-muted, ${({ theme }) => theme.COLORS.TEXT_COLOR_02});
 `;

@@ -3,6 +3,7 @@ import { glassEffect } from "../../styles/glass";
 
 export const DockContainer = styled.nav`
   ${glassEffect}
+  --glass-radius: 999px;
   --dock-item-size: 44px;
   --dock-gap: 0.85rem;
   --dock-padding-x: 0.55rem;
@@ -18,11 +19,7 @@ export const DockContainer = styled.nav`
   flex-direction: column;
   gap: var(--dock-gap);
   padding: var(--dock-padding-y) var(--dock-padding-x);
-  border-radius: 999px;
   z-index: 30;
-  background: rgb(12 24 37 / 50%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.06);
 
   @media (max-width: 900px) {
     --dock-padding-x: 1.15rem;
@@ -34,9 +31,8 @@ export const DockContainer = styled.nav`
     top: auto;
     transform: translateX(-50%);
     flex-direction: row;
-    border-radius: 30px;
+    --glass-radius: 30px;
     z-index: 50;
-    backdrop-filter: blur(16px);
   }
 `;
 
@@ -49,7 +45,7 @@ export const ActiveIndicator = styled.span`
   height: var(--dock-item-size);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.12);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  [data-tone="light"] > & { background: rgb(20 35 52 / 8%); }
   pointer-events: none;
   opacity: ${({ $visible }) => ($visible ? 1 : 0)};
   transition:
@@ -82,6 +78,12 @@ export const DockItem = styled.a`
     background-color 0.2s ease,
     color 0.2s ease;
   cursor: pointer;
+
+  &[data-tone="light"] { color: #475569; }
+  &[data-tone="light"][aria-current],
+  &[data-tone="light"]:hover,
+  &[data-tone="light"]:focus-visible { color: #142334; }
+  &[data-tone="light"]:focus-visible { outline-color: #075985; background: rgb(20 35 52 / 8%); }
 
   &:focus-visible {
     color: ${({ theme }) => theme.COLORS.WHITE};
